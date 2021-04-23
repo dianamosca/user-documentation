@@ -33,8 +33,8 @@ In this video we review how to
 * Create a new ML Task for Categorization
 * Access other Dictionnary and Category within a project
 * Configure Bootstrap ML Task 
-* Create a new Dictionnary
-* Manually Categorize records
+* Create a new dictionnary
+* Manually categorize records
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
@@ -75,12 +75,12 @@ This is how you view existing filter applied and clear sorting:
 
 [Open Image]("/user-documentation//screenshot/Remove_sort_filter.png)
 
-#### 4.2 Manually matching task 
 
-#### 4.3 Creating Rules and Rules suggestion
 
-##### 4.3.1 Generate rules in XLS
+#### 4.2 Creating Rules and Rules suggestion
 
-#### 4.4 Using Task Filters
+##### 4.2.1 Generate rules in XLS
 
-#### 4.5 Usage of disambuigiton chart
+#### 4.3 Using Task Filters
+
+#### 4.4 Usage of disambuigiton chart
