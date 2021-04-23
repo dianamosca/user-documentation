@@ -36,6 +36,10 @@ In this video we review how to
 * Create a new dictionnary
 * Manually categorize records
 
+**TIPS**: 
+* You can manually categorize records in bulk by selecting multiple records and calling the `Action > Categorize` menu.  
+* Filter your records to find multiple records matching the same category and select all of them before selecting a category. If you want to automatically categorize all records matching those filter, you can create a rule (section 4.2)
+
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 
