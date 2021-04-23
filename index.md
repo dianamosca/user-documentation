@@ -83,6 +83,8 @@ This is how you view existing filter applied and clear sorting:
 
 #### 4.2 Creating Rules and Rules suggestion
 
+See section 2.3 to manually categorize record. 
+
 ##### 4.2.1 Generate rules in XLS
 
 #### 4.3 Using Task Filters
