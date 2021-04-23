@@ -85,9 +85,16 @@ In this video we review how to
 
 #### 4.3 Creating Rules and Rules suggestion
 
+In this video
+* Create a filter to validate the set of records we want to apply a rules to
+* Create a rule
+* Filter records with the rules applied
+* Identified records with conflicting rules
+* View at the project level all rules and the number of records impacted. 
+* Export / Import rules
 
 
-##### 4.3.1 Generate rules in XLS
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/f07f86baeecc4cb1be9996869c9b96ea" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 #### 4.4 Using Task Filters
 
