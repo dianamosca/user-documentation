@@ -22,7 +22,7 @@ In this tutorial we go through the process of uploading new data into unifyd and
 
 #### 2.1 How to load data manually in dataset
 
-#### 2.1.1 Using Deduplication with Dataset
+##### 2.1.1 Using Deduplication with Dataset
 
 #### 2.2 How to publish to a catalogue
 
