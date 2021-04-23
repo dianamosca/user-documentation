@@ -2,6 +2,9 @@
 
 ### 1. Introduction
 
+URL to login: https://profitero.unifyd.io/
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/e5dcf081f900467385a8427c4c6149fd" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ### 2. Creating a project 
 
 ### 2: Project creation
