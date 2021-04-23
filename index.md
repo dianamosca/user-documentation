@@ -61,6 +61,7 @@ This is how you view existing filter applied and clear sorting:
 
 <img class="alignleft" src="/user-documentation//screenshot/Remove_sort_filter.png" width="100%"/></div>
 
+[Open Image]("/user-documentation//screenshot/Remove_sort_filter.png)
 
 #### 4.2 Manually matching task 
 
