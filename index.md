@@ -3,11 +3,19 @@
 ### 1. Introduction
 
 URL to login: https://profitero.unifyd.io/
+
+Video Content: How to access
+* Project
+* Dataset
+* Wrange/Recipe
+* Catalogue
+* ML Task
+
+
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/e5dcf081f900467385a8427c4c6149fd" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### 2. Creating a project 
 
-### 2: Project creation
 
 #### 2.1 How to load data manually in dataset
 
@@ -21,11 +29,15 @@ URL to login: https://profitero.unifyd.io/
 
 #### 2.3 Setting up a categorization project
 
-##### 2.3.1 Create Category
+In this video we review how to
+* Create a new ML Task for Categorization
+* Access other Dictionnary and Category within a project
+* Configure Bootstrap ML Task 
+* Create a new Dictionnary
+* Manually Categorize records
 
-##### 2.3.2 Share Category within a project
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-##### 2.3.3 Configure Bootstrap ML Task 
 
 #### 2.4 Setting up a Record Matching project
 
@@ -59,7 +71,7 @@ We also see how you can
 
 This is how you view existing filter applied and clear sorting: 
 
-<img class="alignleft" src="/user-documentation//screenshot/Remove_sort_filter.png" width="100%"/></div>
+<img class="alignleft" src="/user-documentation//screenshot/Remove_sort_filter.png" width="100%"/>
 
 [Open Image]("/user-documentation//screenshot/Remove_sort_filter.png)
 
@@ -67,7 +79,7 @@ This is how you view existing filter applied and clear sorting:
 
 #### 4.3 Creating Rules and Rules suggestion
 
-##### 4.3.1 Generate rules in XLS -> import/export
+##### 4.3.1 Generate rules in XLS
 
 #### 4.4 Using Task Filters
 
