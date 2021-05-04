@@ -114,7 +114,7 @@ Update the following columns to generate the `filters` expression
 * `Filter Variable`: the keyword to search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point, you will need to create one filter for each value
 * `But Not Variable`: the keyword to exclude from the search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point. 
 
-Once your rules generated, you can copy and use paste special without the formula (using `Ctrl+Alt+V` see [Office documentation](https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows) the columns `name` `output` `filters` to the [rules-task-template.csv](/asset/rules-task-template.csv) document and save it as csv. 
+Once your rules generated, you can copy and use paste special without the formula (using `Ctrl+Alt+V` see [Office documentation](https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows)) the columns `name` `output` `filters` to the [rules-task-template.csv](/asset/rules-task-template.csv) document and save it as csv. 
 
 
 
