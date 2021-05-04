@@ -123,7 +123,7 @@ This tutorial explain how you can delete a categorization rules.
 * 2. Click the eye icone to open the rule panel
 * 3. Select delete
 
-<img class="alignleft" src="/user-documentation//screenshot/Delete_Categorization_Rule.png.png" width="100%"/>
+<img class="alignleft" src="/user-documentation//screenshot/Delete_Categorization_Rule.png" width="100%"/>
 
 [Open Image]("/user-documentation//screenshot/Delete_Categorization_Rule.png)
 
