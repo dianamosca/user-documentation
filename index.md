@@ -116,7 +116,19 @@ Update the following columns to generate the `filters` expression
 
 Once your rules generated, you can copy and use paste special without the formula (using `Ctrl+Alt+V` see [Office documentation](https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows)) the columns `name` `output` `filters` to the [rules-task-template.csv](/asset/rules-task-template.csv) document and save it as csv. 
 
+#### 4.3.3 Delete Categorization Rules
 
+This tutorial explain how you can delete a categorization rules. 
+* 1. Find a Record with the rules and click the cross arrow icone
+* 2. Click the eye icone to open the rule panel
+* 3. Select delete
+
+<img class="alignleft" src="/user-documentation//screenshot/Delete_Categorization_Rule.png.png" width="100%"/>
+
+[Open Image]("/user-documentation//screenshot/Delete_Categorization_Rule.png.png)
+
+We also recorded a quick walkthrough. 
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/79073ba0c85f459994bcfcb0f3027b3a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 #### 4.4 Using Task Filters
 
