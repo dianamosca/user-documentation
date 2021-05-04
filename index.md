@@ -101,7 +101,7 @@ In this video
 
 This tutorial explain how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial we only use the filter `contains` on a single column. 
 
-Using the [rules-task-template.xlsx](user-documentation/asset/rules-task-template.xlsx) template (line 2 and 3 are available as example, you can delete them): 
+Using the [rules-task-template.xlsx](/asset/rules-task-template.xlsx) template (line 2 and 3 are available as example, you can delete them): 
 * `name`:  Name of the rule as it will appear in Unifyd Interface
 * `output`: Name of the category it should be mapped to. You need to provide the full path of the category. We recommend that you copy the value from the Unifyd interface. 
 * `filters`: **do not edit this column** The Excel formula concatenante the value from column D to G to generate the filter expression for Unifyd. The formula is 
@@ -114,7 +114,7 @@ Update the following columns to generate the `filters` expression
 * `Filter Variable`: the keyword to search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point, you will need to create one filter for each value
 * `But Not Variable`: the keyword to exclude from the search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point. 
 
-Once your rules generated, you can copy and use paste special without the formula (using `Ctrl+Alt+V` see [Office documentation](https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows) the columns `name` `output` `filters` to the [rules-task-template.csv](user-documentation/asset/rules-task-template.csv) document and save it as csv. 
+Once your rules generated, you can copy and use paste special without the formula (using `Ctrl+Alt+V` see [Office documentation](https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows) the columns `name` `output` `filters` to the [rules-task-template.csv](/asset/rules-task-template.csv) document and save it as csv. 
 
 
 
