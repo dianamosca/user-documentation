@@ -125,7 +125,7 @@ This tutorial explain how you can delete a categorization rules.
 
 <img class="alignleft" src="/user-documentation//screenshot/Delete_Categorization_Rule.png.png" width="100%"/>
 
-[Open Image]("/user-documentation//screenshot/Delete_Categorization_Rule.png.png)
+[Open Image]("/user-documentation//screenshot/Delete_Categorization_Rule.png)
 
 We also recorded a quick walkthrough. 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/79073ba0c85f459994bcfcb0f3027b3a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
