@@ -46,10 +46,12 @@ In this tutorial we go through the process of uploading new data into unifyd and
 
 In this tutorial we walk through the contains filter on a catalogue including usage of
 * `All Of`  to search all word separated by comma (AND search)
-* `Any Of` to search any word separated by comma (OR search
+* `Any Of` to search any word separated by comma (OR search)
 * Build complex search by combining multiple string with `AND` / `OR` / `BUT NOT` operators
 * Use Case Sensitive either for a specific word 
-Known limitation
+
+**Known limitations**
+* When using a list of comma separated words, make sure you have no space between your term.
 * You need to use Case Sensitive search to for multiple word ([UNPR-1103](https://unifyd.atlassian.net/browse/UNPR-1103))
 * Note that at this stage you cannot search string that contains a comma `,` ([UNPR-1092](https://unifyd.atlassian.net/browse/UNPR-1092))
 
