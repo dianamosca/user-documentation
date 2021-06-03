@@ -24,11 +24,6 @@ In this tutorial we go through the process of uploading new data into unifyd and
 
 ##### 2.1.1 Using Deduplication with Dataset
 
-#### 2.2 How to publish to a catalogue
-
-##### 2.2.1 Using Deduplication with Catalogue
-
-##### 2.2.2 Managing View
 
 
 ### 3. Using Wrangle
@@ -37,12 +32,17 @@ In this tutorial we go through the process of uploading new data into unifyd and
 
 #### 3.2: Using Facets
 
- 
+### 4. Creating a Catalogue
 
-### 4.  Create a Categorization Project
+#### 4.1 How to publish to a catalogue
 
+##### 4.1.1 Using Deduplication with Catalogue
 
-#### 4.1 Interface tour Managing the ML Task Grid
+##### 4.1.2 Managing View
+
+### 5.  Create a Categorization Project
+
+#### 5.1 Interface tour Managing the ML Task Grid
 In this video we see how to manage the grid appearance including
 * Resize column
 * Reorder column
@@ -66,7 +66,7 @@ This is how you view existing filter applied and clear sorting:
 [Open Image]("/user-documentation//screenshot/Remove_sort_filter.png)
 
 
-#### 4.2 Setting up a categorization project
+#### 5.2 Setting up a categorization project
 
 In this video we review how to
 * Create a new ML Task for Categorization
@@ -83,9 +83,9 @@ In this video we review how to
 
 
 
-#### 4.3 Creating Rules and Rules suggestion
+#### 5.3 Creating Rules and Rules suggestion
 
-#### 4.3.1 Overview
+#### 5.3.1 Overview
 In this video
 * Create a filter to validate the set of records we want to apply a rules to
 * Create a rule
@@ -97,7 +97,7 @@ In this video
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/f07f86baeecc4cb1be9996869c9b96ea" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-#### 4.3.2 Bulk Generating Rules in Excel (Export / Import)
+#### 5.3.2 Bulk Generating Rules in Excel (Export / Import)
 
 This tutorial explain how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial we only use the filter `contains` on a single column. 
 
@@ -116,7 +116,7 @@ Update the following columns to generate the `filters` expression
 
 Once your rules generated, you can copy and use paste special without the formula (using `Ctrl+Alt+V` see [Office documentation](https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows)) the columns `name` `output` `filters` to the [rules-task-template.csv](/asset/rules-task-template.csv) document and save it as csv. 
 
-#### 4.3.3 Delete Categorization Rules
+#### 5.3.3 Delete Categorization Rules
 
 This tutorial explain how you can delete a categorization rules. 
 1. Find a Record with the rules and click the cross arrow icone
@@ -130,9 +130,9 @@ This tutorial explain how you can delete a categorization rules.
 We also recorded a quick walkthrough. 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/79073ba0c85f459994bcfcb0f3027b3a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-#### 4.4 Using Task Filters
+#### 5.4 Using Task Filters
 
-#### 4.5 Usage of disambuigiton chart
+#### 5.5 Usage of disambuigiton chart
 
 
-### 4.  Create a Record Matching Project
+### 6.  Create a Record Matching Project
