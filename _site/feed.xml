@@ -1,961 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-16T13:23:42+00:00</updated><id>http://localhost:4000/</id><title type="html">Base</title><subtitle>Knowledge base template for Jekyll.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Urban</title><link href="http://localhost:4000/themes/urban/" rel="alternate" type="text/html" title="Urban" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/themes/urban</id><content type="html" xml:base="http://localhost:4000/themes/urban/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-17T18:28:52+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Wrangling</title><link href="http://localhost:4000/2.%20wrangling/Wrangling/" rel="alternate" type="text/html" title="Wrangling" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/2.%20wrangling/Wrangling</id><content type="html" xml:base="http://localhost:4000/2.%20wrangling/Wrangling/">&lt;p&gt;Content to be created&lt;/p&gt;
 
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
+&lt;h3 id=&quot;1-using-wrangle&quot;&gt;1. Using Wrangle&lt;/h3&gt;
 
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
+&lt;h4 id=&quot;11-creating--reusing-a-wrangle&quot;&gt;1.1 Creating / Reusing a Wrangle&lt;/h4&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
+&lt;h4 id=&quot;12-using-facets&quot;&gt;1.2 Using Facets&lt;/h4&gt;
 
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
-
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
-
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
-
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
+&lt;h3 id=&quot;2-mapping-a-wrangle-to-a-catalogue&quot;&gt;2. Mapping a wrangle to a Catalogue&lt;/h3&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Content to be created</summary></entry><entry><title type="html">Unifyd Overview</title><link href="http://localhost:4000/1.%20introduction/Unifyd-Overview/" rel="alternate" type="text/html" title="Unifyd Overview" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/1.%20introduction/Unifyd-Overview</id><content type="html" xml:base="http://localhost:4000/1.%20introduction/Unifyd-Overview/">&lt;p&gt;Video Content: How to access&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
+  &lt;li&gt;Project&lt;/li&gt;
+  &lt;li&gt;Dataset&lt;/li&gt;
+  &lt;li&gt;Wrange/Recipe&lt;/li&gt;
+  &lt;li&gt;Catalogue&lt;/li&gt;
+  &lt;li&gt;ML Task&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry><entry><title type="html">Subscription payments</title><link href="http://localhost:4000/billing/subscription-payments/" rel="alternate" type="text/html" title="Subscription payments" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/billing/subscription-payments</id><content type="html" xml:base="http://localhost:4000/billing/subscription-payments/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/e5dcf081f900467385a8427c4c6149fd&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Video Content: How to access Project Dataset Wrange/Recipe Catalogue ML Task</summary></entry><entry><title type="html">Project and Catalogue Creation</title><link href="http://localhost:4000/1.%20introduction/Project-Creation/" rel="alternate" type="text/html" title="Project and Catalogue Creation" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/1.%20introduction/Project-Creation</id><content type="html" xml:base="http://localhost:4000/1.%20introduction/Project-Creation/">&lt;p&gt;In this tutorial we go through the process of uploading new data into unifyd and creating a new catalogue. This is the most simple version of the workflow without duplication set up or aggregating multiple dataset together.&lt;/p&gt;
 
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
-
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
-
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
-
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
-
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/a1a26c79964c4326935561e5ad04f875&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">In this tutorial we go through the process of uploading new data into unifyd and creating a new catalogue. This is the most simple version of the workflow without duplication set up or aggregating multiple dataset together.</summary></entry><entry><title type="html">Contains Filter</title><link href="http://localhost:4000/3.%20catalogs%20filter/Contains-Filter/" rel="alternate" type="text/html" title="Contains Filter" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/3.%20catalogs%20filter/Contains-Filter</id><content type="html" xml:base="http://localhost:4000/3.%20catalogs%20filter/Contains-Filter/">&lt;p&gt;In this tutorial we walk through the contains filter on a catalogue including usage of&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;All Of&lt;/code&gt;  to search all word separated by comma (AND search)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Any Of&lt;/code&gt; to search any word separated by comma (OR search)&lt;/li&gt;
+  &lt;li&gt;Build complex search by combining multiple string with &lt;code class=&quot;highlighter-rouge&quot;&gt;AND&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;OR&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;BUT NOT&lt;/code&gt; operators&lt;/li&gt;
+  &lt;li&gt;Use Case Sensitive either for a specific word&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry><entry><title type="html">S3</title><link href="http://localhost:4000/deployment/s3/" rel="alternate" type="text/html" title="S3" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/deployment/s3</id><content type="html" xml:base="http://localhost:4000/deployment/s3/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
-
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
-
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
-
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
-
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
-
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;Known limitations&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
+  &lt;li&gt;When using a list of comma separated words, make sure you have no space between your term.&lt;/li&gt;
+  &lt;li&gt;You need to use Case Sensitive search to for multiple word (&lt;a href=&quot;https://unifyd.atlassian.net/browse/UNPR-1103&quot;&gt;UNPR-1103&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Note that at this stage you cannot search string that contains a comma &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; (&lt;a href=&quot;https://unifyd.atlassian.net/browse/UNPR-1092&quot;&gt;UNPR-1092&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry><entry><title type="html">Overview</title><link href="http://localhost:4000/account-settings/overview/" rel="alternate" type="text/html" title="Overview" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/account-settings/overview</id><content type="html" xml:base="http://localhost:4000/account-settings/overview/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/71d17681c7d94543ae0cb8ccb472109b&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">In this tutorial we walk through the contains filter on a catalogue including usage of All Of to search all word separated by comma (AND search) Any Of to search any word separated by comma (OR search) Build complex search by combining multiple string with AND / OR / BUT NOT operators Use Case Sensitive either for a specific word</summary></entry><entry><title type="html">Categorization Introduction</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" rel="alternate" type="text/html" title="Categorization Introduction" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Project</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Project/">&lt;h2 id=&quot;navigating-the-grid&quot;&gt;Navigating the grid&lt;/h2&gt;
 
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
-
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
-
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
-
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
-
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
+&lt;p&gt;In this video we see how to manage the grid appearance including&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
+  &lt;li&gt;Resize column&lt;/li&gt;
+  &lt;li&gt;Reorder column&lt;/li&gt;
+  &lt;li&gt;Sort column&lt;/li&gt;
+  &lt;li&gt;Change the row height&lt;/li&gt;
+  &lt;li&gt;Hide column&lt;/li&gt;
+  &lt;li&gt;Filter&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry><entry><title type="html">Manual payments</title><link href="http://localhost:4000/billing/manual-payments/" rel="alternate" type="text/html" title="Manual payments" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/billing/manual-payments</id><content type="html" xml:base="http://localhost:4000/billing/manual-payments/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
-
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
-
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
-
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
-
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
-
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
+&lt;p&gt;We also see how you can&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
+  &lt;li&gt;Export data&lt;/li&gt;
+  &lt;li&gt;Access the rules generator&lt;/li&gt;
+  &lt;li&gt;Add a comment on a record.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry><entry><title type="html">Malt</title><link href="http://localhost:4000/themes/malt/" rel="alternate" type="text/html" title="Malt" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/themes/malt</id><content type="html" xml:base="http://localhost:4000/themes/malt/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/22d0624e46204812832b066a8f9ddb21&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
+&lt;p&gt;This is how you view existing filter applied and clear sorting:&lt;/p&gt;
 
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
+&lt;p&gt;&lt;img class=&quot;alignleft&quot; src=&quot;/user-documentation/images/Remove_sort_filter.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Remove_sort_filter.png&quot;&gt;Open Image&lt;/a&gt;&lt;/p&gt;
 
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
+&lt;h2 id=&quot;creating-a-project&quot;&gt;Creating a project&lt;/h2&gt;
 
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
-
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
-
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
+&lt;p&gt;In this video we review how to&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
+  &lt;li&gt;Create a new ML Task for Categorization&lt;/li&gt;
+  &lt;li&gt;Access other Dictionnary and Category within a project&lt;/li&gt;
+  &lt;li&gt;Configure Bootstrap ML Task&lt;/li&gt;
+  &lt;li&gt;Create a new dictionnary&lt;/li&gt;
+  &lt;li&gt;Manually categorize records&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry><entry><title type="html">Justice</title><link href="http://localhost:4000/themes/justice/" rel="alternate" type="text/html" title="Justice" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/themes/justice</id><content type="html" xml:base="http://localhost:4000/themes/justice/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
-
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
-
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
-
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
-
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
-
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;TIPS&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
+  &lt;li&gt;You can manually categorize records in bulk by selecting multiple records and calling the &lt;code class=&quot;highlighter-rouge&quot;&gt;Action &amp;gt; Categorize&lt;/code&gt; menu.&lt;/li&gt;
+  &lt;li&gt;Filter your records to find multiple records matching the same category and select all of them before selecting a category. If you want to automatically categorize all records matching those filter, you can create a rule (section 4.2)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry><entry><title type="html">jekyll-sitemap</title><link href="http://localhost:4000/plugins/jekyll-sitemap/" rel="alternate" type="text/html" title="jekyll-sitemap" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/plugins/jekyll-sitemap</id><content type="html" xml:base="http://localhost:4000/plugins/jekyll-sitemap/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Navigating the grid</summary></entry><entry><title type="html">Categorization Rules Management</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules/" rel="alternate" type="text/html" title="Categorization Rules Management" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
-
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
-
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
-
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
-
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
+&lt;p&gt;In this video&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
+  &lt;li&gt;Create a filter to validate the set of records we want to apply a rules to&lt;/li&gt;
+  &lt;li&gt;Create a rule&lt;/li&gt;
+  &lt;li&gt;Filter records with the rules applied&lt;/li&gt;
+  &lt;li&gt;Identified records with conflicting rules&lt;/li&gt;
+  &lt;li&gt;View at the project level all rules and the number of records impacted.&lt;/li&gt;
+  &lt;li&gt;Export / Import rules&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry><entry><title type="html">jekyll-search</title><link href="http://localhost:4000/plugins/jekyll-search/" rel="alternate" type="text/html" title="jekyll-search" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/plugins/jekyll-search</id><content type="html" xml:base="http://localhost:4000/plugins/jekyll-search/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/f07f86baeecc4cb1be9996869c9b96ea&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
+&lt;h2 id=&quot;delete-rules&quot;&gt;Delete Rules&lt;/h2&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
+&lt;p&gt;This tutorial explain how you can delete a categorization rules.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Find a Record with the rules and click the cross arrow icone&lt;/li&gt;
+  &lt;li&gt;Click the eye icone to open the rule panel&lt;/li&gt;
+  &lt;li&gt;Select delete&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
+&lt;p&gt;&lt;img class=&quot;alignleft&quot; src=&quot;/user-documentation/screenshot/Delete_Categorization_Rule.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
+&lt;p&gt;&lt;a href=&quot;/user-documentation/screenshot/Delete_Categorization_Rule.png&quot;&gt;Open Image&lt;/a&gt;&lt;/p&gt;
 
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;p&gt;We also recorded a quick walkthrough.&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/79073ba0c85f459994bcfcb0f3027b3a&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;downloading-and-uploading-rules&quot;&gt;Downloading and Uploading Rules&lt;/h2&gt;
 
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;This tutorial explain how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial we only use the filter &lt;code class=&quot;highlighter-rouge&quot;&gt;contains&lt;/code&gt; on a single column.&lt;/p&gt;
 
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
+&lt;p&gt;Using the &lt;a href=&quot;/asset/rules-task-template.xlsx&quot;&gt;rules-task-template.xlsx&lt;/a&gt; template (line 2 and 3 are available as example, you can delete them):&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt;:  Name of the rule as it will appear in Unifyd Interface&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt;: Name of the category it should be mapped to. You need to provide the full path of the category. We recommend that you copy the value from the Unifyd interface.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;filters&lt;/code&gt;: &lt;strong&gt;do not edit this column&lt;/strong&gt; The Excel formula concatenante the value from column D to G to generate the filter expression for Unifyd. The formula is
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;=&quot;{&quot;&quot;&quot;&amp;amp;D2&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;:{&quot;&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;operand&quot;&quot;&quot;&amp;amp;&quot;:[&quot;&quot;&quot;&amp;amp;F2&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;,&quot;&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;G2&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;,&quot;&quot;&quot;&amp;amp;&quot;0&quot;&quot;&quot;&amp;amp;&quot;,&quot;&quot;&quot;&amp;amp;&quot;0&quot;&quot;&quot;&amp;amp;&quot;],&quot;&quot;&quot;&amp;amp;&quot;operator&quot;&quot;&quot;&amp;amp;&quot;:&quot;&quot;&quot;&amp;amp;E2&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;}}&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Update the following columns to generate the &lt;code class=&quot;highlighter-rouge&quot;&gt;filters&lt;/code&gt; expression&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Data Column Used&lt;/code&gt;: Which column is used for filtering. It should match the column name in Unifyd.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Filter Type&lt;/code&gt;: in this tutorial we only use &lt;code class=&quot;highlighter-rouge&quot;&gt;CONTAINS&lt;/code&gt; (in UpperCase only)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Filter Variable&lt;/code&gt;: the keyword to search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point, you will need to create one filter for each value&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;But Not Variable&lt;/code&gt;: the keyword to exclude from the search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry><entry><title type="html">jekyll-paginate</title><link href="http://localhost:4000/plugins/jekyll-paginate/" rel="alternate" type="text/html" title="jekyll-paginate" /><published>2017-01-16T00:00:00+00:00</published><updated>2017-01-16T00:00:00+00:00</updated><id>http://localhost:4000/plugins/jekyll-paginate</id><content type="html" xml:base="http://localhost:4000/plugins/jekyll-paginate/">&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
-
-&lt;p&gt;If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install Jekyll and Bundler gems through RubyGems&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
-
-&lt;span class=&quot;c&quot;&gt;# Create a new Jekyll site at ./myblog&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new myblog
-
-&lt;span class=&quot;c&quot;&gt;# Change into your new directory&lt;/span&gt;
-~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
-
-&lt;span class=&quot;c&quot;&gt;# Build the site on the preview server&lt;/span&gt;
-~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-
-&lt;span class=&quot;c&quot;&gt;# Now browse to http://localhost:4000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
-
-&lt;p&gt;Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome configuration options Jekyll makes available.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-usage&quot;&gt;Basic usage&lt;/h2&gt;
-
-&lt;p&gt;The Jekyll gem makes a &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable available to you in your Terminal window. You can use this command in a number of ways:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--source&lt;/span&gt; &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--watch&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# =&amp;gt; The current folder will be generated into ./_site,&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#    watched for changes, and regenerated automatically.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h2&gt;
-
-&lt;p&gt;Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files; the static web site is the final product.&lt;/p&gt;
-
-&lt;p&gt;A basic Jekyll site usually looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── _config.yml
-├── _data
-|   └── members.yml
-├── _drafts
-|   ├── begin-with-the-crazy-ideas.md
-|   └── on-simplicity-in-technology.md
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-|   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-|   ├── _base.scss
-|   └── _layout.scss
-├── _site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# can also be an 'index.md' with valid YAML Frontmatter&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;front-matter&quot;&gt;Front matter&lt;/h2&gt;
-
-&lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: post
-title: Blogging Like a Hacker
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;amp;q=80&amp;amp;fm=jpg&amp;amp;crop=entropy&amp;amp;cs=tinysrgb&amp;amp;w=1920&amp;amp;h=1080&amp;amp;fit=crop&amp;amp;s=80308172730757a7db0434987fa985f3&quot; alt=&quot;Example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;where-additional-pages-live&quot;&gt;Where additional pages live&lt;/h2&gt;
-
-&lt;p&gt;Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of creating pages:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Place named HTML or Markdown files for each page in your site’s root folder.&lt;/li&gt;
-  &lt;li&gt;Place pages inside folders and subfolders named whatever you want.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Both methods work fine (and can be used in conjunction with each other), with the only real difference being the resulting URLs. By default, pages retain the same folder structure in &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; as they do in the source directory.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</summary></entry></feed>
+&lt;p&gt;Once your rules generated, you can copy and use paste special without the formula (using &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+Alt+V&lt;/code&gt; see &lt;a href=&quot;https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows&quot;&gt;Office documentation&lt;/a&gt;) the columns &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;filters&lt;/code&gt; to the &lt;a href=&quot;/asset/rules-task-template.csv&quot;&gt;rules-task-template.csv&lt;/a&gt; document and save it as csv.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Overview</summary></entry></feed>
