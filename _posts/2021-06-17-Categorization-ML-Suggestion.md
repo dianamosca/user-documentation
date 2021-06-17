@@ -16,7 +16,7 @@ Please note:
 * At any time you can bulk upvote or downvote item from the `Action` menu.
 * Once categorize the `Labels` will show the classified icon" <img src="/user-documentation/screenshot/fa-crown.svg" width="25" height="25">
 
-<img class="alignleft" src="/user-documentation/screenshot/upvote-ml-suggestion.png" width="100%"/>
+<img class="alignleft" src="/user-documentation/images/upvote-ml-suggestion.png" width="100%"/>
 
 
 
