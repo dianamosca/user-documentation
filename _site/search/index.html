@@ -165,6 +165,21 @@
 				
 					,
 					
+					"5-20matching-20project-matching-project": {
+						"id": "5-20matching-20project-matching-project",
+						"title": "Matching Introduction",
+						"categories": "5. Matching Project",
+						"url": " /5.%20matching%20project/Matching-Project/",
+						"content": "Project Creation\n\nOnce you selected your Catalog and Catalog Table, select Type = Record Matching (Entity Mastering)\n\nField Configuration\n\n\n\nUnifyd Insight Matching algorithm provide an 100 score when two rows matches perfectly on the selected field. Any differences between the two rows will degrade the matching score based on\n\nThe Column Search Boost let you give more or less weight to a field. Matching (or non matching) results  - For example for a string field set with extact with extremly high boot, the model gives an extremely high penalty to the score if the two value does not exactly match.\n\nAnalyzers and Schema Settings option are\n\n  Text\n    \n      Exact\n      Fuzzy Match\n      Fingerprint\n      Non Exact Match\n    \n  \n  Numeric and Date Value\n    \n      Numeric Decay %"
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
 					"3-20catalogs-20filter-contains-filter": {
 						"id": "3-20catalogs-20filter-contains-filter",
 						"title": "Contains Filter",
@@ -195,12 +210,42 @@
 				
 					,
 					
+					"4-20categorization-20project-categorization-ml-suggestion": {
+						"id": "4-20categorization-20project-categorization-ml-suggestion",
+						"title": "Categorization ML Suggestion",
+						"categories": "4. Categorization Project",
+						"url": " /4.%20categorization%20project/Categorization-ML-Suggestion/",
+						"content": "As you start labelling records, Unifyd Insights Machine Learning will automatically starts suggesting category for similar records. The suggestion improve as more example are provided. Depending of your dataset (size and number of category), we suggest a threshold of a few hundreds to a thousand categorized rows per category for the ML to produce good recommendation.\n\nPlease note:\n\n  ML are only suggestion. You will need to manually review and approve them by upvoting them.\n  If the selected catory is wrong, you can  down vote it to select the next suggested category.\n  At any time you can bulk upvote or downvote item from the Action menu.\n  Once categorize the Labels will show the classified icon”"
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"4-20categorization-20project-categorization-download-label": {
+						"id": "4-20categorization-20project-categorization-download-label",
+						"title": "Categorization Download Label",
+						"categories": "4. Categorization Project",
+						"url": " /4.%20categorization%20project/Categorization-Download-Label/",
+						"content": ""
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
 					"4-20categorization-20project-categorization-creating-rules": {
 						"id": "4-20categorization-20project-categorization-creating-rules",
 						"title": "Categorization Rules Management",
 						"categories": "4. Categorization Project",
 						"url": " /4.%20categorization%20project/Categorization-Creating-Rules/",
-						"content": "Overview\n\nIn this video\n\n  Create a filter to validate the set of records we want to apply a rules to\n  Create a rule\n  Filter records with the rules applied\n  Identified records with conflicting rules\n  View at the project level all rules and the number of records impacted.\n  Export / Import rules\n\n\n\n\n\n\nDelete Rules\n\nThis tutorial explain how you can delete a categorization rules.\n\n  Find a Record with the rules and click the cross arrow icone\n  Click the eye icone to open the rule panel\n  Select delete\n\n\n\n\nOpen Image\n\nWe also recorded a quick walkthrough.\n\n\nDownloading and Uploading Rules\n\nThis tutorial explain how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial we only use the filter contains on a single column.\n\nUsing the rules-task-template.xlsx template (line 2 and 3 are available as example, you can delete them):\n\n  name:  Name of the rule as it will appear in Unifyd Interface\n  output: Name of the category it should be mapped to. You need to provide the full path of the category. We recommend that you copy the value from the Unifyd interface.\n  filters: do not edit this column The Excel formula concatenante the value from column D to G to generate the filter expression for Unifyd. The formula is\n    =\"{\"\"\"&amp;D2&amp;\"\"\"\"&amp;\":{\"&amp;\"\"\"\"&amp;\"operand\"\"\"&amp;\":[\"\"\"&amp;F2&amp;\"\"\"\"&amp;\",\"&amp;\"\"\"\"&amp;G2&amp;\"\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\"],\"\"\"&amp;\"operator\"\"\"&amp;\":\"\"\"&amp;E2&amp;\"\"\"\"&amp;\"}}\"\n    \n    Update the following columns to generate the filters expression\n  \n  Data Column Used: Which column is used for filtering. It should match the column name in Unifyd.\n  Filter Type: in this tutorial we only use CONTAINS (in UpperCase only)\n  Filter Variable: the keyword to search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point, you will need to create one filter for each value\n  But Not Variable: the keyword to exclude from the search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point.\n\n\nOnce your rules generated, you can copy and use paste special without the formula (using Ctrl+Alt+V see Office documentation) the columns name output filters to the rules-task-template.csv document and save it as csv."
+						"content": "Create a Rule\n\nIn this video\n\n  Create a filter to validate the set of records we want to apply a rules to\n  Create a rule\n  Filter records with the rules applied\n  Identified records with conflicting rules\n  View at the project level all rules and the number of records impacted.\n  Export / Import rules\n\n\n\n\n \nIf you want your rules to apply the label directly you need to select Auto Label Record option during the rule creation\n\n\n\nEdit Rules\n\nWe currently do not support Rules Edition. You will need to delete the rules and recreate it with your modification.\n\nSee Feature UNPR-1170\n\nDelete Rules\n\nThis tutorial explain how you can delete a categorization rules.\n\n  Find a Record with the rules and click the cross arrow icone\n  Click the eye icone to open the rule panel\n  Select delete\n\n\n\n\nOpen Image\n\nWe also recorded a quick walkthrough.\n\n\nDownloading and Uploading Rules\n\nThis tutorial explain how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial we only use the filter contains on a single column.\n\nUsing the rules-task-template.xlsx template (line 2 and 3 are available as example, you can delete them):\n\n  name:  Name of the rule as it will appear in Unifyd Interface\n  output: Name of the category it should be mapped to. You need to provide the full path of the category. We recommend that you copy the value from the Unifyd interface.\n  filters: do not edit this column The Excel formula concatenante the value from column D to G to generate the filter expression for Unifyd. The formula is\n    =\"{\"\"\"&amp;D2&amp;\"\"\"\"&amp;\":{\"&amp;\"\"\"\"&amp;\"operand\"\"\"&amp;\":[\"\"\"&amp;F2&amp;\"\"\"\"&amp;\",\"&amp;\"\"\"\"&amp;G2&amp;\"\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\"],\"\"\"&amp;\"operator\"\"\"&amp;\":\"\"\"&amp;E2&amp;\"\"\"\"&amp;\"}}\"\n    \n    Update the following columns to generate the filters expression\n  \n  Data Column Used: Which column is used for filtering. It should match the column name in Unifyd.\n  Filter Type: in this tutorial we only use CONTAINS (in UpperCase only)\n  Filter Variable: the keyword to search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point, you will need to create one filter for each value\n  But Not Variable: the keyword to exclude from the search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point.\n\n\nOnce your rules generated, you can copy and use paste special without the formula (using Ctrl+Alt+V see Office documentation) the columns name output filters to the rules-task-template.csv document and save it as csv."
 					}
 					
 				

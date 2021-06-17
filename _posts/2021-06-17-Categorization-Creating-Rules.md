@@ -7,7 +7,7 @@ description:
 type: Document
 ---
 
-## Overview
+## Create a Rule
 
 In this video
 * Create a filter to validate the set of records we want to apply a rules to
@@ -21,6 +21,15 @@ In this video
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/f07f86baeecc4cb1be9996869c9b96ea" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 <br> 
+If you want your rules to apply the label directly you need to select `Auto Label Record` option during the rule creation 
+
+<img class="alignleft" src="/user-documentation/screenshot/auto-label-record.png" width="100%"/>
+
+## Edit Rules
+
+We currently do not support Rules Edition. You will need to delete the rules and recreate it with your modification. 
+
+See Feature [UNPR-1170](https://unifyd.atlassian.net/browse/UNPR-1170)
 
 ## Delete Rules
 
