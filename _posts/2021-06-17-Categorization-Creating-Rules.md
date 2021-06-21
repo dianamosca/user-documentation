@@ -23,7 +23,8 @@ In this video
 <br> 
 If you want your rules to apply the label directly you need to select `Auto Label Record` option during the rule creation 
 
-<img class="alignleft" src="/user-documentation/images/auto-label-record.png" width="100%"/>
+[![](/user-documentation/images/auto-label-record.png)](/user-documentation/images/auto-label-record.png)
+
 
 ## Edit Rules
 
@@ -39,12 +40,6 @@ This tutorial explain how you can delete a categorization rules.
 3. Select delete
 
 [![](/user-documentation/images/Delete_Categorization_Rule.png)](/user-documentation/images/Delete_Categorization_Rule.png)
-
-[ ![](/user-documentation/images/Delete_Categorization_Rule.png) ](/user-documentation/images/Delete_Categorization_Rule.png)
-
-
-<img class="alignleft" src="/user-documentation/images/Delete_Categorization_Rule.png" width="100%"/>
-
 
 We also recorded a quick walkthrough. 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/79073ba0c85f459994bcfcb0f3027b3a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

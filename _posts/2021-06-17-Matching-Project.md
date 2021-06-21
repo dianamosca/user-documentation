@@ -13,7 +13,7 @@ Once you selected your `Catalog` and `Catalog Table`, select `Type = Record Matc
 
 ## Field Configuration
 
-<img class="alignleft" src="/user-documentation/images/Matching-Field-Configuration.png" width="100%"/>
+[![](/user-documentation/images/Matching-Field-Configuration.png)](/user-documentation/images/Matching-Field-Configuration.png)
 
 Unifyd Insight Matching algorithm provide an 100 score when two rows matches perfectly on the selected field. Any differences between the two rows will degrade the matching score based on
 

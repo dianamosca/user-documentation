@@ -26,9 +26,7 @@ We also see how you can
 
 This is how you view existing filter applied and clear sorting: 
 
-<img class="alignleft" src="/user-documentation/images/Remove_sort_filter.png" width="100%"/>
-
-[Open Image](/user-documentation/images/Remove_sort_filter.png)
+[![](/user-documentation/images/Remove_sort_filter.png)](/user-documentation/images/Remove_sort_filter.png)
 
 ## Creating a project 
 
