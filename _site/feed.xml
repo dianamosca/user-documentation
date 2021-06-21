@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-21T20:00:38+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Wrangling</title><link href="http://localhost:4000/2.%20wrangling/Wrangling/" rel="alternate" type="text/html" title="Wrangling" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/2.%20wrangling/Wrangling</id><content type="html" xml:base="http://localhost:4000/2.%20wrangling/Wrangling/">&lt;p&gt;Content to be created&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-21T21:30:23+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Review ML and Rule Category Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" rel="alternate" type="text/html" title="Review ML and Rule Category Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;The left panel of the screen display the categorization status for each record.  From left to right it contains&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;check box to select a record&lt;/li&gt;
+  &lt;li&gt;Comment  &lt;img src=&quot;/user-documentation/images/comments-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; section&lt;/li&gt;
+  &lt;li&gt;Task  &lt;img src=&quot;/user-documentation/images/list-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;status&lt;/li&gt;
+  &lt;li&gt;Machine Learning (ML) categorization status&lt;/li&gt;
+  &lt;li&gt;Selected Label by the user&lt;/li&gt;
+  &lt;li&gt;Rules categorization status&lt;/li&gt;
+  &lt;li&gt;Record id in the catalog&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Left-Overview.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Left-Overview.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;label-status&quot;&gt;Label Status&lt;/h2&gt;
+
+&lt;p&gt;At the center the Label Satus (or Selected Label) indicate&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/sitemap-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; when a category has been set for the record&lt;/li&gt;
+  &lt;li&gt;in light green without icon when there is only&lt;/li&gt;
+  &lt;li&gt;Click on the  &lt;img src=&quot;/user-documentation/images/sitemap-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; icone to see
+    &lt;ul&gt;
+      &lt;li&gt;The user who categorized the row&lt;/li&gt;
+      &lt;li&gt;The category selected by the user&lt;/li&gt;
+      &lt;li&gt;Select the  &lt;img src=&quot;/user-documentation/images/trash-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; trash icone to delete the category&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Label-Satus.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Label-Satus.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;comment&quot;&gt;Comment&lt;/h2&gt;
+
+&lt;p&gt;Comment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon &lt;img src=&quot;/user-documentation/images/comments-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; indicates there is one or more comment for the record. Click on the icone to open the right panel and view the comment.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Record-Comment.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Record-Comment.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ml-task-status&quot;&gt;ML Task Status&lt;/h2&gt;
+
+&lt;p&gt;As you start labelling records, Unifyd Insights Machine Learning will automatically starts suggesting category for similar records. The suggestion improve as more example are provided. Depending of your dataset (size and number of category), we suggest a threshold of a few hundreds to a thousand categorized rows per category for the ML to produce good recommendation.&lt;/p&gt;
+
+&lt;p&gt;On the left panel the ML Suggestion returns the following information&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/android.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; Robot with a one green: there is only one ML suggestion for the recor&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/android.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; Robot with number yellow: Two ML Suggestion are conflicting. Open the &lt;code class=&quot;highlighter-rouge&quot;&gt;Suggested Category&lt;/code&gt; panel to review the conflict&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/android.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; Robot with number in red: Multiple ML Suggestion are conflicting. Open the &lt;code class=&quot;highlighter-rouge&quot;&gt;Suggested Category&lt;/code&gt; panel to review the conflict&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/thumbs-up-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;Green thumb up: ML Suggestion aggrees with user label&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/thumbs-down-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;Red thumb down: ML Suggestion disagrees with user label&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/ML-Task-Status.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/ML-Task-Status.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;approving-ml-suggestion&quot;&gt;Approving ML Suggestion&lt;/h3&gt;
+
+&lt;p&gt;ML are only suggestion. You will need to manually review and approve them by upvoting them.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If the selected catory is wrong, you can  down vote it to select the next suggested category.&lt;/li&gt;
+  &lt;li&gt;At any time you can bulk upvote or downvote item from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Action&lt;/code&gt; menu.&lt;/li&gt;
+  &lt;li&gt;Once categorize the &lt;code class=&quot;highlighter-rouge&quot;&gt;Labels&lt;/code&gt; will show the classified icon: &lt;img src=&quot;/user-documentation/images/sitemap-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/upvote-ml-suggestion.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/upvote-ml-suggestion.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;suggested-category-panel&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Suggested Category&lt;/code&gt; panel&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Suggested Category&lt;/code&gt; panel let you review conflicting ML suggestion.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;to add&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;rules-status&quot;&gt;Rules Status&lt;/h2&gt;
+
+&lt;p&gt;On the left panel the Rules Suggestion returns the following information&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/random.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; Crossed Arrow with a one green: there is only one rules suggestion for the recor&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/random.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; Crossed Arrow with number in red: Multiples Rules Suggestion are conflicting. Open the &lt;code class=&quot;highlighter-rouge&quot;&gt;Suggested Rule&lt;/code&gt; panel to review the conflict&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/random.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; Red Exclamation mark: Too many rules conflict with a similar score. Open the &lt;code class=&quot;highlighter-rouge&quot;&gt;Suggested Rule&lt;/code&gt; panel to review the conflict&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/thumbs-up-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;Green thumb up: Rule Suggestion aggrees with user label&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/user-documentation/images/thumbs-down-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;Red thumb down: Rule Suggestion disagrees with user label&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Overview</summary></entry><entry><title type="html">Wrangling</title><link href="http://localhost:4000/2.%20wrangling/Wrangling/" rel="alternate" type="text/html" title="Wrangling" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/2.%20wrangling/Wrangling</id><content type="html" xml:base="http://localhost:4000/2.%20wrangling/Wrangling/">&lt;p&gt;Content to be created&lt;/p&gt;
 
 &lt;h3 id=&quot;1-using-wrangle&quot;&gt;1. Using Wrangle&lt;/h3&gt;
 
@@ -101,17 +182,7 @@
   &lt;li&gt;Filter your records to find multiple records matching the same category and select all of them before selecting a category. If you want to automatically categorize all records matching those filter, you can create a rule (section 4.2)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Navigating the grid</summary></entry><entry><title type="html">Categorization ML Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-ML-Suggestion/" rel="alternate" type="text/html" title="Categorization ML Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-ML-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-ML-Suggestion/">&lt;p&gt;As you start labelling records, Unifyd Insights Machine Learning will automatically starts suggesting category for similar records. The suggestion improve as more example are provided. Depending of your dataset (size and number of category), we suggest a threshold of a few hundreds to a thousand categorized rows per category for the ML to produce good recommendation.&lt;/p&gt;
-
-&lt;p&gt;Please note:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;ML are only suggestion. You will need to manually review and approve them by upvoting them.&lt;/li&gt;
-  &lt;li&gt;If the selected catory is wrong, you can  down vote it to select the next suggested category.&lt;/li&gt;
-  &lt;li&gt;At any time you can bulk upvote or downvote item from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Action&lt;/code&gt; menu.&lt;/li&gt;
-  &lt;li&gt;Once categorize the &lt;code class=&quot;highlighter-rouge&quot;&gt;Labels&lt;/code&gt; will show the classified icon” &lt;img src=&quot;/user-documentation/images/sitemap-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/upvote-ml-suggestion.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/upvote-ml-suggestion.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">As you start labelling records, Unifyd Insights Machine Learning will automatically starts suggesting category for similar records. The suggestion improve as more example are provided. Depending of your dataset (size and number of category), we suggest a threshold of a few hundreds to a thousand categorized rows per category for the ML to produce good recommendation.</summary></entry><entry><title type="html">Categorization Download Label</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/" rel="alternate" type="text/html" title="Categorization Download Label" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/">&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/fb038906378b44898d5ad2db8c9a5a8f&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html"></summary></entry><entry><title type="html">Categorization Rules Management</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules/" rel="alternate" type="text/html" title="Categorization Rules Management" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules/">&lt;h2 id=&quot;create-a-rule&quot;&gt;Create a Rule&lt;/h2&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Navigating the grid</summary></entry><entry><title type="html">Categorization Download Label</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/" rel="alternate" type="text/html" title="Categorization Download Label" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/">&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/fb038906378b44898d5ad2db8c9a5a8f&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html"></summary></entry><entry><title type="html">Categorization Rules Management</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules/" rel="alternate" type="text/html" title="Categorization Rules Management" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules/">&lt;h2 id=&quot;create-a-rule&quot;&gt;Create a Rule&lt;/h2&gt;
 
 &lt;p&gt;In this video&lt;/p&gt;
 &lt;ul&gt;

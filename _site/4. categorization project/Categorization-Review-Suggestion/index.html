@@ -14,19 +14,19 @@
 		
 
 		<!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Categorization ML Suggestion | Unifyd Insights Documentation</title>
+<title>Review ML and Rule Category Suggestion | Unifyd Insights Documentation</title>
 <meta name="generator" content="Jekyll v3.7.2" />
-<meta property="og:title" content="Categorization ML Suggestion" />
+<meta property="og:title" content="Review ML and Rule Category Suggestion" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="As you start labelling records, Unifyd Insights Machine Learning will automatically starts suggesting category for similar records. The suggestion improve as more example are provided. Depending of your dataset (size and number of category), we suggest a threshold of a few hundreds to a thousand categorized rows per category for the ML to produce good recommendation." />
-<meta property="og:description" content="As you start labelling records, Unifyd Insights Machine Learning will automatically starts suggesting category for similar records. The suggestion improve as more example are provided. Depending of your dataset (size and number of category), we suggest a threshold of a few hundreds to a thousand categorized rows per category for the ML to produce good recommendation." />
-<link rel="canonical" href="http://localhost:4000/4.%20categorization%20project/Categorization-ML-Suggestion/" />
-<meta property="og:url" content="http://localhost:4000/4.%20categorization%20project/Categorization-ML-Suggestion/" />
+<meta name="description" content="Overview" />
+<meta property="og:description" content="Overview" />
+<link rel="canonical" href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" />
+<meta property="og:url" content="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" />
 <meta property="og:site_name" content="Unifyd Insights Documentation" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-06-17T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"As you start labelling records, Unifyd Insights Machine Learning will automatically starts suggesting category for similar records. The suggestion improve as more example are provided. Depending of your dataset (size and number of category), we suggest a threshold of a few hundreds to a thousand categorized rows per category for the ML to produce good recommendation.","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"url":"http://localhost:4000/4.%20categorization%20project/Categorization-ML-Suggestion/","headline":"Categorization ML Suggestion","dateModified":"2021-06-17T00:00:00+00:00","datePublished":"2021-06-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/4.%20categorization%20project/Categorization-ML-Suggestion/"},"@context":"http://schema.org"}</script>
+{"description":"Overview","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"url":"http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/","headline":"Review ML and Rule Category Suggestion","dateModified":"2021-06-17T00:00:00+00:00","datePublished":"2021-06-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Unifyd Insights Documentation" />
@@ -112,27 +112,107 @@
 		<ul>
 			
 			
+				<li><a href="#overview">Overview</a></li>
+			
+				<li><a href="#label-status">Label Status</a></li>
+			
+				<li><a href="#comment">Comment</a></li>
+			
+				<li><a href="#ml-task-status">ML Task Status</a></li>
+			
+				<li><a href="#rules-status">Rules Status</a></li>
+			
 		</ul>
-		<br><a href="https://github.com/Unifyd-Insights/user-documentation/edit/CloudCannon/_posts/2021-06-17-Categorization-ML-Suggestion.md">Edit this page</a>
+		<br><a href="https://github.com/Unifyd-Insights/user-documentation/edit/CloudCannon/_posts/2021-06-21-Categorization-Review-Suggestion.md">Edit this page</a>
 	</section>
 	<section class="tutorial-content">
-		<h1>Categorization ML Suggestion</h1>
+		<h1>Review ML and Rule Category Suggestion</h1>
 
 		
 		
 		<div class="tutorial-main">
-			<p>As you start labelling records, Unifyd Insights Machine Learning will automatically starts suggesting category for similar records. The suggestion improve as more example are provided. Depending of your dataset (size and number of category), we suggest a threshold of a few hundreds to a thousand categorized rows per category for the ML to produce good recommendation.</p>
+			<h2 id="overview">Overview</h2>
 
-<p>Please note:</p>
+<p>The left panel of the screen display the categorization status for each record.  From left to right it contains</p>
 <ul>
-  <li>ML are only suggestion. You will need to manually review and approve them by upvoting them.</li>
+  <li>check box to select a record</li>
+  <li>Comment  <img src="/user-documentation/images/comments-solid.svg" width="25" height="25" /> section</li>
+  <li>Task  <img src="/user-documentation/images/list-solid.svg" width="25" height="25" />status</li>
+  <li>Machine Learning (ML) categorization status</li>
+  <li>Selected Label by the user</li>
+  <li>Rules categorization status</li>
+  <li>Record id in the catalog</li>
+</ul>
+
+<p><a href="/user-documentation/images/Categorization-Left-Overview.png"><img src="/user-documentation/images/Categorization-Left-Overview.png" alt="" /></a></p>
+
+<h2 id="label-status">Label Status</h2>
+
+<p>At the center the Label Satus (or Selected Label) indicate</p>
+<ul>
+  <li><img src="/user-documentation/images/sitemap-solid.svg" width="25" height="25" /> when a category has been set for the record</li>
+  <li>in light green without icon when there is only</li>
+  <li>Click on the  <img src="/user-documentation/images/sitemap-solid.svg" width="25" height="25" /> icone to see
+    <ul>
+      <li>The user who categorized the row</li>
+      <li>The category selected by the user</li>
+      <li>Select the  <img src="/user-documentation/images/trash-solid.svg" width="25" height="25" /> trash icone to delete the category</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="/user-documentation/images/Categorization-Label-Satus.png"><img src="/user-documentation/images/Categorization-Label-Satus.png" alt="" /></a></p>
+
+<h2 id="comment">Comment</h2>
+
+<p>Comment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon <img src="/user-documentation/images/comments-solid.svg" width="25" height="25" /> indicates there is one or more comment for the record. Click on the icone to open the right panel and view the comment.</p>
+
+<p><a href="/user-documentation/images/Record-Comment.png"><img src="/user-documentation/images/Record-Comment.png" alt="" /></a></p>
+
+<h2 id="ml-task-status">ML Task Status</h2>
+
+<p>As you start labelling records, Unifyd Insights Machine Learning will automatically starts suggesting category for similar records. The suggestion improve as more example are provided. Depending of your dataset (size and number of category), we suggest a threshold of a few hundreds to a thousand categorized rows per category for the ML to produce good recommendation.</p>
+
+<p>On the left panel the ML Suggestion returns the following information</p>
+<ul>
+  <li><img src="/user-documentation/images/android.svg" width="25" height="25" /> Robot with a one green: there is only one ML suggestion for the recor</li>
+  <li><img src="/user-documentation/images/android.svg" width="25" height="25" /> Robot with number yellow: Two ML Suggestion are conflicting. Open the <code class="highlighter-rouge">Suggested Category</code> panel to review the conflict</li>
+  <li><img src="/user-documentation/images/android.svg" width="25" height="25" /> Robot with number in red: Multiple ML Suggestion are conflicting. Open the <code class="highlighter-rouge">Suggested Category</code> panel to review the conflict</li>
+  <li><img src="/user-documentation/images/thumbs-up-solid.svg" width="25" height="25" />Green thumb up: ML Suggestion aggrees with user label</li>
+  <li><img src="/user-documentation/images/thumbs-down-solid.svg" width="25" height="25" />Red thumb down: ML Suggestion disagrees with user label</li>
+</ul>
+
+<p><a href="/user-documentation/images/ML-Task-Status.png"><img src="/user-documentation/images/ML-Task-Status.png" alt="" /></a></p>
+
+<h3 id="approving-ml-suggestion">Approving ML Suggestion</h3>
+
+<p>ML are only suggestion. You will need to manually review and approve them by upvoting them.</p>
+<ul>
   <li>If the selected catory is wrong, you can  down vote it to select the next suggested category.</li>
   <li>At any time you can bulk upvote or downvote item from the <code class="highlighter-rouge">Action</code> menu.</li>
-  <li>Once categorize the <code class="highlighter-rouge">Labels</code> will show the classified icon” <img src="/user-documentation/images/sitemap-solid.svg" width="25" height="25" /></li>
+  <li>Once categorize the <code class="highlighter-rouge">Labels</code> will show the classified icon: <img src="/user-documentation/images/sitemap-solid.svg" width="25" height="25" /></li>
 </ul>
 
 <p><a href="/user-documentation/images/upvote-ml-suggestion.png"><img src="/user-documentation/images/upvote-ml-suggestion.png" alt="" /></a></p>
 
+<h3 id="suggested-category-panel"><code class="highlighter-rouge">Suggested Category</code> panel</h3>
+
+<p>The <code class="highlighter-rouge">Suggested Category</code> panel let you review conflicting ML suggestion.</p>
+
+<p><em>to add</em></p>
+
+<h2 id="rules-status">Rules Status</h2>
+
+<p>On the left panel the Rules Suggestion returns the following information</p>
+<ul>
+  <li><img src="/user-documentation/images/random.svg" width="25" height="25" /> Crossed Arrow with a one green: there is only one rules suggestion for the recor</li>
+  <li><img src="/user-documentation/images/random.svg" width="25" height="25" /> Crossed Arrow with number in red: Multiples Rules Suggestion are conflicting. Open the <code class="highlighter-rouge">Suggested Rule</code> panel to review the conflict</li>
+  <li><img src="/user-documentation/images/random.svg" width="25" height="25" /> Red Exclamation mark: Too many rules conflict with a similar score. Open the <code class="highlighter-rouge">Suggested Rule</code> panel to review the conflict</li>
+  <li><img src="/user-documentation/images/thumbs-up-solid.svg" width="25" height="25" />Green thumb up: Rule Suggestion aggrees with user label</li>
+  <li><img src="/user-documentation/images/thumbs-down-solid.svg" width="25" height="25" />Red thumb down: Rule Suggestion disagrees with user label</li>
+</ul>
+
+<p><a href="/user-documentation/images/Categorization-Rule-Status.png"><img src="/user-documentation/images/Categorization-Rule-Status.png" alt="" /></a></p>
 
 		</div>
 	</section>
