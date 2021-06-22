@@ -14,19 +14,19 @@
 		
 
 		<!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Use Case 1 | Unifyd Insights Documentation</title>
+<title>Matching Two Datasets Together | Unifyd Insights Documentation</title>
 <meta name="generator" content="Jekyll v3.7.2" />
-<meta property="og:title" content="Use Case 1" />
+<meta property="og:title" content="Matching Two Datasets Together" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Content to be created." />
-<meta property="og:description" content="Content to be created." />
-<link rel="canonical" href="http://localhost:4000/use-case1/" />
-<meta property="og:url" content="http://localhost:4000/use-case1/" />
+<meta name="description" content="This use case explain how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify Shipment records matching a VIP Issue. Once the match perform, the data is automatically pushed using webhook into the operation system." />
+<meta property="og:description" content="This use case explain how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify Shipment records matching a VIP Issue. Once the match perform, the data is automatically pushed using webhook into the operation system." />
+<link rel="canonical" href="http://localhost:4000/use-case-matching-two-datasets/" />
+<meta property="og:url" content="http://localhost:4000/use-case-matching-two-datasets/" />
 <meta property="og:site_name" content="Unifyd Insights Documentation" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-06-22T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Content to be created.","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"url":"http://localhost:4000/use-case1/","headline":"Use Case 1","dateModified":"2021-06-22T00:00:00+00:00","datePublished":"2021-06-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/use-case1/"},"@context":"http://schema.org"}</script>
+{"description":"This use case explain how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify Shipment records matching a VIP Issue. Once the match perform, the data is automatically pushed using webhook into the operation system.","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"url":"http://localhost:4000/use-case-matching-two-datasets/","headline":"Matching Two Datasets Together","dateModified":"2021-06-22T00:00:00+00:00","datePublished":"2021-06-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/use-case-matching-two-datasets/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Unifyd Insights Documentation" />
@@ -117,187 +117,135 @@
 		<ul>
 			
 			
+				<li><a href="#project-set-up">Project Set up</a></li>
+			
+				<li><a href="#reviewing-matches">Reviewing Matches</a></li>
+			
 		</ul>
-		<br><a href="https://github.com/Unifyd-Insights/user-documentation/edit/CloudCannon/_posts/2021-06-22-use-case1.md">Edit this page</a>
+		<br><a href="https://github.com/Unifyd-Insights/user-documentation/edit/CloudCannon/_posts/2021-06-22-use-case-matching-two-datasets.md">Edit this page</a>
 	</section>
 	<section class="tutorial-content">
-		<h1>Use Case 1</h1>
+		<h1>Matching Two Datasets Together</h1>
 
 		
 		
 		<div class="tutorial-main">
-			<p>Content to be created.</p>
+			<p>This use case explain how to use Unifyd Insights Platform to match <code class="highlighter-rouge">Shipment</code> data with <code class="highlighter-rouge">VIP Issues</code>. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify <code class="highlighter-rouge">Shipment</code> records matching a <code class="highlighter-rouge">VIP Issue</code>. Once the match perform, the data is automatically pushed using webhook into the operation system.</p>
+
+<h2 id="project-set-up">Project Set up</h2>
+
+<p>This section describes how we set up the project (one time configuration). With the following set up the script is idempotent</p>
+<ul>
+  <li>if we miss an execution, the following one will reset update the process to mirror VIP and Shipment information</li>
+  <li>if there is update made outside Unifyd (directly in VIP for example), Unifyd will reflect those changes at the next update.</li>
+</ul>
+
+<h3 id="data-pipeline-overview">Data Pipeline Overview</h3>
+
+<p>A automated script (aka bot) automates the following steps four times per day (at 9AM, 12PM, 2PM and 7PM EST).</p>
+<ul>
+  <li>Retrive data from the <code class="highlighter-rouge">Shipment</code> and <code class="highlighter-rouge">VIP</code> systems and perform advanced data normalization</li>
+  <li>Update data in Unifyd <strong>dataset</strong> with the following settings
+    <ul>
+      <li>One dataset per system</li>
+      <li>No deduplication set up, we update each dataset in full for two reasons
+        <ul>
+          <li>Ease troubleshooting and data lineage identification. One can review the data as they were inserted in Unifyd</li>
+          <li>We manage the deduplication at the catalog level</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Apply the <strong>Wrangle</strong> to
+    <ul>
+      <li>Convert data type</li>
+      <li>Create the <code class="highlighter-rouge">key</code> used in catalog deduplication rules (see following section).</li>
+    </ul>
+  </li>
+  <li><strong>Map and Upload in a commom catalog</strong> the update to the catatalog as described in the following section</li>
+</ul>
+
+<h3 id="catalog-mapping-configuration">Catalog Mapping Configuration</h3>
+
+<p>The catalog mapping is set up with the following parameters:</p>
+
+<p><strong>Master Records</strong></p>
+<ul>
+  <li>Data coming from <code class="highlighter-rouge">VIP</code> are imported as <code class="highlighter-rouge">Master</code></li>
+  <li>Data coming from the <code class="highlighter-rouge">Shipment</code> are imported as <code class="highlighter-rouge">Non Master</code></li>
+</ul>
+
+<p><strong>Deduplication Rules</strong></p>
+<ul>
+  <li>Data coming from <code class="highlighter-rouge">VIP</code> has the following <code class="highlighter-rouge">KEY = ISSUE NUMBER</code></li>
+  <li>Data coming from the <code class="highlighter-rouge">Shipment</code> file has the following <code class="highlighter-rouge">KEY = ITEM + DIST IT</code></li>
+  <li>The mapping use <code class="highlighter-rouge">Insert new and replace old data</code> using the <code class="highlighter-rouge">KEY</code> field</li>
+</ul>
+
+<h3 id="view-set-up">View Set up</h3>
+
+<p>The current view is configured with optimized</p>
+<ul>
+  <li>Field orders</li>
+  <li>Field size</li>
+  <li>Hide unecessary field</li>
+  <li>Filter on Open and Master Record</li>
+</ul>
+
+<p>Read more on</p>
+<ul>
+  <li><a href="/3.%20catalog%20set%20up/Manage-Catalog-Grid/">Managing the Grid</a></li>
+  <li>View Configuration (<em>to add</em>)</li>
+</ul>
+
+<h2 id="reviewing-matches">Reviewing Matches</h2>
+
+<h3 id="using-the-interface">Using the interface</h3>
+
+<p><a href="/user-documentation/images/Matching-Two-Datasets-Together.png"><img src="/user-documentation/images/Matching-Two-Datasets-Together.png" alt="" /></a></p>
+
+<p>In the view setup the following filter:</p>
+<ul>
+  <li><code class="highlighter-rouge">View_Status = Opened</code></li>
+  <li><code class="highlighter-rouge">Master Record</code></li>
+  <li>Records with no matches</li>
+</ul>
+
+<p>For each record click the robot icon <img src="/user-documentation/images/android.svg" width="25" height="25" /> to open the lower <code class="highlighter-rouge">Matching</code> panel.</p>
+
+<p>In the lower panel select only <code class="highlighter-rouge">non master records</code> (the grey circle) to display only Shipment data. The Matching algorythme ranks potential matches by scores.</p>
+
+<p>The matching interface</p>
+<ul>
+  <li>Highlight in yellow matching string</li>
+  <li>When two rows matches perfectly on the selected field the application will return a score of 100%. Each difference between the master record and the degrade that score</li>
+</ul>
+
+<p>Read more:</p>
+<ul>
+  <li>Unifyd Matching Interface (<em>to add</em>)</li>
+</ul>
+
+<h3 id="searching-for-matches">Searching for Matches</h3>
+
+<p>If the interface does not return a match with a high score you can search for the entire catalog.</p>
+
+<h3 id="webhook">Webhook</h3>
+<p>If you found a match, click on the green check mark to confirm it. Unifyd will automaticall update <code class="highlighter-rouge">VIP</code> platform with the following message <code class="highlighter-rouge">TFE [Current date in MM/DD format] – Please code to supplier item # [matched supplier item number].  Thank you!</code></p>
+
+<p>If there is no matches you can select one of the following webhook</p>
+<ul>
+  <li>Item Not in VIP Item Catalog Yet: <code class="highlighter-rouge">TFE [Current date in MM/DD format] – This item is not available for order or shipping  yet.  Thank you!</code></li>
+  <li>Match Not Wanted: <code class="highlighter-rouge">Match Not Wanted (discontinued item, another suppliers’ item, etc):  TFE [Current date in MM/DD format] – Please code to 6X.  Thank you!</code></li>
+  <li>Missing Distributor Item Details: <code class="highlighter-rouge">TFE [Current date in MM/DD format] – Please ask distributor to provide product details.  Thank you!</code></li>
+</ul>
+
+<p>We will notify you by email if the bot to update VIP failed. You can then manually process the update in VIP.</p>
 
 
 		</div>
 	</section>
 </section>
-
-
-
-
-	<div class="related">
-		<h3>Related tutorials</h3>
-
-		<ul class="listing">
-	
-		<li >
-			<a href="/4.%20categorization%20project/Categorization-Review-Suggestion/">
-				<div class="icon">
-		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
-			<path d="M0 0h24v24H0z" fill="none"/>
-		</svg>
-</div>
-				<article>
-					<div>
-						<h3>Review ML and Rule Category Suggestion</h3>
-						<p class="description"></p>
-					</div>
-				</article>
-			</a>
-		</li>
-	
-		<li >
-			<a href="/2.%20wrangling/Wrangling/">
-				<div class="icon">
-		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
-			<path d="M0 0h24v24H0z" fill="none"/>
-		</svg>
-</div>
-				<article>
-					<div>
-						<h3>Wrangling</h3>
-						<p class="description"></p>
-					</div>
-				</article>
-			</a>
-		</li>
-	
-		<li >
-			<a href="/1.%20introduction/Unifyd-Overview/">
-				<div class="icon">
-		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
-			<path d="M0 0h24v24H0z" fill="none"/>
-		</svg>
-</div>
-				<article>
-					<div>
-						<h3>Unifyd Overview</h3>
-						<p class="description"></p>
-					</div>
-				</article>
-			</a>
-		</li>
-	
-		<li >
-			<a href="/1.%20introduction/Project-Creation/">
-				<div class="icon">
-		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
-			<path d="M0 0h24v24H0z" fill="none"/>
-		</svg>
-</div>
-				<article>
-					<div>
-						<h3>Project and Catalogue Creation</h3>
-						<p class="description"></p>
-					</div>
-				</article>
-			</a>
-		</li>
-	
-		<li >
-			<a href="/5.%20matching%20project/Matching-Project/">
-				<div class="icon">
-		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
-			<path d="M0 0h24v24H0z" fill="none"/>
-		</svg>
-</div>
-				<article>
-					<div>
-						<h3>Matching Introduction</h3>
-						<p class="description"></p>
-					</div>
-				</article>
-			</a>
-		</li>
-	
-		<li >
-			<a href="/3.%20catalogs%20filter/Contains-Filter/">
-				<div class="icon">
-		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
-			<path d="M0 0h24v24H0z" fill="none"/>
-		</svg>
-</div>
-				<article>
-					<div>
-						<h3>Contains Filter</h3>
-						<p class="description"></p>
-					</div>
-				</article>
-			</a>
-		</li>
-	
-		<li >
-			<a href="/4.%20categorization%20project/Categorization-Project/">
-				<div class="icon">
-		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
-			<path d="M0 0h24v24H0z" fill="none"/>
-		</svg>
-</div>
-				<article>
-					<div>
-						<h3>Categorization Introduction</h3>
-						<p class="description"></p>
-					</div>
-				</article>
-			</a>
-		</li>
-	
-		<li >
-			<a href="/4.%20categorization%20project/Categorization-Download-Label/">
-				<div class="icon">
-		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
-			<path d="M0 0h24v24H0z" fill="none"/>
-		</svg>
-</div>
-				<article>
-					<div>
-						<h3>Categorization Download Label</h3>
-						<p class="description"></p>
-					</div>
-				</article>
-			</a>
-		</li>
-	
-		<li >
-			<a href="/4.%20categorization%20project/Categorization-Creating-Rules/">
-				<div class="icon">
-		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
-			<path d="M0 0h24v24H0z" fill="none"/>
-		</svg>
-</div>
-				<article>
-					<div>
-						<h3>Categorization Rules Management</h3>
-						<p class="description"></p>
-					</div>
-				</article>
-			</a>
-		</li>
-	
-</ul>
-	</div>
-
-
 
 
 

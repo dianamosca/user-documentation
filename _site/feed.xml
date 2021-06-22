@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-22T18:33:23+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Use Case 1</title><link href="http://localhost:4000/use-case1/" rel="alternate" type="text/html" title="Use Case 1" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case1</id><content type="html" xml:base="http://localhost:4000/use-case1/">&lt;p&gt;Content to be created.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Content to be created.</summary></entry><entry><title type="html">Review ML and Rule Category Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" rel="alternate" type="text/html" title="Review ML and Rule Category Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-22T21:16:49+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;p&gt;This use case explain how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; records matching a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt;. Once the match perform, the data is automatically pushed using webhook into the operation system.&lt;/p&gt;
+
+&lt;h2 id=&quot;project-set-up&quot;&gt;Project Set up&lt;/h2&gt;
+
+&lt;p&gt;This section describes how we set up the project (one time configuration). With the following set up the script is idempotent&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;if we miss an execution, the following one will reset update the process to mirror VIP and Shipment information&lt;/li&gt;
+  &lt;li&gt;if there is update made outside Unifyd (directly in VIP for example), Unifyd will reflect those changes at the next update.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-pipeline-overview&quot;&gt;Data Pipeline Overview&lt;/h3&gt;
+
+&lt;p&gt;A automated script (aka bot) automates the following steps four times per day (at 9AM, 12PM, 2PM and 7PM EST).&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Retrive data from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; systems and perform advanced data normalization&lt;/li&gt;
+  &lt;li&gt;Update data in Unifyd &lt;strong&gt;dataset&lt;/strong&gt; with the following settings
+    &lt;ul&gt;
+      &lt;li&gt;One dataset per system&lt;/li&gt;
+      &lt;li&gt;No deduplication set up, we update each dataset in full for two reasons
+        &lt;ul&gt;
+          &lt;li&gt;Ease troubleshooting and data lineage identification. One can review the data as they were inserted in Unifyd&lt;/li&gt;
+          &lt;li&gt;We manage the deduplication at the catalog level&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Apply the &lt;strong&gt;Wrangle&lt;/strong&gt; to
+    &lt;ul&gt;
+      &lt;li&gt;Convert data type&lt;/li&gt;
+      &lt;li&gt;Create the &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; used in catalog deduplication rules (see following section).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Map and Upload in a commom catalog&lt;/strong&gt; the update to the catatalog as described in the following section&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;catalog-mapping-configuration&quot;&gt;Catalog Mapping Configuration&lt;/h3&gt;
+
+&lt;p&gt;The catalog mapping is set up with the following parameters:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Master Records&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data coming from &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; are imported as &lt;code class=&quot;highlighter-rouge&quot;&gt;Master&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Data coming from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; are imported as &lt;code class=&quot;highlighter-rouge&quot;&gt;Non Master&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Deduplication Rules&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data coming from &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; has the following &lt;code class=&quot;highlighter-rouge&quot;&gt;KEY = ISSUE NUMBER&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Data coming from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; file has the following &lt;code class=&quot;highlighter-rouge&quot;&gt;KEY = ITEM + DIST IT&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;The mapping use &lt;code class=&quot;highlighter-rouge&quot;&gt;Insert new and replace old data&lt;/code&gt; using the &lt;code class=&quot;highlighter-rouge&quot;&gt;KEY&lt;/code&gt; field&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;view-set-up&quot;&gt;View Set up&lt;/h3&gt;
+
+&lt;p&gt;The current view is configured with optimized&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Field orders&lt;/li&gt;
+  &lt;li&gt;Field size&lt;/li&gt;
+  &lt;li&gt;Hide unecessary field&lt;/li&gt;
+  &lt;li&gt;Filter on Open and Master Record&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Read more on&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/3.%20catalog%20set%20up/Manage-Catalog-Grid/&quot;&gt;Managing the Grid&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;View Configuration (&lt;em&gt;to add&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reviewing-matches&quot;&gt;Reviewing Matches&lt;/h2&gt;
+
+&lt;h3 id=&quot;using-the-interface&quot;&gt;Using the interface&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Matching-Two-Datasets-Together.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Matching-Two-Datasets-Together.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the view setup the following filter:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;View_Status = Opened&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Master Record&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Records with no matches&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For each record click the robot icon &lt;img src=&quot;/user-documentation/images/android.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; to open the lower &lt;code class=&quot;highlighter-rouge&quot;&gt;Matching&lt;/code&gt; panel.&lt;/p&gt;
+
+&lt;p&gt;In the lower panel select only &lt;code class=&quot;highlighter-rouge&quot;&gt;non master records&lt;/code&gt; (the grey circle) to display only Shipment data. The Matching algorythme ranks potential matches by scores.&lt;/p&gt;
+
+&lt;p&gt;The matching interface&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Highlight in yellow matching string&lt;/li&gt;
+  &lt;li&gt;When two rows matches perfectly on the selected field the application will return a score of 100%. Each difference between the master record and the degrade that score&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Read more:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unifyd Matching Interface (&lt;em&gt;to add&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;searching-for-matches&quot;&gt;Searching for Matches&lt;/h3&gt;
+
+&lt;p&gt;If the interface does not return a match with a high score you can search for the entire catalog.&lt;/p&gt;
+
+&lt;h3 id=&quot;webhook&quot;&gt;Webhook&lt;/h3&gt;
+&lt;p&gt;If you found a match, click on the green check mark to confirm it. Unifyd will automaticall update &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; platform with the following message &lt;code class=&quot;highlighter-rouge&quot;&gt;TFE [Current date in MM/DD format] – Please code to supplier item # [matched supplier item number].  Thank you!&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If there is no matches you can select one of the following webhook&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Item Not in VIP Item Catalog Yet: &lt;code class=&quot;highlighter-rouge&quot;&gt;TFE [Current date in MM/DD format] – This item is not available for order or shipping  yet.  Thank you!&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Match Not Wanted: &lt;code class=&quot;highlighter-rouge&quot;&gt;Match Not Wanted (discontinued item, another suppliers’ item, etc):  TFE [Current date in MM/DD format] – Please code to 6X.  Thank you!&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Missing Distributor Item Details: &lt;code class=&quot;highlighter-rouge&quot;&gt;TFE [Current date in MM/DD format] – Please ask distributor to provide product details.  Thank you!&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will notify you by email if the bot to update VIP failed. You can then manually process the update in VIP.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">This use case explain how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify Shipment records matching a VIP Issue. Once the match perform, the data is automatically pushed using webhook into the operation system.</summary></entry><entry><title type="html">Manage Catalog Grid</title><link href="http://localhost:4000/3.%20catalog%20set%20up/Manage-Catalog-Grid/" rel="alternate" type="text/html" title="Manage Catalog Grid" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/3.%20catalog%20set%20up/Manage-Catalog-Grid</id><content type="html" xml:base="http://localhost:4000/3.%20catalog%20set%20up/Manage-Catalog-Grid/">&lt;h2 id=&quot;navigating-the-grid&quot;&gt;Navigating the grid&lt;/h2&gt;
+
+&lt;p&gt;In this video we see how to manage the grid appearance including&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Resize column&lt;/li&gt;
+  &lt;li&gt;Reorder column&lt;/li&gt;
+  &lt;li&gt;Sort column&lt;/li&gt;
+  &lt;li&gt;Change the row height&lt;/li&gt;
+  &lt;li&gt;Hide column&lt;/li&gt;
+  &lt;li&gt;Filter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also see how you can&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Export data&lt;/li&gt;
+  &lt;li&gt;Access the rules generator&lt;/li&gt;
+  &lt;li&gt;Add a comment on a record.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/22d0624e46204812832b066a8f9ddb21&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;This is how you view existing filter applied and clear sorting:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Remove_sort_filter.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Remove_sort_filter.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Navigating the grid</summary></entry><entry><title type="html">Review ML and Rule Category Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" rel="alternate" type="text/html" title="Review ML and Rule Category Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;The left panel of the screen display the categorization status for each record.  From left to right it contains&lt;/p&gt;
 &lt;ul&gt;
@@ -125,7 +258,7 @@
       &lt;li&gt;Numeric Decay %&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Project Creation</summary></entry><entry><title type="html">Contains Filter</title><link href="http://localhost:4000/3.%20catalogs%20filter/Contains-Filter/" rel="alternate" type="text/html" title="Contains Filter" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/3.%20catalogs%20filter/Contains-Filter</id><content type="html" xml:base="http://localhost:4000/3.%20catalogs%20filter/Contains-Filter/">&lt;p&gt;In this tutorial we walk through the contains filter on a catalogue including usage of&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Project Creation</summary></entry><entry><title type="html">Contains Filter</title><link href="http://localhost:4000/3.%20catalog%20set%20up/Contains-Filter/" rel="alternate" type="text/html" title="Contains Filter" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/3.%20catalog%20set%20up/Contains-Filter</id><content type="html" xml:base="http://localhost:4000/3.%20catalog%20set%20up/Contains-Filter/">&lt;p&gt;In this tutorial we walk through the contains filter on a catalogue including usage of&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;All Of&lt;/code&gt;  to search all word separated by comma (AND search)&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Any Of&lt;/code&gt; to search any word separated by comma (OR search)&lt;/li&gt;
@@ -140,32 +273,7 @@
   &lt;li&gt;Note that at this stage you cannot search string that contains a comma &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; (&lt;a href=&quot;https://unifyd.atlassian.net/browse/UNPR-1092&quot;&gt;UNPR-1092&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/71d17681c7d94543ae0cb8ccb472109b&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">In this tutorial we walk through the contains filter on a catalogue including usage of All Of to search all word separated by comma (AND search) Any Of to search any word separated by comma (OR search) Build complex search by combining multiple string with AND / OR / BUT NOT operators Use Case Sensitive either for a specific word</summary></entry><entry><title type="html">Categorization Introduction</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" rel="alternate" type="text/html" title="Categorization Introduction" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Project</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Project/">&lt;h2 id=&quot;navigating-the-grid&quot;&gt;Navigating the grid&lt;/h2&gt;
-
-&lt;p&gt;In this video we see how to manage the grid appearance including&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Resize column&lt;/li&gt;
-  &lt;li&gt;Reorder column&lt;/li&gt;
-  &lt;li&gt;Sort column&lt;/li&gt;
-  &lt;li&gt;Change the row height&lt;/li&gt;
-  &lt;li&gt;Hide column&lt;/li&gt;
-  &lt;li&gt;Filter&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We also see how you can&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Export data&lt;/li&gt;
-  &lt;li&gt;Access the rules generator&lt;/li&gt;
-  &lt;li&gt;Add a comment on a record.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/22d0624e46204812832b066a8f9ddb21&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;p&gt;This is how you view existing filter applied and clear sorting:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Remove_sort_filter.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Remove_sort_filter.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;creating-a-project&quot;&gt;Creating a project&lt;/h2&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/71d17681c7d94543ae0cb8ccb472109b&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">In this tutorial we walk through the contains filter on a catalogue including usage of All Of to search all word separated by comma (AND search) Any Of to search any word separated by comma (OR search) Build complex search by combining multiple string with AND / OR / BUT NOT operators Use Case Sensitive either for a specific word</summary></entry><entry><title type="html">Categorization Create Project</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" rel="alternate" type="text/html" title="Categorization Create Project" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Project</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Project/">&lt;h2 id=&quot;creating-a-project&quot;&gt;Creating a project&lt;/h2&gt;
 
 &lt;p&gt;In this video we review how to&lt;/p&gt;
 &lt;ul&gt;
@@ -182,62 +290,4 @@
   &lt;li&gt;Filter your records to find multiple records matching the same category and select all of them before selecting a category. If you want to automatically categorize all records matching those filter, you can create a rule (section 4.2)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Navigating the grid</summary></entry><entry><title type="html">Categorization Download Label</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/" rel="alternate" type="text/html" title="Categorization Download Label" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/">&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/fb038906378b44898d5ad2db8c9a5a8f&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html"></summary></entry><entry><title type="html">Categorization Rules Management</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules/" rel="alternate" type="text/html" title="Categorization Rules Management" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules/">&lt;h2 id=&quot;create-a-rule&quot;&gt;Create a Rule&lt;/h2&gt;
-
-&lt;p&gt;In this video&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Create a filter to validate the set of records we want to apply a rules to&lt;/li&gt;
-  &lt;li&gt;Create a rule&lt;/li&gt;
-  &lt;li&gt;Filter records with the rules applied&lt;/li&gt;
-  &lt;li&gt;Identified records with conflicting rules&lt;/li&gt;
-  &lt;li&gt;View at the project level all rules and the number of records impacted.&lt;/li&gt;
-  &lt;li&gt;Export / Import rules&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/f07f86baeecc4cb1be9996869c9b96ea&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt; 
-If you want your rules to apply the label directly you need to select &lt;code class=&quot;highlighter-rouge&quot;&gt;Auto Label Record&lt;/code&gt; option during the rule creation&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/auto-label-record.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/auto-label-record.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;edit-rules&quot;&gt;Edit Rules&lt;/h2&gt;
-
-&lt;p&gt;We currently do not support Rules Edition. You will need to delete the rules and recreate it with your modification.&lt;/p&gt;
-
-&lt;p&gt;See Feature &lt;a href=&quot;https://unifyd.atlassian.net/browse/UNPR-1170&quot;&gt;UNPR-1170&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;delete-rules&quot;&gt;Delete Rules&lt;/h2&gt;
-
-&lt;p&gt;This tutorial explain how you can delete a categorization rules.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Find a Record with the rules and click the cross arrow icone&lt;/li&gt;
-  &lt;li&gt;Click the eye icone to open the rule panel&lt;/li&gt;
-  &lt;li&gt;Select delete&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Delete_Categorization_Rule.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Delete_Categorization_Rule.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;We also recorded a quick walkthrough.&lt;/p&gt;
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/79073ba0c85f459994bcfcb0f3027b3a&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;downloading-and-uploading-rules&quot;&gt;Downloading and Uploading Rules&lt;/h2&gt;
-
-&lt;p&gt;This tutorial explain how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial we only use the filter &lt;code class=&quot;highlighter-rouge&quot;&gt;contains&lt;/code&gt; on a single column.&lt;/p&gt;
-
-&lt;p&gt;Using the &lt;a href=&quot;/asset/rules-task-template.xlsx&quot;&gt;rules-task-template.xlsx&lt;/a&gt; template (line 2 and 3 are available as example, you can delete them):&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt;:  Name of the rule as it will appear in Unifyd Interface&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt;: Name of the category it should be mapped to. You need to provide the full path of the category. We recommend that you copy the value from the Unifyd interface.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;filters&lt;/code&gt;: &lt;strong&gt;do not edit this column&lt;/strong&gt; The Excel formula concatenante the value from column D to G to generate the filter expression for Unifyd. The formula is
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;=&quot;{&quot;&quot;&quot;&amp;amp;D2&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;:{&quot;&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;operand&quot;&quot;&quot;&amp;amp;&quot;:[&quot;&quot;&quot;&amp;amp;F2&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;,&quot;&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;G2&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;,&quot;&quot;&quot;&amp;amp;&quot;0&quot;&quot;&quot;&amp;amp;&quot;,&quot;&quot;&quot;&amp;amp;&quot;0&quot;&quot;&quot;&amp;amp;&quot;],&quot;&quot;&quot;&amp;amp;&quot;operator&quot;&quot;&quot;&amp;amp;&quot;:&quot;&quot;&quot;&amp;amp;E2&amp;amp;&quot;&quot;&quot;&quot;&amp;amp;&quot;}}&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;Update the following columns to generate the &lt;code class=&quot;highlighter-rouge&quot;&gt;filters&lt;/code&gt; expression&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Data Column Used&lt;/code&gt;: Which column is used for filtering. It should match the column name in Unifyd.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Filter Type&lt;/code&gt;: in this tutorial we only use &lt;code class=&quot;highlighter-rouge&quot;&gt;CONTAINS&lt;/code&gt; (in UpperCase only)&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Filter Variable&lt;/code&gt;: the keyword to search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point, you will need to create one filter for each value&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;But Not Variable&lt;/code&gt;: the keyword to exclude from the search. It can contains only one and only one keyword. Unifyd do not support array or list of search at this point.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Once your rules generated, you can copy and use paste special without the formula (using &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+Alt+V&lt;/code&gt; see &lt;a href=&quot;https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows&quot;&gt;Office documentation&lt;/a&gt;) the columns &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;filters&lt;/code&gt; to the &lt;a href=&quot;/asset/rules-task-template.csv&quot;&gt;rules-task-template.csv&lt;/a&gt; document and save it as csv.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Create a Rule</summary></entry></feed>
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Creating a project</summary></entry><entry><title type="html">Categorization Download Label</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/" rel="alternate" type="text/html" title="Categorization Download Label" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/">&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/fb038906378b44898d5ad2db8c9a5a8f&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html"></summary></entry></feed>

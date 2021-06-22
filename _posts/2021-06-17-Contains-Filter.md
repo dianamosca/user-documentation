@@ -2,7 +2,7 @@
 date: 2021-06-17
 title: Contains Filter
 categories:
-- 3. Catalogs Filter
+- 3. Catalog Set up
 description:
 type: Document
 ---

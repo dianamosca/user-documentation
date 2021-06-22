@@ -45,33 +45,6 @@ layout: default
 		{% include listings.html listings=series_posts numbered=true%}
 	</div>
 {% endif %}
-{% assign related_posts = site.related_posts %}
-{% assign related_posts_size = related_posts | size %}
-{% if related_posts_size > 0 %}
-	<div class="related">
-		<h3>Related tutorials</h3>
-
-		{% include listings.html listings=site.related_posts %}
-	</div>
-{% endif %}
-
-{% if site.disqus_shortname and page.comments %}
-	<div id="disqus_thread"></div>
-	<script>
-		var disqus_shortname = '{{ site.disqus_shortname }}';
-		var disqus_config = function () {
-			this.page.url = "{{ page.url | prepend: site.url }}";
-			this.page.identifier = "{{ page.id }}";
-		};
-		(function() {  // DON'T EDIT BELOW THIS LINE
-			var d = document, s = d.createElement('script');
-			s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-		})();
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-{% endif %}
 
 
 <script src="{{ site.baseurl }}/js/main.js"></script>
