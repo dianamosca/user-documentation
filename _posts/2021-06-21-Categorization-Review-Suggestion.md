@@ -12,8 +12,8 @@ type: Document
 
 The left panel of the screen display the categorization status for each record.  From left to right it contains
 * check box to select a record
-* Comment  <img src="/user-documentation/images/comments-solid.svg" width="25" height="25"> section
-* Task  <img src="/user-documentation/images/list-solid.svg" width="25" height="25">status
+* Comment section: <img src="/user-documentation/images/comments-solid.svg" width="25" height="25"> 
+* Task status: <img src="/user-documentation/images/list-solid.svg" width="25" height="25">
 * Machine Learning (ML) categorization status
 * Selected Label by the user
 * Rules categorization status
@@ -26,10 +26,10 @@ The left panel of the screen display the categorization status for each record. 
 At the center the Label Satus (or Selected Label) indicate
 *  <img src="/user-documentation/images/sitemap-solid.svg" width="25" height="25"> when a category has been set for the record
 * in light green without icon when there is only 
-* Click on the  <img src="/user-documentation/images/sitemap-solid.svg" width="25" height="25"> icone to see
+* Click on the  <img src="/user-documentation/images/sitemap-solid.svg" width="25" height="25"> icon to see
   * The user who categorized the row
   * The category selected by the user
-  * Select the  <img src="/user-documentation/images/trash-solid.svg" width="25" height="25"> trash icone to delete the category
+  * Select the  <img src="/user-documentation/images/trash-solid.svg" width="25" height="25"> trash icon to delete the category
 
 
 [![](/user-documentation/images/Categorization-Label-Satus.png)](/user-documentation/images/Categorization-Label-Satus.png)
@@ -37,7 +37,7 @@ At the center the Label Satus (or Selected Label) indicate
 
 ## Comment
 
-Comment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon <img src="/user-documentation/images/comments-solid.svg" width="25" height="25"> indicates there is one or more comment for the record. Click on the icone to open the right panel and view the comment. 
+Comment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon <img src="/user-documentation/images/comments-solid.svg" width="25" height="25"> indicates there is one or more comment for the record. Click on the icon to open the right panel and view the comment. 
 
 [![](/user-documentation/images/Record-Comment.png)](/user-documentation/images/Record-Comment.png)
 

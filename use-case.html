@@ -1,0 +1,7 @@
+---
+---
+{% assign use-case = site.posts | where: "type", "use-case" | sort: "title" %}
+
+<h2>Use Cases <span class="count">({{ use-case | size }})</span></h2>
+
+{% include listings.html listings=use-case %}

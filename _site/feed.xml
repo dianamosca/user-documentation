@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-21T21:30:23+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Review ML and Rule Category Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" rel="alternate" type="text/html" title="Review ML and Rule Category Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-22T18:33:23+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Use Case 1</title><link href="http://localhost:4000/use-case1/" rel="alternate" type="text/html" title="Use Case 1" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case1</id><content type="html" xml:base="http://localhost:4000/use-case1/">&lt;p&gt;Content to be created.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Content to be created.</summary></entry><entry><title type="html">Review ML and Rule Category Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" rel="alternate" type="text/html" title="Review ML and Rule Category Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;The left panel of the screen display the categorization status for each record.  From left to right it contains&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;check box to select a record&lt;/li&gt;
-  &lt;li&gt;Comment  &lt;img src=&quot;/user-documentation/images/comments-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; section&lt;/li&gt;
-  &lt;li&gt;Task  &lt;img src=&quot;/user-documentation/images/list-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;status&lt;/li&gt;
+  &lt;li&gt;Comment section: &lt;img src=&quot;/user-documentation/images/comments-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Task status: &lt;img src=&quot;/user-documentation/images/list-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Machine Learning (ML) categorization status&lt;/li&gt;
   &lt;li&gt;Selected Label by the user&lt;/li&gt;
   &lt;li&gt;Rules categorization status&lt;/li&gt;
@@ -19,11 +19,11 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;img src=&quot;/user-documentation/images/sitemap-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; when a category has been set for the record&lt;/li&gt;
   &lt;li&gt;in light green without icon when there is only&lt;/li&gt;
-  &lt;li&gt;Click on the  &lt;img src=&quot;/user-documentation/images/sitemap-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; icone to see
+  &lt;li&gt;Click on the  &lt;img src=&quot;/user-documentation/images/sitemap-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; icon to see
     &lt;ul&gt;
       &lt;li&gt;The user who categorized the row&lt;/li&gt;
       &lt;li&gt;The category selected by the user&lt;/li&gt;
-      &lt;li&gt;Select the  &lt;img src=&quot;/user-documentation/images/trash-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; trash icone to delete the category&lt;/li&gt;
+      &lt;li&gt;Select the  &lt;img src=&quot;/user-documentation/images/trash-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; trash icon to delete the category&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -32,7 +32,7 @@
 
 &lt;h2 id=&quot;comment&quot;&gt;Comment&lt;/h2&gt;
 
-&lt;p&gt;Comment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon &lt;img src=&quot;/user-documentation/images/comments-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; indicates there is one or more comment for the record. Click on the icone to open the right panel and view the comment.&lt;/p&gt;
+&lt;p&gt;Comment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon &lt;img src=&quot;/user-documentation/images/comments-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; indicates there is one or more comment for the record. Click on the icon to open the right panel and view the comment.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/user-documentation/images/Record-Comment.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Record-Comment.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
