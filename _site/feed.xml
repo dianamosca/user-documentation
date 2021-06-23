@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-22T21:16:49+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;p&gt;This use case explain how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; records matching a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt;. Once the match perform, the data is automatically pushed using webhook into the operation system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-22T21:19:02+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;p&gt;This use case explain how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; records matching a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt;. Once the match perform, the data is automatically pushed using webhook into the operation system.&lt;/p&gt;
 
 &lt;h2 id=&quot;project-set-up&quot;&gt;Project Set up&lt;/h2&gt;
 
@@ -60,7 +60,7 @@
   &lt;li&gt;Filter on Open and Master Record&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Read more on&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Read more:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/3.%20catalog%20set%20up/Manage-Catalog-Grid/&quot;&gt;Managing the Grid&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;View Configuration (&lt;em&gt;to add&lt;/em&gt;)&lt;/li&gt;
@@ -89,7 +89,7 @@
   &lt;li&gt;When two rows matches perfectly on the selected field the application will return a score of 100%. Each difference between the master record and the degrade that score&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Read more:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Read more:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Unifyd Matching Interface (&lt;em&gt;to add&lt;/em&gt;)&lt;/li&gt;
 &lt;/ul&gt;

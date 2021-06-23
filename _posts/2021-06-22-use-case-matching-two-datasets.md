@@ -53,7 +53,7 @@ The current view is configured with optimized
 * Hide unecessary field
 * Filter on Open and Master Record 
 
-Read more on 
+**Read more:** 
 * [Managing the Grid](/3.%20catalog%20set%20up/Manage-Catalog-Grid/)
 * View Configuration (_to add_)
 
@@ -76,7 +76,7 @@ The matching interface
 * Highlight in yellow matching string
 * When two rows matches perfectly on the selected field the application will return a score of 100%. Each difference between the master record and the degrade that score
 
-Read more:
+**Read more:**
 * Unifyd Matching Interface (_to add_)
 
 ### Searching for Matches
