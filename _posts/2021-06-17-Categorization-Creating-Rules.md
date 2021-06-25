@@ -21,10 +21,18 @@ In this video
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/f07f86baeecc4cb1be9996869c9b96ea" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 <br> 
+
+### Auto Label Record 
+
 If you want your rules to apply the label directly, you need to select the `Auto Label Record` option during the rule creation. 
 
 [![Image auto-label-record](/user-documentation/images/auto-label-record.png)](/user-documentation/images/auto-label-record.png)
 
+If your rules has
+* Less than 1,000 records the new label will be applied within few seconds (you can refresh the page to see them)
+* More than 1,000 records, the application will trigger a background job. You can follow its progress in the job panel (see screenshot below)
+
+[![rules-background-job.png](/user-documentation/images/rules-background-job.png)](/user-documentation/images/rules-background-job.png)
 
 ## Edit Rules
 
