@@ -6,27 +6,29 @@ description:
 type: use-case
 ---
 
-This use case explain how to use Unifyd Insights Platform to match `Shipment` data with `VIP Issues`. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify `Shipment` records matching a `VIP Issue`. Once the match perform, the data is automatically pushed using webhook into the operation system. 
+This use case explains how to use Unifyd Insights Platform to match `Shipment` data with `VIP Issues`. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a `VIP Issue` with a `Shipment` record. Then, once a match is made, we update the VIP platform automatically using webhook. 
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/a4aef116c4734e608a5006ba049ca585" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ## Project Set up 
 
-This section describes how we set up the project (one time configuration). With the following set up the script is idempotent 
+This section describes how we set up the project (one-time configuration). With the following set up the script is idempotent 
 * if we miss an execution, the following one will reset update the process to mirror VIP and Shipment information
-* if there is update made outside Unifyd (directly in VIP for example), Unifyd will reflect those changes at the next update.
+* if there is an update made outside Unifyd (directly in VIP, for example), Unifyd will reflect those changes at the next update.
 
 ### Data Pipeline Overview 
 
-A automated script (aka bot) automates the following steps four times per day (at 9AM, 12PM, 2PM and 7PM EST). 
-* Retrive data from the `Shipment` and `VIP` systems and perform advanced data normalization
+An automated script (aka bot) automates the following steps four times per day (at 9 AM, 12 PM, 2 PM, and 7 PM EST). 
+* Retrieve data from the `Shipment` and `VIP` systems and perform advanced data normalization
 * Update data in Unifyd **dataset** with the following settings
   * One dataset per system
-  * No deduplication set up, we update each dataset in full for two reasons
-      * Ease troubleshooting and data lineage identification. One can review the data as they were inserted in Unifyd
+  * No deduplication set up; we update each dataset entirely for two reasons:
+      * To ease troubleshooting and data lineage identification. One can review the data coming from each production system as we inserted them in Unifyd
       * We manage the deduplication at the catalog level
 * Apply the **Wrangle** to 
   * Convert data type
-  * Create the `key` used in catalog deduplication rules (see following section). 
-* **Map and Upload in a commom catalog** the update to the catatalog as described in the following section
+  * Create the `key` used in catalog deduplication rules (more details in the next section). 
+* **Map and Upload in a unique catalog** the update to the catalog as described in the following section
 
  
 
@@ -47,10 +49,10 @@ The catalog mapping is set up with the following parameters:
 
 ### View Set up 
 
-The current view is configured with optimized
+The current view is configured to review and match open items from VIP rapidly.
 * Field orders
 * Field size
-* Hide unecessary field
+* Hide unnecessary field
 * Filter on Open and Master Record 
 
 **Read more:** 
@@ -61,7 +63,7 @@ The current view is configured with optimized
 
 ### Using the interface
 
-[![](/user-documentation/images/Matching-Two-Datasets-Together.png)](/user-documentation/images/Matching-Two-Datasets-Together.png)
+[![Matching-Two-Datasets-Together.png](/user-documentation/images/Matching-Two-Datasets-Together.png)](/user-documentation/images/Matching-Two-Datasets-Together.png)
 
 In the view setup the following filter:
 * `View_Status = Opened`
@@ -70,24 +72,24 @@ In the view setup the following filter:
 
 For each record click the robot icon <img src="/user-documentation/images/android.svg" width="25" height="25"> to open the lower `Matching` panel. 
 
-In the lower panel select only `non master records` (the grey circle) to display only Shipment data. The Matching algorythme ranks potential matches by scores. 
+In the lower panel, select only `non master records` (the grey circle) to display only Shipment data. The Matching algorithm ranks potential matches by scores. 
 
 The matching interface
 * Highlight in yellow matching string
-* When two rows matches perfectly on the selected field the application will return a score of 100%. Each difference between the master record and the degrade that score
+* When two rows match perfectly on the selected field, the application will return a score of 100%. Each difference between the master record and the degrade that score
 
 **Read more:**
 * Unifyd Matching Interface (_to add_)
 
 ### Searching for Matches
 
-If the interface does not return a match with a high score you can search for the entire catalog.
+If the interface does not return a match with a high score, you can search for the entire catalog.
 
 ### Webhook
-If you found a match, click on the green check mark to confirm it. Unifyd will automaticall update `VIP` platform with the following message `TFE [Current date in MM/DD format] – Please code to supplier item # [matched supplier item number].  Thank you!`
+If you found a match, click on the green check mark to confirm it. Unifyd will automatically update `VIP` platform with the following message `TFE [Current date in MM/DD format] – Please code to supplier item # [matched supplier item number].  Thank you!`
 
-If there is no matches you can select one of the following webhook
-* Item Not in VIP Item Catalog Yet: `TFE [Current date in MM/DD format] – This item is not available for order or shipping  yet.  Thank you!`
+If there are no matches, you can select one of the following webhook
+* Item Not in VIP Item Catalog Yet: `TFE [Current date in MM/DD format] – This item is not available for order or shipping yet.  Thank you!`
 * Match Not Wanted: `Match Not Wanted (discontinued item, another suppliers’ item, etc):  TFE [Current date in MM/DD format] – Please code to 6X.  Thank you!`
 * Missing Distributor Item Details: `TFE [Current date in MM/DD format] – Please ask distributor to provide product details.  Thank you!`
 

@@ -11,7 +11,7 @@ type: Document
 Video Content: How to access
 * Project
 * Dataset
-* Wrange/Recipe
+* Wrangle/Recipe
 * Catalogue
 * ML Task
 

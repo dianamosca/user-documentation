@@ -18,15 +18,15 @@
 <meta name="generator" content="Jekyll v3.7.2" />
 <meta property="og:title" content="Matching Two Datasets Together" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This use case explain how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify Shipment records matching a VIP Issue. Once the match perform, the data is automatically pushed using webhook into the operation system." />
-<meta property="og:description" content="This use case explain how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify Shipment records matching a VIP Issue. Once the match perform, the data is automatically pushed using webhook into the operation system." />
+<meta name="description" content="This use case explains how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a VIP Issue with a Shipment record. Then, once a match is made, we update the VIP platform automatically using webhook." />
+<meta property="og:description" content="This use case explains how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a VIP Issue with a Shipment record. Then, once a match is made, we update the VIP platform automatically using webhook." />
 <link rel="canonical" href="http://localhost:4000/use-case-matching-two-datasets/" />
 <meta property="og:url" content="http://localhost:4000/use-case-matching-two-datasets/" />
 <meta property="og:site_name" content="Unifyd Insights Documentation" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-06-22T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"This use case explain how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify Shipment records matching a VIP Issue. Once the match perform, the data is automatically pushed using webhook into the operation system.","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"url":"http://localhost:4000/use-case-matching-two-datasets/","headline":"Matching Two Datasets Together","dateModified":"2021-06-22T00:00:00+00:00","datePublished":"2021-06-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/use-case-matching-two-datasets/"},"@context":"http://schema.org"}</script>
+{"description":"This use case explains how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a VIP Issue with a Shipment record. Then, once a match is made, we update the VIP platform automatically using webhook.","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"url":"http://localhost:4000/use-case-matching-two-datasets/","headline":"Matching Two Datasets Together","dateModified":"2021-06-22T00:00:00+00:00","datePublished":"2021-06-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/use-case-matching-two-datasets/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Unifyd Insights Documentation" />
@@ -130,27 +130,29 @@
 		
 		
 		<div class="tutorial-main">
-			<p>This use case explain how to use Unifyd Insights Platform to match <code class="highlighter-rouge">Shipment</code> data with <code class="highlighter-rouge">VIP Issues</code>. In this scenario Unifyd Insight application mirror data from two systems. We use Unifyd Insights to perform identify <code class="highlighter-rouge">Shipment</code> records matching a <code class="highlighter-rouge">VIP Issue</code>. Once the match perform, the data is automatically pushed using webhook into the operation system.</p>
+			<p>This use case explains how to use Unifyd Insights Platform to match <code class="highlighter-rouge">Shipment</code> data with <code class="highlighter-rouge">VIP Issues</code>. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a <code class="highlighter-rouge">VIP Issue</code> with a <code class="highlighter-rouge">Shipment</code> record. Then, once a match is made, we update the VIP platform automatically using webhook.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/a4aef116c4734e608a5006ba049ca585" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 <h2 id="project-set-up">Project Set up</h2>
 
-<p>This section describes how we set up the project (one time configuration). With the following set up the script is idempotent</p>
+<p>This section describes how we set up the project (one-time configuration). With the following set up the script is idempotent</p>
 <ul>
   <li>if we miss an execution, the following one will reset update the process to mirror VIP and Shipment information</li>
-  <li>if there is update made outside Unifyd (directly in VIP for example), Unifyd will reflect those changes at the next update.</li>
+  <li>if there is an update made outside Unifyd (directly in VIP, for example), Unifyd will reflect those changes at the next update.</li>
 </ul>
 
 <h3 id="data-pipeline-overview">Data Pipeline Overview</h3>
 
-<p>A automated script (aka bot) automates the following steps four times per day (at 9AM, 12PM, 2PM and 7PM EST).</p>
+<p>An automated script (aka bot) automates the following steps four times per day (at 9 AM, 12 PM, 2 PM, and 7 PM EST).</p>
 <ul>
-  <li>Retrive data from the <code class="highlighter-rouge">Shipment</code> and <code class="highlighter-rouge">VIP</code> systems and perform advanced data normalization</li>
+  <li>Retrieve data from the <code class="highlighter-rouge">Shipment</code> and <code class="highlighter-rouge">VIP</code> systems and perform advanced data normalization</li>
   <li>Update data in Unifyd <strong>dataset</strong> with the following settings
     <ul>
       <li>One dataset per system</li>
-      <li>No deduplication set up, we update each dataset in full for two reasons
+      <li>No deduplication set up; we update each dataset entirely for two reasons:
         <ul>
-          <li>Ease troubleshooting and data lineage identification. One can review the data as they were inserted in Unifyd</li>
+          <li>To ease troubleshooting and data lineage identification. One can review the data coming from each production system as we inserted them in Unifyd</li>
           <li>We manage the deduplication at the catalog level</li>
         </ul>
       </li>
@@ -159,10 +161,10 @@
   <li>Apply the <strong>Wrangle</strong> to
     <ul>
       <li>Convert data type</li>
-      <li>Create the <code class="highlighter-rouge">key</code> used in catalog deduplication rules (see following section).</li>
+      <li>Create the <code class="highlighter-rouge">key</code> used in catalog deduplication rules (more details in the next section).</li>
     </ul>
   </li>
-  <li><strong>Map and Upload in a commom catalog</strong> the update to the catatalog as described in the following section</li>
+  <li><strong>Map and Upload in a unique catalog</strong> the update to the catalog as described in the following section</li>
 </ul>
 
 <h3 id="catalog-mapping-configuration">Catalog Mapping Configuration</h3>
@@ -184,11 +186,11 @@
 
 <h3 id="view-set-up">View Set up</h3>
 
-<p>The current view is configured with optimized</p>
+<p>The current view is configured to review and match open items from VIP rapidly.</p>
 <ul>
   <li>Field orders</li>
   <li>Field size</li>
-  <li>Hide unecessary field</li>
+  <li>Hide unnecessary field</li>
   <li>Filter on Open and Master Record</li>
 </ul>
 
@@ -202,7 +204,7 @@
 
 <h3 id="using-the-interface">Using the interface</h3>
 
-<p><a href="/user-documentation/images/Matching-Two-Datasets-Together.png"><img src="/user-documentation/images/Matching-Two-Datasets-Together.png" alt="" /></a></p>
+<p><a href="/user-documentation/images/Matching-Two-Datasets-Together.png"><img src="/user-documentation/images/Matching-Two-Datasets-Together.png" alt="Matching-Two-Datasets-Together.png" /></a></p>
 
 <p>In the view setup the following filter:</p>
 <ul>
@@ -213,12 +215,12 @@
 
 <p>For each record click the robot icon <img src="/user-documentation/images/android.svg" width="25" height="25" /> to open the lower <code class="highlighter-rouge">Matching</code> panel.</p>
 
-<p>In the lower panel select only <code class="highlighter-rouge">non master records</code> (the grey circle) to display only Shipment data. The Matching algorythme ranks potential matches by scores.</p>
+<p>In the lower panel, select only <code class="highlighter-rouge">non master records</code> (the grey circle) to display only Shipment data. The Matching algorithm ranks potential matches by scores.</p>
 
 <p>The matching interface</p>
 <ul>
   <li>Highlight in yellow matching string</li>
-  <li>When two rows matches perfectly on the selected field the application will return a score of 100%. Each difference between the master record and the degrade that score</li>
+  <li>When two rows match perfectly on the selected field, the application will return a score of 100%. Each difference between the master record and the degrade that score</li>
 </ul>
 
 <p><strong>Read more:</strong></p>
@@ -228,14 +230,14 @@
 
 <h3 id="searching-for-matches">Searching for Matches</h3>
 
-<p>If the interface does not return a match with a high score you can search for the entire catalog.</p>
+<p>If the interface does not return a match with a high score, you can search for the entire catalog.</p>
 
 <h3 id="webhook">Webhook</h3>
-<p>If you found a match, click on the green check mark to confirm it. Unifyd will automaticall update <code class="highlighter-rouge">VIP</code> platform with the following message <code class="highlighter-rouge">TFE [Current date in MM/DD format] – Please code to supplier item # [matched supplier item number].  Thank you!</code></p>
+<p>If you found a match, click on the green check mark to confirm it. Unifyd will automatically update <code class="highlighter-rouge">VIP</code> platform with the following message <code class="highlighter-rouge">TFE [Current date in MM/DD format] – Please code to supplier item # [matched supplier item number].  Thank you!</code></p>
 
-<p>If there is no matches you can select one of the following webhook</p>
+<p>If there are no matches, you can select one of the following webhook</p>
 <ul>
-  <li>Item Not in VIP Item Catalog Yet: <code class="highlighter-rouge">TFE [Current date in MM/DD format] – This item is not available for order or shipping  yet.  Thank you!</code></li>
+  <li>Item Not in VIP Item Catalog Yet: <code class="highlighter-rouge">TFE [Current date in MM/DD format] – This item is not available for order or shipping yet.  Thank you!</code></li>
   <li>Match Not Wanted: <code class="highlighter-rouge">Match Not Wanted (discontinued item, another suppliers’ item, etc):  TFE [Current date in MM/DD format] – Please code to 6X.  Thank you!</code></li>
   <li>Missing Distributor Item Details: <code class="highlighter-rouge">TFE [Current date in MM/DD format] – Please ask distributor to provide product details.  Thank you!</code></li>
 </ul>

@@ -7,12 +7,9 @@ description:
 type: Document
 ---
 
-Content to be created
+----
+**Note**
 
-###  1. Using Wrangle
+Content to be created.
 
-#### 1.1 Creating / Reusing a Wrangle
-
-#### 1.2 Using Facets
-
-### 2. Mapping a wrangle to a Catalogue
+---
