@@ -28,9 +28,7 @@ If you want your rules to apply the label directly, you need to select the `Auto
 
 ## Edit Rules
 
-We currently do not support Rules Edition. You will need to delete the rule and recreate it with your modification. 
-
-See Feature [UNPR-1170](https://unifyd.atlassian.net/browse/UNPR-1170)
+We currently do not support Rules Edition. You will need to delete the rule and recreate it with your modification.[^1]
 
 ## Delete Rules
 
@@ -69,3 +67,5 @@ Update the following columns to generate the `filters` expression
 * `But Not Variable`: the keyword to exclude from the search. It can contain only one and only one keyword. Unifyd does not support an array or list of searches at this point. 
 
 Once your rules are generated, you can copy and paste special without the formula (using `Ctrl+Alt+V` see [Office documentation](https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows)) the columns `name` `output` `filters` to the [rules-task-template.csv](/asset/rules-task-template.csv) document and save it as csv. 
+
+[^1]: See Feature [UNPR-1170](https://unifyd.atlassian.net/browse/UNPR-1170)
