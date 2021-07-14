@@ -2,7 +2,7 @@
 date: 2021-06-17
 title: Wrangling
 categories:
-- 2. Wrangling
+- Wrangling
 description:
 type: Document
 ---
