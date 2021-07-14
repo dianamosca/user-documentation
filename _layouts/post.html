@@ -5,10 +5,7 @@ layout: default
 <section class="tutorial">
 	<section class="sidebar sticky">
 		<ul>
-			{% assign sub_navigation = content | extract_element: 'h2' %}
-			{% for item in sub_navigation %}
-				<li><a href="#{{ item.id }}">{{ item.text }}</a></li>
-			{% endfor %}
+			{% include toc.html html=content %}
 		</ul>
 		<br><a href="https://github.com/Unifyd-Insights/user-documentation/edit/CloudCannon/{{ page.path }}">Edit this page</a>
 	</section>
