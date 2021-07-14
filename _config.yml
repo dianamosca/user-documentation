@@ -44,6 +44,11 @@ exclude:
 collections:
   sets:
 
+# Archives
+collections:
+  archives:
+    output: true
+    permalink: /archives/:path/
 
 jekyll-archives:
   enabled: ['categories']
