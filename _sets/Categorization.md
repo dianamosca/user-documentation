@@ -1,4 +1,0 @@
----
-title: Categorization
-description:
----
