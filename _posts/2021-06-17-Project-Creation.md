@@ -3,10 +3,10 @@ date: 2021-06-17
 title: Project and Catalogue Creation
 categories:
 - 1. Introduction
+order_number: 2
 description:
 type: Document
-set: introduction
-order_number: 2
+
 ---
 
 In this tutorial, we present how to upload new data into unifyd and creating a new catalog. This is the most simple version of the workflow without duplication, set up, or aggregating multiple datasets together. 

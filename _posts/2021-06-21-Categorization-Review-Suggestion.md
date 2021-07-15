@@ -3,6 +3,7 @@ date: 2021-06-17
 title: Review ML and Rule Category Suggestion
 categories:
 - 4. Categorization Project
+order_number: 2
 description:
 type: Document
 ---

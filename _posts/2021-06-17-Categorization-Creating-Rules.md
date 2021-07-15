@@ -3,6 +3,7 @@ date: 2021-06-17
 title: Categorization Rules Management
 categories:
 - 4. Categorization Project
+order_number: 3
 description:
 type: Document
 ---
