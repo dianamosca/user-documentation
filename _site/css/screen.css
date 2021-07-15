@@ -341,7 +341,7 @@ code, pre, tt {
       margin: 0;
       list-style: none; }
       .tutorial .sidebar ul li {
-        margin: 0 0 15px 0; }
+        margin: 15px 0 15px 0; }
     .tutorial .sidebar a {
       color: #666;
       text-decoration: none;

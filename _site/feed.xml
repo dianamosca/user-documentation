@@ -1,76 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-14T17:23:55+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;p&gt;This use case explains how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; record. Then, once a match is made, we update the VIP platform automatically using webhook.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-15T18:06:03+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
+
+&lt;p&gt;This use case explains how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; record. Then, once a match is made, we update the VIP platform automatically using webhook.&lt;/p&gt;
 
 &lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/a4aef116c4734e608a5006ba049ca585&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;project-set-up&quot;&gt;Project Set up&lt;/h2&gt;
+&lt;h2 id=&quot;2-reviewing-matches&quot;&gt;2. Reviewing Matches&lt;/h2&gt;
 
-&lt;p&gt;This section describes how we set up the project (one-time configuration). With the following set up the script is idempotent&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;if we miss an execution, the following one will reset update the process to mirror VIP and Shipment information&lt;/li&gt;
-  &lt;li&gt;if there is an update made outside Unifyd (directly in VIP, for example), Unifyd will reflect those changes at the next update.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;21-navigating-to-the-ml-tasks&quot;&gt;2.1 Navigating to the ML Tasks&lt;/h3&gt;
 
-&lt;h3 id=&quot;data-pipeline-overview&quot;&gt;Data Pipeline Overview&lt;/h3&gt;
+&lt;p&gt;To access the project select &lt;code class=&quot;highlighter-rouge&quot;&gt;Machine Learning &amp;amp; NLP Tasks&lt;/code&gt; and then &lt;code class=&quot;highlighter-rouge&quot;&gt;Matching&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;An automated script (aka bot) automates the following steps four times per day (at 9 AM, 12 PM, 2 PM, and 7 PM EST).&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Retrieve data from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; systems and perform advanced data normalization&lt;/li&gt;
-  &lt;li&gt;Update data in Unifyd &lt;strong&gt;dataset&lt;/strong&gt; with the following settings
-    &lt;ul&gt;
-      &lt;li&gt;One dataset per system&lt;/li&gt;
-      &lt;li&gt;No deduplication set up; we update each dataset entirely for two reasons:
-        &lt;ul&gt;
-          &lt;li&gt;To ease troubleshooting and data lineage identification. One can review the data coming from each production system as we inserted them in Unifyd&lt;/li&gt;
-          &lt;li&gt;We manage the deduplication at the catalog level&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Apply the &lt;strong&gt;Wrangle&lt;/strong&gt; to
-    &lt;ul&gt;
-      &lt;li&gt;Convert data type&lt;/li&gt;
-      &lt;li&gt;Create the &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; used in catalog deduplication rules (more details in the next section).&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Map and Upload in a unique catalog&lt;/strong&gt; the update to the catalog as described in the following section&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Access-Matching-Two-Datasets-Together.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Access-Matching-Two-Datasets-Together.png&quot; alt=&quot;Access-Matching-Two-Datasets-Together.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;catalog-mapping-configuration&quot;&gt;Catalog Mapping Configuration&lt;/h3&gt;
-
-&lt;p&gt;The catalog mapping is set up with the following parameters:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Master Records&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data coming from &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; are imported as &lt;code class=&quot;highlighter-rouge&quot;&gt;Master&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Data coming from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; are imported as &lt;code class=&quot;highlighter-rouge&quot;&gt;Non Master&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Deduplication Rules&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data coming from &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; has the following &lt;code class=&quot;highlighter-rouge&quot;&gt;KEY = ISSUE NUMBER&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Data coming from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; file has the following &lt;code class=&quot;highlighter-rouge&quot;&gt;KEY = ITEM + DIST IT&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;The mapping use &lt;code class=&quot;highlighter-rouge&quot;&gt;Insert new and replace old data&lt;/code&gt; using the &lt;code class=&quot;highlighter-rouge&quot;&gt;KEY&lt;/code&gt; field&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;view-set-up&quot;&gt;View Set up&lt;/h3&gt;
-
-&lt;p&gt;The current view is configured to review and match open items from VIP rapidly.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Field orders&lt;/li&gt;
-  &lt;li&gt;Field size&lt;/li&gt;
-  &lt;li&gt;Hide unnecessary field&lt;/li&gt;
-  &lt;li&gt;Filter on Open and Master Record&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Read more:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/3.%20catalog%20set%20up/Manage-Catalog-Grid/&quot;&gt;Managing the Grid&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;View Configuration (&lt;em&gt;to add&lt;/em&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reviewing-matches&quot;&gt;Reviewing Matches&lt;/h2&gt;
-
-&lt;h3 id=&quot;using-the-interface&quot;&gt;Using the interface&lt;/h3&gt;
+&lt;h3 id=&quot;22-using-the-interface&quot;&gt;2.2 Using the interface&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;/user-documentation/images/Matching-Two-Datasets-Together.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Matching-Two-Datasets-Together.png&quot; alt=&quot;Matching-Two-Datasets-Together.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -96,11 +38,11 @@
   &lt;li&gt;Unifyd Matching Interface (&lt;em&gt;to add&lt;/em&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;searching-for-matches&quot;&gt;Searching for Matches&lt;/h3&gt;
+&lt;h3 id=&quot;23-searching-for-matches&quot;&gt;2.3 Searching for Matches&lt;/h3&gt;
 
 &lt;p&gt;If the interface does not return a match with a high score, you can search for the entire catalog.&lt;/p&gt;
 
-&lt;h3 id=&quot;webhook&quot;&gt;Webhook&lt;/h3&gt;
+&lt;h3 id=&quot;24-webhook&quot;&gt;2.4 Webhook&lt;/h3&gt;
 &lt;p&gt;If you found a match, click on the green check mark to confirm it. Unifyd will automatically update &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; platform with the following message &lt;code class=&quot;highlighter-rouge&quot;&gt;TFE [Current date in MM/DD format] – Please code to supplier item # [matched supplier item number].  Thank you!&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;If there are no matches, you can select one of the following webhook&lt;/p&gt;
@@ -110,7 +52,73 @@
   &lt;li&gt;Missing Distributor Item Details: &lt;code class=&quot;highlighter-rouge&quot;&gt;TFE [Current date in MM/DD format] – Please ask distributor to provide product details.  Thank you!&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We will notify you by email if the bot to update VIP failed. You can then manually process the update in VIP.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">This use case explains how to use Unifyd Insights Platform to match Shipment data with VIP Issues. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a VIP Issue with a Shipment record. Then, once a match is made, we update the VIP platform automatically using webhook.</summary></entry><entry><title type="html">Manage Catalog Grid</title><link href="http://localhost:4000/Manage-Catalog-Grid/" rel="alternate" type="text/html" title="Manage Catalog Grid" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/Manage-Catalog-Grid</id><content type="html" xml:base="http://localhost:4000/Manage-Catalog-Grid/">&lt;h2 id=&quot;navigating-the-grid&quot;&gt;Navigating the grid&lt;/h2&gt;
+&lt;p&gt;We will notify you by email if the bot to update VIP failed. You can then manually process the update in VIP.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-project-set-up&quot;&gt;3. Project Set up&lt;/h2&gt;
+
+&lt;p&gt;This section describes how we set up the project (one-time configuration). With the following set up the script is idempotent&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;if we miss an execution, the following one will reset update the process to mirror VIP and Shipment information&lt;/li&gt;
+  &lt;li&gt;if there is an update made outside Unifyd (directly in VIP, for example), Unifyd will reflect those changes at the next update.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;31-data-pipeline-overview&quot;&gt;3.1 Data Pipeline Overview&lt;/h3&gt;
+
+&lt;p&gt;An automated script (aka bot) automates the following steps four times per day (at 9 AM, 12 PM, 2 PM, and 7 PM EST).&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Retrieve data from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; systems and perform advanced data normalization&lt;/li&gt;
+  &lt;li&gt;Update data in Unifyd &lt;strong&gt;dataset&lt;/strong&gt; with the following settings
+    &lt;ul&gt;
+      &lt;li&gt;One dataset per system&lt;/li&gt;
+      &lt;li&gt;No deduplication set up; we update each dataset entirely for two reasons:
+        &lt;ul&gt;
+          &lt;li&gt;To ease troubleshooting and data lineage identification. One can review the data coming from each production system as we inserted them in Unifyd&lt;/li&gt;
+          &lt;li&gt;We manage the deduplication at the catalog level&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Apply the &lt;strong&gt;Wrangle&lt;/strong&gt; to
+    &lt;ul&gt;
+      &lt;li&gt;Convert data type&lt;/li&gt;
+      &lt;li&gt;Create the &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; used in catalog deduplication rules (more details in the next section).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Map and Upload in a unique catalog&lt;/strong&gt; the update to the catalog as described in the following section&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;32-catalog-mapping-configuration&quot;&gt;3.2 Catalog Mapping Configuration&lt;/h3&gt;
+
+&lt;p&gt;The catalog mapping is set up with the following parameters:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Master Records&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data coming from &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; are imported as &lt;code class=&quot;highlighter-rouge&quot;&gt;Master&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Data coming from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; are imported as &lt;code class=&quot;highlighter-rouge&quot;&gt;Non Master&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Deduplication Rules&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data coming from &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP&lt;/code&gt; has the following &lt;code class=&quot;highlighter-rouge&quot;&gt;KEY = ISSUE NUMBER&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Data coming from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; file has the following &lt;code class=&quot;highlighter-rouge&quot;&gt;KEY = ITEM + DIST ID&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;The mapping use &lt;code class=&quot;highlighter-rouge&quot;&gt;Insert new and replace old data&lt;/code&gt; using the &lt;code class=&quot;highlighter-rouge&quot;&gt;KEY&lt;/code&gt; field&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;33-view-set-up&quot;&gt;3.3 View Set up&lt;/h3&gt;
+
+&lt;p&gt;The current view is configured to review and match open items from VIP rapidly.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Field orders&lt;/li&gt;
+  &lt;li&gt;Field size&lt;/li&gt;
+  &lt;li&gt;Hide unnecessary field&lt;/li&gt;
+  &lt;li&gt;Filter on Open and Master Record&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Read more:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/3.%20catalog%20set%20up/Manage-Catalog-Grid/&quot;&gt;Managing the Grid&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;View Configuration (&lt;em&gt;to add&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Overview</summary></entry><entry><title type="html">Manage Catalog Grid</title><link href="http://localhost:4000/Manage-Catalog-Grid/" rel="alternate" type="text/html" title="Manage Catalog Grid" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/Manage-Catalog-Grid</id><content type="html" xml:base="http://localhost:4000/Manage-Catalog-Grid/">&lt;h2 id=&quot;navigating-the-grid&quot;&gt;Navigating the grid&lt;/h2&gt;
 
 &lt;p&gt;In this video, we see how to manage the grid appearance, including&lt;/p&gt;
 &lt;ul&gt;
@@ -208,7 +216,7 @@
   &lt;li&gt;&lt;img src=&quot;/user-documentation/images/thumbs-down-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;Red thumb down: Rule Suggestion disagrees with user label&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot; alt=&quot;Categorization-Rule-Status.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Overview</summary></entry><entry><title type="html">Wrangling</title><link href="http://localhost:4000/wrangling/Wrangling/" rel="alternate" type="text/html" title="Wrangling" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/wrangling/Wrangling</id><content type="html" xml:base="http://localhost:4000/wrangling/Wrangling/">&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot; alt=&quot;Categorization-Rule-Status.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Overview</summary></entry><entry><title type="html">Wrangling</title><link href="http://localhost:4000/2.%20wrangling/Wrangling/" rel="alternate" type="text/html" title="Wrangling" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/2.%20wrangling/Wrangling</id><content type="html" xml:base="http://localhost:4000/2.%20wrangling/Wrangling/">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Content to be created.&lt;/p&gt;
