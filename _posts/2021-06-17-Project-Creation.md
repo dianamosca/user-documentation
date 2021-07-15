@@ -5,6 +5,8 @@ categories:
 - 1. Introduction
 description:
 type: Document
+set: introduction
+order_number: 2
 ---
 
 In this tutorial, we present how to upload new data into unifyd and creating a new catalog. This is the most simple version of the workflow without duplication, set up, or aggregating multiple datasets together. 
