@@ -31,7 +31,7 @@ If you want your rules to apply the label directly, you need to select the `Auto
 
 If your rules has
 * Less than 1,000 records the new label will be applied within few seconds (you can refresh the page to see them)
-* More than 1,000 records, the application will trigger a background job. You can follow its progress in the job panel (see screenshot below)
+* More than 1,000 records, the application will trigger a background job. **The new category will appears only once the job completed** You can follow its progress in the job panel (see screenshot below)
 
 [![rules-background-job.png](/user-documentation/images/rules-background-job.png)](/user-documentation/images/rules-background-job.png)
 

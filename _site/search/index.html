@@ -180,11 +180,11 @@
 				
 					,
 					
-					"1-20introduction-unifyd-overview": {
-						"id": "1-20introduction-unifyd-overview",
+					"unifyd-overview": {
+						"id": "unifyd-overview",
 						"title": "Unifyd Overview",
-						"categories": "1. Introduction",
-						"url": " /1.%20introduction/Unifyd-Overview/",
+						"categories": "",
+						"url": " /Unifyd-Overview/",
 						"content": "Video Content: How to access\n\n  Project\n  Dataset\n  Wrangle/Recipe\n  Catalogue\n  ML Task"
 					}
 					
@@ -195,11 +195,11 @@
 				
 					,
 					
-					"1-20introduction-project-creation": {
-						"id": "1-20introduction-project-creation",
+					"1-20project-20-20dataset-project-creation": {
+						"id": "1-20project-20-20dataset-project-creation",
 						"title": "Project and Catalogue Creation",
-						"categories": "1. Introduction",
-						"url": " /1.%20introduction/Project-Creation/",
+						"categories": "1. Project &amp; Dataset",
+						"url": " /1.%20project%20&amp;%20dataset/Project-Creation/",
 						"content": "In this tutorial, we present how to upload new data into unifyd and creating a new catalog. This is the most simple version of the workflow without duplication, set up, or aggregating multiple datasets together."
 					}
 					
@@ -275,7 +275,7 @@
 						"title": "Categorization Rules Management",
 						"categories": "4. Categorization Project",
 						"url": " /4.%20categorization%20project/Categorization-Creating-Rules/",
-						"content": "Create a Rule\n\nIn this video\n\n  Create a filter to validate the set of records we want to apply a rule to\n  Create a rule\n  Filter records with the rules applied\n  Identified records with conflicting rules\n  View at the project level all rules and the number of records impacted.\n  Export / Import rules\n\n\n\n\n\n\nAuto Label Record\n\nIf you want your rules to apply the label directly, you need to select the Auto Label Record option during the rule creation.\n\n\n\nIf your rules has\n\n  Less than 1,000 records the new label will be applied within few seconds (you can refresh the page to see them)\n  More than 1,000 records, the application will trigger a background job. You can follow its progress in the job panel (see screenshot below)\n\n\n\n\nEdit Rules\n\nWe currently do not support Rules Edition. You will need to delete the rule and recreate it with your modification.1\n\nDelete Rules\n\nThis tutorial explains how you can delete a categorization rule.\n\n  Find a Record with the rules and click the cross arrow icon\n  Click the eye icon to open the rule panel\n  Select delete\n\n\n\n\nWe also recorded a quick walkthrough.\n\n\nDownloading and Uploading Rules\n\nThis tutorial explains how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial, we only use the filter contains on a single column.\n\n\nNOTE\n\nThe section below needs to be updated following the new Contains filter released in June 2021\n\n\n\nUsing the rules-task-template.xlsx template (line 2 and 3 are available as an example, you can delete them):\n\n  name:  Name of the rule as it will appear in Unifyd Interface\n  output: Name of the category it should be mapped to. You need to provide the full path of the category. We recommend that you copy the value from the Unifyd interface.\n  filters: do not edit this column The Excel formula concatenates the value from column D to G to generate the filter expression for Unifyd. The formula is\n    =\"{\"\"\"&amp;D2&amp;\"\"\"\"&amp;\":{\"&amp;\"\"\"\"&amp;\"operand\"\"\"&amp;\":[\"\"\"&amp;F2&amp;\"\"\"\"&amp;\",\"&amp;\"\"\"\"&amp;G2&amp;\"\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\"],\"\"\"&amp;\"operator\"\"\"&amp;\":\"\"\"&amp;E2&amp;\"\"\"\"&amp;\"}}\"\n    \n    Update the following columns to generate the filters expression\n  \n  Data Column Used: Which column is used for filtering. It should match the column name in Unifyd.\n  Filter Type: in this tutorial, we only use CONTAINS (in UpperCase only)\n  Filter Variable: the keyword to search. It can contain only one and only one keyword. Unifyd do not support array or list of search at this point; you will need to create one filter for each value\n  But Not Variable: the keyword to exclude from the search. It can contain only one and only one keyword. Unifyd does not support an array or list of searches at this point.\n\n\nOnce your rules are generated, you can copy and paste special without the formula (using Ctrl+Alt+V see Office documentation) the columns name output filters to the rules-task-template.csv document and save it as csv.\n\n\nFootnote\n\n\n  \n    \n      See Feature UNPR-1170 &#8617;"
+						"content": "Create a Rule\n\nIn this video\n\n  Create a filter to validate the set of records we want to apply a rule to\n  Create a rule\n  Filter records with the rules applied\n  Identified records with conflicting rules\n  View at the project level all rules and the number of records impacted.\n  Export / Import rules\n\n\n\n\n\n\nAuto Label Record\n\nIf you want your rules to apply the label directly, you need to select the Auto Label Record option during the rule creation.\n\n\n\nIf your rules has\n\n  Less than 1,000 records the new label will be applied within few seconds (you can refresh the page to see them)\n  More than 1,000 records, the application will trigger a background job. The new category will appears only once the job completed You can follow its progress in the job panel (see screenshot below)\n\n\n\n\nEdit Rules\n\nWe currently do not support Rules Edition. You will need to delete the rule and recreate it with your modification.1\n\nDelete Rules\n\nThis tutorial explains how you can delete a categorization rule.\n\n  Find a Record with the rules and click the cross arrow icon\n  Click the eye icon to open the rule panel\n  Select delete\n\n\n\n\nWe also recorded a quick walkthrough.\n\n\nDownloading and Uploading Rules\n\nThis tutorial explains how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial, we only use the filter contains on a single column.\n\n\nNOTE\n\nThe section below needs to be updated following the new Contains filter released in June 2021\n\n\n\nUsing the rules-task-template.xlsx template (line 2 and 3 are available as an example, you can delete them):\n\n  name:  Name of the rule as it will appear in Unifyd Interface\n  output: Name of the category it should be mapped to. You need to provide the full path of the category. We recommend that you copy the value from the Unifyd interface.\n  filters: do not edit this column The Excel formula concatenates the value from column D to G to generate the filter expression for Unifyd. The formula is\n    =\"{\"\"\"&amp;D2&amp;\"\"\"\"&amp;\":{\"&amp;\"\"\"\"&amp;\"operand\"\"\"&amp;\":[\"\"\"&amp;F2&amp;\"\"\"\"&amp;\",\"&amp;\"\"\"\"&amp;G2&amp;\"\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\"],\"\"\"&amp;\"operator\"\"\"&amp;\":\"\"\"&amp;E2&amp;\"\"\"\"&amp;\"}}\"\n    \n    Update the following columns to generate the filters expression\n  \n  Data Column Used: Which column is used for filtering. It should match the column name in Unifyd.\n  Filter Type: in this tutorial, we only use CONTAINS (in UpperCase only)\n  Filter Variable: the keyword to search. It can contain only one and only one keyword. Unifyd do not support array or list of search at this point; you will need to create one filter for each value\n  But Not Variable: the keyword to exclude from the search. It can contain only one and only one keyword. Unifyd does not support an array or list of searches at this point.\n\n\nOnce your rules are generated, you can copy and paste special without the formula (using Ctrl+Alt+V see Office documentation) the columns name output filters to the rules-task-template.csv document and save it as csv.\n\n\nFootnote\n\n\n  \n    \n      See Feature UNPR-1170 &#8617;"
 					}
 					
 				

@@ -2,8 +2,8 @@
 date: 2021-06-17
 title: Project and Catalogue Creation
 categories:
-- 1. Introduction
-order_number: 2
+- 1. Project & Dataset
+order_number: 1
 description:
 type: Document
 

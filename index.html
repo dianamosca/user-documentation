@@ -1,6 +1,8 @@
 ---
 ---
-
+<h3>Unifyd Insight Overview</h3>
+Watch the  <a href="{{ site.baseurl }}/Unifyd-Overview/">introduction video</a>
+</p>
 <section class="categories">
 	{% assign categories = site.categories | sort %}
 	{% for category in categories %}
@@ -9,7 +11,7 @@
 		{% assign size = posts | size %}
 		<section class="category">
 				<h3>
-					<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ name | replace: "-", " " }}</a>
+					{{ name | replace: "-", " " }}
 				</h3>
 
 			<ul>

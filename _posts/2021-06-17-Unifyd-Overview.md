@@ -2,8 +2,7 @@
 date: 2021-06-17
 title: Unifyd Overview
 categories:
-- 1. Introduction
-order_number: 1
+order_number:
 description:
 type: Document
 
