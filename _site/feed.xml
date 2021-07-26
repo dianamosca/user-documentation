@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-26T21:18:44+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-26T22:18:43+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
 
 &lt;p&gt;This use case explains how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; record. Then, once a match is made, we update the VIP platform automatically using webhook.&lt;/p&gt;
 
@@ -288,7 +288,28 @@
       &lt;p&gt;See (&lt;a href=&quot;https://unifyd.atlassian.net/browse/UNPR-1092&quot;&gt;UNPR-1092&lt;/a&gt;) &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">In this tutorial, we walk through the contains filter on a catalog, including usage of All Of to search all word separated by comma (AND search) Any Of to search any word separated by comma (OR search) Build complex search by combining multiple string with AND / OR / BUT NOT operators Use Case Sensitive either for a specific word</summary></entry><entry><title type="html">Categorization Create Project</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" rel="alternate" type="text/html" title="Categorization Create Project" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Project</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Project/">&lt;h2 id=&quot;creating-a-project&quot;&gt;Creating a project&lt;/h2&gt;
+&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">In this tutorial, we walk through the contains filter on a catalog, including usage of All Of to search all word separated by comma (AND search) Any Of to search any word separated by comma (OR search) Build complex search by combining multiple string with AND / OR / BUT NOT operators Use Case Sensitive either for a specific word</summary></entry><entry><title type="html">Categorization Create Project</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" rel="alternate" type="text/html" title="Categorization Create Project" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Project</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Project/">&lt;h2 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h2&gt;
+
+&lt;p&gt;We use a categorization project to assign records in a catalog to a specific category (for example, product category). Unifyd Insight human in the loop interface mix three approaches to ensure high accuracy of the categorization:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Rules (created by domain expert)&lt;/li&gt;
+  &lt;li&gt;Machine Learning suggestion and categorization.&lt;/li&gt;
+  &lt;li&gt;Manual categorization to
+    &lt;ul&gt;
+      &lt;li&gt;Assign a record in a category and train the ML model&lt;/li&gt;
+      &lt;li&gt;Distribute categorization task across a crowd to review Machine Learning suggestions and resolve conflicts between rules, expert and ML suggestions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Usually, a project is done in three phases (described on this page)&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Project Creation&lt;/li&gt;
+  &lt;li&gt;Training the model&lt;/li&gt;
+  &lt;li&gt;Running the ML Task and reviewing the results.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;2-creating-a-project&quot;&gt;2. Creating a project&lt;/h2&gt;
 
 &lt;p&gt;In this video, we review how to&lt;/p&gt;
 &lt;ul&gt;
@@ -299,11 +320,31 @@
   &lt;li&gt;Manually categorize records&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;TIPS&lt;/strong&gt;:&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+We review the meaning of each icon in the left menu on the page &lt;a href=&quot;/4.%20categorization%20project/Categorization-Review-Suggestion/&quot;&gt;Review ML and Rule Category Suggestion&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-training-the-model&quot;&gt;3. Training the Model&lt;/h2&gt;
+
+&lt;p&gt;Once you created your ML Task project and your category, you can start categorizing! &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The goal is to categorize between at least 100 up to 1,000 items per category to train our ML model. At this stage, we will privilege various patterns for each category&lt;/strong&gt; (versus looking only for similar records).&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;You can manually categorize records in bulk by selecting multiple records and calling the &lt;code class=&quot;highlighter-rouge&quot;&gt;Action &amp;gt; Categorize&lt;/code&gt; menu.&lt;/li&gt;
-  &lt;li&gt;Filter your records to find multiple records matching the same category and select all of them before selecting a category. If you want to categorize all records matching those filter automatically, you can create a rule (section 4.2)&lt;/li&gt;
-  &lt;li&gt;We review the meaning of each icon in the left menu in the page &lt;a href=&quot;/4.%20categorization%20project/Categorization-Review-Suggestion/&quot;&gt;Review ML and Rule Category Suggestion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Manually&lt;/strong&gt;: You can manually categorize records in bulk by selecting multiple records and calling the &lt;code class=&quot;highlighter-rouge&quot;&gt;Action &amp;gt; Categorize&lt;/code&gt; menu.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Using Rules&lt;/strong&gt;: If you want to automatically categorize all records matching a set of filters, you can create a rule. With the &lt;code class=&quot;highlighter-rouge&quot;&gt;Auto Label Record&lt;/code&gt; option, the records will be assigned to the right category. &lt;strong&gt;Learn more about &lt;a href=&quot;4.%20categorization%20project/Categorization-Creating-Rules/&quot;&gt;rules creation and management&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Unifyd bootstrapped Machine Learning&lt;/strong&gt; engine will start suggesting categories as you categorize items. Those categories are generated on the fly and are updated as you progress in your categorization.&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;Rules Conflict Ambiguity Chart&lt;/strong&gt; presents where rules and manual categorization by an expert conflict help to focus on attention.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Creating a project</summary></entry><entry><title type="html">Categorization Download Label</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/" rel="alternate" type="text/html" title="Categorization Download Label" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/">&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/fb038906378b44898d5ad2db8c9a5a8f&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have a similar dataset already categorized, we can leverage them as examples in the Unifyd engine. Contact us for more details.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-running-the-ml-task&quot;&gt;4. Running the ML Task&lt;/h2&gt;
+
+&lt;p&gt;Once the model is trained, we can configure a batch ML Categorization. In this process we:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Configure the model (please get in touch with your service team for this step)&lt;/li&gt;
+  &lt;li&gt;Train the model on your dataset and batch categorize records. This task can take from few minutes to several hours, depending on the size of your dataset&lt;/li&gt;
+  &lt;li&gt;Review the conflict between ML suggestion and your rules and expert categorization. The ambiguity chart helps to target hard-to-categorize items and improve the model accuracy.&lt;/li&gt;
+  &lt;li&gt;Build, train and rerun a new model. We usually need a couple of iteration to achieve up to 99% accuracy of the model.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Introduction</summary></entry><entry><title type="html">Categorization Download Label</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/" rel="alternate" type="text/html" title="Categorization Download Label" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/">&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/fb038906378b44898d5ad2db8c9a5a8f&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html"></summary></entry></feed>

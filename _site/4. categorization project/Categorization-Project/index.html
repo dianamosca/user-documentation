@@ -18,15 +18,15 @@
 <meta name="generator" content="Jekyll v3.7.2" />
 <meta property="og:title" content="Categorization Create Project" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Creating a project" />
-<meta property="og:description" content="Creating a project" />
+<meta name="description" content="1. Introduction" />
+<meta property="og:description" content="1. Introduction" />
 <link rel="canonical" href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" />
 <meta property="og:url" content="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" />
 <meta property="og:site_name" content="Unifyd Insights Documentation" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-06-17T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Creating a project","@type":"BlogPosting","url":"http://localhost:4000/4.%20categorization%20project/Categorization-Project/","headline":"Categorization Create Project","dateModified":"2021-06-17T00:00:00+00:00","datePublished":"2021-06-17T00:00:00+00:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/4.%20categorization%20project/Categorization-Project/"},"@context":"http://schema.org"}</script>
+{"description":"1. Introduction","@type":"BlogPosting","url":"http://localhost:4000/4.%20categorization%20project/Categorization-Project/","headline":"Categorization Create Project","dateModified":"2021-06-17T00:00:00+00:00","datePublished":"2021-06-17T00:00:00+00:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/4.%20categorization%20project/Categorization-Project/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Unifyd Insights Documentation" />
@@ -115,7 +115,7 @@
 				<section class="tutorial">
 	<section class="sidebar sticky">
 		<ul>
-			<ul><li><a href="#creating-a-project">Creating a project</a></li></ul>
+			<ul><li><a href="#1-introduction">1. Introduction</a></li><li><a href="#2-creating-a-project">2. Creating a project</a></li><li><a href="#3-training-the-model">3. Training the Model</a></li><li><a href="#4-running-the-ml-task">4. Running the ML Task</a></li></ul>
 
 		</ul>
 		<br>
@@ -130,7 +130,28 @@
 		
 		
 		<div class="tutorial-main">
-			<h2 id="creating-a-project">Creating a project</h2>
+			<h2 id="1-introduction">1. Introduction</h2>
+
+<p>We use a categorization project to assign records in a catalog to a specific category (for example, product category). Unifyd Insight human in the loop interface mix three approaches to ensure high accuracy of the categorization:</p>
+<ul>
+  <li>Rules (created by domain expert)</li>
+  <li>Machine Learning suggestion and categorization.</li>
+  <li>Manual categorization to
+    <ul>
+      <li>Assign a record in a category and train the ML model</li>
+      <li>Distribute categorization task across a crowd to review Machine Learning suggestions and resolve conflicts between rules, expert and ML suggestions.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Usually, a project is done in three phases (described on this page)</p>
+<ol>
+  <li>Project Creation</li>
+  <li>Training the model</li>
+  <li>Running the ML Task and reviewing the results.</li>
+</ol>
+
+<h2 id="2-creating-a-project">2. Creating a project</h2>
 
 <p>In this video, we review how to</p>
 <ul>
@@ -141,14 +162,34 @@
   <li>Manually categorize records</li>
 </ul>
 
-<p><strong>TIPS</strong>:</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<p><br />
+We review the meaning of each icon in the left menu on the page <a href="/4.%20categorization%20project/Categorization-Review-Suggestion/">Review ML and Rule Category Suggestion</a></p>
+
+<h2 id="3-training-the-model">3. Training the Model</h2>
+
+<p>Once you created your ML Task project and your category, you can start categorizing! <br /></p>
+
+<p><strong>The goal is to categorize between at least 100 up to 1,000 items per category to train our ML model. At this stage, we will privilege various patterns for each category</strong> (versus looking only for similar records).</p>
+
 <ul>
-  <li>You can manually categorize records in bulk by selecting multiple records and calling the <code class="highlighter-rouge">Action &gt; Categorize</code> menu.</li>
-  <li>Filter your records to find multiple records matching the same category and select all of them before selecting a category. If you want to categorize all records matching those filter automatically, you can create a rule (section 4.2)</li>
-  <li>We review the meaning of each icon in the left menu in the page <a href="/4.%20categorization%20project/Categorization-Review-Suggestion/">Review ML and Rule Category Suggestion</a></li>
+  <li><strong>Manually</strong>: You can manually categorize records in bulk by selecting multiple records and calling the <code class="highlighter-rouge">Action &gt; Categorize</code> menu.</li>
+  <li><strong>Using Rules</strong>: If you want to automatically categorize all records matching a set of filters, you can create a rule. With the <code class="highlighter-rouge">Auto Label Record</code> option, the records will be assigned to the right category. <strong>Learn more about <a href="4.%20categorization%20project/Categorization-Creating-Rules/">rules creation and management</a></strong></li>
+  <li><strong>Unifyd bootstrapped Machine Learning</strong> engine will start suggesting categories as you categorize items. Those categories are generated on the fly and are updated as you progress in your categorization.</li>
+  <li>The <strong>Rules Conflict Ambiguity Chart</strong> presents where rules and manual categorization by an expert conflict help to focus on attention.</li>
 </ul>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/90b981d4cc13425caeb17a202cc6c844" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<p><strong>Note:</strong> If you have a similar dataset already categorized, we can leverage them as examples in the Unifyd engine. Contact us for more details.</p>
+
+<h2 id="4-running-the-ml-task">4. Running the ML Task</h2>
+
+<p>Once the model is trained, we can configure a batch ML Categorization. In this process we:</p>
+<ul>
+  <li>Configure the model (please get in touch with your service team for this step)</li>
+  <li>Train the model on your dataset and batch categorize records. This task can take from few minutes to several hours, depending on the size of your dataset</li>
+  <li>Review the conflict between ML suggestion and your rules and expert categorization. The ambiguity chart helps to target hard-to-categorize items and improve the model accuracy.</li>
+  <li>Build, train and rerun a new model. We usually need a couple of iteration to achieve up to 99% accuracy of the model.</li>
+</ul>
 
 		</div>
 	</section>
