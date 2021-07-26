@@ -68,7 +68,7 @@ ML recommendations are only suggestions. You will need to review and upvote (i.e
 On the left panel, the Rules Suggestion returns the following information:
 * <img src="/user-documentation/images/random.svg" width="25" height="25"> Crossed Arrow with a one green: there is only one rules suggestion for the recor
 * <img src="/user-documentation/images/random.svg" width="25" height="25"> Crossed Arrow with number in red: Multiples Rules Suggestion are conflicting. Open the `Suggested Rule` panel to review the conflict 
-* <img src="/user-documentation/images/random.svg" width="25" height="25"> Red Exclamation mark: Too many rules conflict with a similar score. Open the `Suggested Rule` panel to review the conflict 
+* <img src="/user-documentation/images/exclamation.svg" width="25" height="25"> Red Exclamation mark: Too many rules conflict with a similar score. Open the `Suggested Rule` panel to review the conflict 
 * <img src="/user-documentation/images/thumbs-up-solid.svg" width="25" height="25">Green thumb up: Rule Suggestion aggrees with user label
 * <img src="/user-documentation/images/thumbs-down-solid.svg" width="25" height="25">Red thumb down: Rule Suggestion disagrees with user label
 
