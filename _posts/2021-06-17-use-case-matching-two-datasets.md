@@ -101,5 +101,5 @@ The current view is configured to review and match open items from VIP rapidly.
 * Filter on Open and Master Record 
 
 **Read more:** 
-* [Managing the Grid](/3.%20catalog%20set%20up/Manage-Catalog-Grid/)
+* [Managing the Grid](/3.%20catalog%20set%20up/Catalog-Manage-Grid/)
 * View Configuration (_to add_)

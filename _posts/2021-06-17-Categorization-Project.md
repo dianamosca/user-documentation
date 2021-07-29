@@ -42,7 +42,7 @@ Once you created your ML Task project and your category, you can start categoriz
 **The goal is to categorize between at least 100 up to 1,000 items per category to train our ML model. At this stage, we will privilege various patterns for each category** (versus looking only for similar records).
 
 * **Manually**: You can manually categorize records in bulk by selecting multiple records and calling the `Action > Categorize` menu. 
-* **Using Rules**: If you want to automatically categorize all records matching a set of filters, you can create a rule. With the `Auto Label Record` option, the records will be assigned to the right category. **Learn more about [rules creation and management](4.%20categorization%20project/Categorization-Creating-Rules/)**
+* **Using Rules**: If you want to automatically categorize all records matching a set of filters, you can create a rule. With the `Auto Label Record` option, the records will be assigned to the right category. **Learn more about [rules creation and management](/4.%20categorization%20project/Categorization-Creating-Rules/)**
 * **Unifyd bootstrapped Machine Learning** engine will start suggesting categories as you categorize items. Those categories are generated on the fly and are updated as you progress in your categorization. 
 * The **Rules Conflict Ambiguity Chart** presents where rules and manual categorization by an expert conflict help to focus on attention. 
 
