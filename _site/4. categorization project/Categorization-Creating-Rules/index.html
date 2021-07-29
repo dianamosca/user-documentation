@@ -115,7 +115,7 @@
 				<section class="tutorial">
 	<section class="sidebar sticky">
 		<ul>
-			<ul><li><a href="#create-a-rule">Create a Rule</a><ul><li><a href="#auto-label-record">Auto Label Record</a></li></ul></li><li><a href="#edit-rules">Edit Rules</a></li><li><a href="#delete-rules">Delete Rules</a></li><li><a href="#downloading-and-uploading-rules">Downloading and Uploading Rules</a></li></ul>
+			<ul><li><a href="#create-a-rule">Create a Rule</a><ul><li><a href="#auto-label-record">Auto Label Record</a></li></ul></li><li><a href="#edit-rules">Edit Rules</a></li><li><a href="#delete-rules">Delete Rules</a></li></ul>
 
 		</ul>
 		<br>
@@ -177,34 +177,6 @@
 
 <p>We also recorded a quick walkthrough.</p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/79073ba0c85f459994bcfcb0f3027b3a" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
-<h2 id="downloading-and-uploading-rules">Downloading and Uploading Rules</h2>
-
-<p>This tutorial explains how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial, we only use the filter <code class="highlighter-rouge">contains</code> on a single column.</p>
-
-<hr />
-<p><strong>NOTE</strong></p>
-
-<p>The section below needs to be updated following the new Contains filter released in June 2021</p>
-
-<hr />
-
-<p>Using the <a href="/asset/rules-task-template.xlsx">rules-task-template.xlsx</a> template (line 2 and 3 are available as an example, you can delete them):</p>
-<ul>
-  <li><code class="highlighter-rouge">name</code>:  Name of the rule as it will appear in Unifyd Interface</li>
-  <li><code class="highlighter-rouge">output</code>: Name of the category it should be mapped to. You need to provide the full path of the category. We recommend that you copy the value from the Unifyd interface.</li>
-  <li><code class="highlighter-rouge">filters</code>: <strong>do not edit this column</strong> The Excel formula concatenates the value from column D to G to generate the filter expression for Unifyd. The formula is
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>="{"""&amp;D2&amp;""""&amp;":{"&amp;""""&amp;"operand"""&amp;":["""&amp;F2&amp;""""&amp;","&amp;""""&amp;G2&amp;""""&amp;","""&amp;"0"""&amp;","""&amp;"0"""&amp;"],"""&amp;"operator"""&amp;":"""&amp;E2&amp;""""&amp;"}}"
-</code></pre></div>    </div>
-    <p>Update the following columns to generate the <code class="highlighter-rouge">filters</code> expression</p>
-  </li>
-  <li><code class="highlighter-rouge">Data Column Used</code>: Which column is used for filtering. It should match the column name in Unifyd.</li>
-  <li><code class="highlighter-rouge">Filter Type</code>: in this tutorial, we only use <code class="highlighter-rouge">CONTAINS</code> (in UpperCase only)</li>
-  <li><code class="highlighter-rouge">Filter Variable</code>: the keyword to search. It can contain only one and only one keyword. Unifyd do not support array or list of search at this point; you will need to create one filter for each value</li>
-  <li><code class="highlighter-rouge">But Not Variable</code>: the keyword to exclude from the search. It can contain only one and only one keyword. Unifyd does not support an array or list of searches at this point.</li>
-</ul>
-
-<p>Once your rules are generated, you can copy and paste special without the formula (using <code class="highlighter-rouge">Ctrl+Alt+V</code> see <a href="https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad#ID0EAACAAA=Windows">Office documentation</a>) the columns <code class="highlighter-rouge">name</code> <code class="highlighter-rouge">output</code> <code class="highlighter-rouge">filters</code> to the <a href="/asset/rules-task-template.csv">rules-task-template.csv</a> document and save it as csv.</p>
 
 <hr />
 <p><strong>Footnote</strong></p>

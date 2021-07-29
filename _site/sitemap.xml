@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/3.%20catalog%20set%20up/Catalog-Contains-Filter/</loc>
+<lastmod>2021-06-17T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/3.%20catalog%20set%20up/Catalog-Manage-Grid/</loc>
+<lastmod>2021-06-17T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/4.%20categorization%20project/Categorization-Creating-Rules/</loc>
 <lastmod>2021-06-17T00:00:00+00:00</lastmod>
 </url>
@@ -13,7 +21,7 @@
 <lastmod>2021-06-17T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/3.%20catalog%20set%20up/Contains-Filter/</loc>
+<loc>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/</loc>
 <lastmod>2021-06-17T00:00:00+00:00</lastmod>
 </url>
 <url>
@@ -25,20 +33,20 @@
 <lastmod>2021-06-17T00:00:00+00:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Deduplication/</loc>
+<lastmod>2021-06-17T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Update-Data/</loc>
+<lastmod>2021-06-17T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/Unifyd-Overview/</loc>
 <lastmod>2021-06-17T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/2.%20wrangling/Wrangling/</loc>
 <lastmod>2021-06-17T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/</loc>
-<lastmod>2021-06-17T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/Manage-Catalog-Grid/</loc>
-<lastmod>2021-06-22T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/use-case-matching-two-datasets/</loc>
@@ -51,10 +59,10 @@
 <loc>http://localhost:4000/use-case/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/category/4-categorization-project/</loc>
+<loc>http://localhost:4000/category/3-catalog-set-up/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/category/3-catalog-set-up/</loc>
+<loc>http://localhost:4000/category/4-categorization-project/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/category/5-matching-project/</loc>

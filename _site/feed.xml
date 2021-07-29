@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-26T22:18:43+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-29T20:40:01+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
 
 &lt;p&gt;This use case explains how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; record. Then, once a match is made, we update the VIP platform automatically using webhook.&lt;/p&gt;
 
@@ -118,30 +118,88 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/3.%20catalog%20set%20up/Manage-Catalog-Grid/&quot;&gt;Managing the Grid&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;View Configuration (&lt;em&gt;to add&lt;/em&gt;)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Overview</summary></entry><entry><title type="html">Manage Catalog Grid</title><link href="http://localhost:4000/Manage-Catalog-Grid/" rel="alternate" type="text/html" title="Manage Catalog Grid" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/Manage-Catalog-Grid</id><content type="html" xml:base="http://localhost:4000/Manage-Catalog-Grid/">&lt;h2 id=&quot;navigating-the-grid&quot;&gt;Navigating the grid&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Overview</summary></entry><entry><title type="html">Wrangling</title><link href="http://localhost:4000/2.%20wrangling/Wrangling/" rel="alternate" type="text/html" title="Wrangling" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/2.%20wrangling/Wrangling</id><content type="html" xml:base="http://localhost:4000/2.%20wrangling/Wrangling/">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;In this video, we see how to manage the grid appearance, including&lt;/p&gt;
+&lt;p&gt;Content to be created.&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Note</summary></entry><entry><title type="html">Unifyd Overview</title><link href="http://localhost:4000/Unifyd-Overview/" rel="alternate" type="text/html" title="Unifyd Overview" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/Unifyd-Overview</id><content type="html" xml:base="http://localhost:4000/Unifyd-Overview/">&lt;p&gt;Video Content: How to access&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Resize column&lt;/li&gt;
-  &lt;li&gt;Reorder column&lt;/li&gt;
-  &lt;li&gt;Sort column&lt;/li&gt;
-  &lt;li&gt;Change the row height&lt;/li&gt;
-  &lt;li&gt;Hide column&lt;/li&gt;
-  &lt;li&gt;Filter&lt;/li&gt;
+  &lt;li&gt;Project&lt;/li&gt;
+  &lt;li&gt;Dataset&lt;/li&gt;
+  &lt;li&gt;Wrangle/Recipe&lt;/li&gt;
+  &lt;li&gt;Catalogue&lt;/li&gt;
+  &lt;li&gt;ML Task&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We also see how you can&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/e5dcf081f900467385a8427c4c6149fd&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Video Content: How to access Project Dataset Wrangle/Recipe Catalogue ML Task</summary></entry><entry><title type="html">Uplodate Data in a Project</title><link href="http://localhost:4000/1.%20project%20&%20dataset/Project-Update-Data/" rel="alternate" type="text/html" title="Uplodate Data in a Project" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Update-Data</id><content type="html" xml:base="http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Update-Data/">&lt;p&gt;In this tutorial, we present how to upload data into a dataset in Unifyd.&lt;/p&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 57.05229793977813%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/0478f89381004a06944f07e23c3e7fc4&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">In this tutorial, we present how to upload data into a dataset in Unifyd.</summary></entry><entry><title type="html">ID Policy and Deduplication Settings</title><link href="http://localhost:4000/1.%20project%20&%20dataset/Project-Deduplication/" rel="alternate" type="text/html" title="ID Policy and Deduplication Settings" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Deduplication</id><content type="html" xml:base="http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Deduplication/">&lt;div style=&quot;position: relative; padding-bottom: 57.05229793977813%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/d6c7a248fd7b46e0a90929d0452a7f9d&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;When you create a dataset for the first time, you have the option to setup a ID Policy/Deduplication Settings.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Key field&lt;/strong&gt;: Select the fields that will determine uniqueness of records for insertion. The field (or combination of fields) must be&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Export data&lt;/li&gt;
-  &lt;li&gt;Access the rules generator&lt;/li&gt;
-  &lt;li&gt;Add a comment on a record.&lt;/li&gt;
+  &lt;li&gt;unique per records&lt;/li&gt;
+  &lt;li&gt;always present in the dataset (not null).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/22d0624e46204812832b066a8f9ddb21&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;The update parameters&lt;/strong&gt; are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;None&lt;/code&gt;: Unifyd will import the entier file for each dataset update. This setting is great if you want to keep a historical version of a records overtime across different updates.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Insert Only New Records&lt;/code&gt;: If the record has already been uploaded in previous dataset update, it will be discarded from the newest file update. You will see a lower amount of records inserted in Unifyd compare to the total count in your file. New records are inserted.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Insert and Update Records&lt;/code&gt;: If the record has already been uploaded in previous dataset update, the data in the previous dataset will be updated. In other word we will not keep historical version of a record, the entire dataset only contains the most recent version of each record. The updated record will also be present in the latest dataset update. New records are inserted.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html"></summary></entry><entry><title type="html">Create a Project</title><link href="http://localhost:4000/1.%20project%20&%20dataset/Project-Creation/" rel="alternate" type="text/html" title="Create a Project" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Creation</id><content type="html" xml:base="http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Creation/">&lt;p&gt;Project in Unifyd are the top level entity managing&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;User access and permission&lt;/li&gt;
+  &lt;li&gt;Data around a particular topic&lt;/li&gt;
+  &lt;li&gt;Machine Learning Task artifacts including dictionnary, catalogue and ML models&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;The screenshot below presents how you can remove sorting on a column.&lt;/p&gt;
+&lt;p&gt;From the &lt;code class=&quot;highlighter-rouge&quot;&gt;Project&lt;/code&gt; tab in the homepage you can&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Access existing project&lt;/li&gt;
+  &lt;li&gt;View meta information regarding the project including last updated date, number of task and user who have access&lt;/li&gt;
+  &lt;li&gt;Create a new project by clicking the icon&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Remove_sort_filter.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Remove_sort_filter.png&quot; alt=&quot;Remove_sort_filter.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Navigating the grid</summary></entry><entry><title type="html">Review ML and Rule Category Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" rel="alternate" type="text/html" title="Review ML and Rule Category Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/create-project-icon.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/create-project-icon.png&quot; alt=&quot;Rcreate-project-icon.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the project created to invite new user&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Click the &lt;a href=&quot;/user-documentation/images/user-icone.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/user-icone.png&quot; alt=&quot;user-icone.png&quot; /&gt;&lt;/a&gt; in the top right menu&lt;/li&gt;
+  &lt;li&gt;Select the user to invite&lt;/li&gt;
+  &lt;li&gt;Key the project name in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Projects&lt;/code&gt; section at the bottom of the menu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/add-user-to-project.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/add-user-to-project.png&quot; alt=&quot;add-user-to-project.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Project in Unifyd are the top level entity managing User access and permission Data around a particular topic Machine Learning Task artifacts including dictionnary, catalogue and ML models</summary></entry><entry><title type="html">Matching Introduction</title><link href="http://localhost:4000/5.%20matching%20project/Matching-Project/" rel="alternate" type="text/html" title="Matching Introduction" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/5.%20matching%20project/Matching-Project</id><content type="html" xml:base="http://localhost:4000/5.%20matching%20project/Matching-Project/">&lt;h2 id=&quot;project-creation&quot;&gt;Project Creation&lt;/h2&gt;
+
+&lt;p&gt;Once you selected your &lt;code class=&quot;highlighter-rouge&quot;&gt;Catalog&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Catalog Table&lt;/code&gt;, select &lt;code class=&quot;highlighter-rouge&quot;&gt;Type = Record Matching (Entity Mastering)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;field-configuration&quot;&gt;Field Configuration&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Matching-Field-Configuration.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Matching-Field-Configuration.png&quot; alt=&quot;Matching-Field-Configuration.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Unifyd Insight Matching algorithm provides a 100 score when two rows match perfectly on the selected field. Any differences between the two rows will degrade the matching score based on&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;Column Search Boost&lt;/strong&gt; let you give more or less weight to a field. For example, for a string field set with &lt;code class=&quot;highlighter-rouge&quot;&gt;exact&lt;/code&gt; match with &lt;code class=&quot;highlighter-rouge&quot;&gt;extremely high&lt;/code&gt; bost, the model gives an extremely high penalty to the score if the two values do not exactly match.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Analyzers and Schema Settings&lt;/strong&gt; option are&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Text
+    &lt;ul&gt;
+      &lt;li&gt;Exact&lt;/li&gt;
+      &lt;li&gt;Fuzzy Match&lt;/li&gt;
+      &lt;li&gt;Fingerprint&lt;/li&gt;
+      &lt;li&gt;Non-Exact Match&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Numeric and Date Value
+    &lt;ul&gt;
+      &lt;li&gt;Numeric Decay %&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Project Creation</summary></entry><entry><title type="html">Review ML and Rule Category Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" rel="alternate" type="text/html" title="Review ML and Rule Category Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;The left panel of the screen displays the categorization status for each record.  From left to right it contains&lt;/p&gt;
 &lt;ul&gt;
@@ -216,79 +274,7 @@
   &lt;li&gt;&lt;img src=&quot;/user-documentation/images/thumbs-down-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;Red thumb down: Rule Suggestion disagrees with user label&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot; alt=&quot;Categorization-Rule-Status.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Overview</summary></entry><entry><title type="html">Wrangling</title><link href="http://localhost:4000/2.%20wrangling/Wrangling/" rel="alternate" type="text/html" title="Wrangling" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/2.%20wrangling/Wrangling</id><content type="html" xml:base="http://localhost:4000/2.%20wrangling/Wrangling/">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Content to be created.&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Note</summary></entry><entry><title type="html">Unifyd Overview</title><link href="http://localhost:4000/Unifyd-Overview/" rel="alternate" type="text/html" title="Unifyd Overview" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/Unifyd-Overview</id><content type="html" xml:base="http://localhost:4000/Unifyd-Overview/">&lt;p&gt;Video Content: How to access&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Project&lt;/li&gt;
-  &lt;li&gt;Dataset&lt;/li&gt;
-  &lt;li&gt;Wrangle/Recipe&lt;/li&gt;
-  &lt;li&gt;Catalogue&lt;/li&gt;
-  &lt;li&gt;ML Task&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/e5dcf081f900467385a8427c4c6149fd&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Video Content: How to access Project Dataset Wrangle/Recipe Catalogue ML Task</summary></entry><entry><title type="html">Project and Catalogue Creation</title><link href="http://localhost:4000/1.%20project%20&%20dataset/Project-Creation/" rel="alternate" type="text/html" title="Project and Catalogue Creation" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Creation</id><content type="html" xml:base="http://localhost:4000/1.%20project%20&amp;%20dataset/Project-Creation/">&lt;p&gt;In this tutorial, we present how to upload new data into unifyd and creating a new catalog. This is the most simple version of the workflow without duplication, set up, or aggregating multiple datasets together.&lt;/p&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/a1a26c79964c4326935561e5ad04f875&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">In this tutorial, we present how to upload new data into unifyd and creating a new catalog. This is the most simple version of the workflow without duplication, set up, or aggregating multiple datasets together.</summary></entry><entry><title type="html">Matching Introduction</title><link href="http://localhost:4000/5.%20matching%20project/Matching-Project/" rel="alternate" type="text/html" title="Matching Introduction" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/5.%20matching%20project/Matching-Project</id><content type="html" xml:base="http://localhost:4000/5.%20matching%20project/Matching-Project/">&lt;h2 id=&quot;project-creation&quot;&gt;Project Creation&lt;/h2&gt;
-
-&lt;p&gt;Once you selected your &lt;code class=&quot;highlighter-rouge&quot;&gt;Catalog&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Catalog Table&lt;/code&gt;, select &lt;code class=&quot;highlighter-rouge&quot;&gt;Type = Record Matching (Entity Mastering)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;field-configuration&quot;&gt;Field Configuration&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Matching-Field-Configuration.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Matching-Field-Configuration.png&quot; alt=&quot;Matching-Field-Configuration.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Unifyd Insight Matching algorithm provides a 100 score when two rows match perfectly on the selected field. Any differences between the two rows will degrade the matching score based on&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Column Search Boost&lt;/strong&gt; let you give more or less weight to a field. For example, for a string field set with &lt;code class=&quot;highlighter-rouge&quot;&gt;exact&lt;/code&gt; match with &lt;code class=&quot;highlighter-rouge&quot;&gt;extremely high&lt;/code&gt; bost, the model gives an extremely high penalty to the score if the two values do not exactly match.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Analyzers and Schema Settings&lt;/strong&gt; option are&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Text
-    &lt;ul&gt;
-      &lt;li&gt;Exact&lt;/li&gt;
-      &lt;li&gt;Fuzzy Match&lt;/li&gt;
-      &lt;li&gt;Fingerprint&lt;/li&gt;
-      &lt;li&gt;Non-Exact Match&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Numeric and Date Value
-    &lt;ul&gt;
-      &lt;li&gt;Numeric Decay %&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Project Creation</summary></entry><entry><title type="html">Contains Filter</title><link href="http://localhost:4000/3.%20catalog%20set%20up/Contains-Filter/" rel="alternate" type="text/html" title="Contains Filter" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/3.%20catalog%20set%20up/Contains-Filter</id><content type="html" xml:base="http://localhost:4000/3.%20catalog%20set%20up/Contains-Filter/">&lt;p&gt;In this tutorial, we walk through the contains filter on a catalog, including usage of&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;All Of&lt;/code&gt;  to search all word separated by comma (AND search)&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Any Of&lt;/code&gt; to search any word separated by comma (OR search)&lt;/li&gt;
-  &lt;li&gt;Build complex search by combining multiple string with &lt;code class=&quot;highlighter-rouge&quot;&gt;AND&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;OR&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;BUT NOT&lt;/code&gt; operators&lt;/li&gt;
-  &lt;li&gt;Use Case Sensitive either for a specific word&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Known limitations&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;When using a list of comma-separated words, make sure you have no space between your term.&lt;/li&gt;
-  &lt;li&gt;You need to use Case Sensitive search for multiple words&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;Note that at this stage, you cannot search string that contains a comma &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/71d17681c7d94543ae0cb8ccb472109b&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Footnotes&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;See (&lt;a href=&quot;https://unifyd.atlassian.net/browse/UNPR-1103&quot;&gt;UNPR-1103&lt;/a&gt;) &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;See (&lt;a href=&quot;https://unifyd.atlassian.net/browse/UNPR-1092&quot;&gt;UNPR-1092&lt;/a&gt;) &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">In this tutorial, we walk through the contains filter on a catalog, including usage of All Of to search all word separated by comma (AND search) Any Of to search any word separated by comma (OR search) Build complex search by combining multiple string with AND / OR / BUT NOT operators Use Case Sensitive either for a specific word</summary></entry><entry><title type="html">Categorization Create Project</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" rel="alternate" type="text/html" title="Categorization Create Project" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Project</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Project/">&lt;h2 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot; alt=&quot;Categorization-Rule-Status.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Overview</summary></entry><entry><title type="html">Categorization Create Project</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" rel="alternate" type="text/html" title="Categorization Create Project" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Project</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Project/">&lt;h2 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h2&gt;
 
 &lt;p&gt;We use a categorization project to assign records in a catalog to a specific category (for example, product category). Unifyd Insight human in the loop interface mix three approaches to ensure high accuracy of the categorization:&lt;/p&gt;
 &lt;ul&gt;

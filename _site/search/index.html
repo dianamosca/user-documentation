@@ -135,36 +135,6 @@
 				
 					,
 					
-					"manage-catalog-grid": {
-						"id": "manage-catalog-grid",
-						"title": "Manage Catalog Grid",
-						"categories": "",
-						"url": " /Manage-Catalog-Grid/",
-						"content": "Navigating the grid\n\nIn this video, we see how to manage the grid appearance, including\n\n  Resize column\n  Reorder column\n  Sort column\n  Change the row height\n  Hide column\n  Filter\n\n\nWe also see how you can\n\n  Export data\n  Access the rules generator\n  Add a comment on a record.\n\n\n\n\nThe screenshot below presents how you can remove sorting on a column."
-					}
-					
-				
-			
-		
-			
-				
-					,
-					
-					"4-20categorization-20project-categorization-review-suggestion": {
-						"id": "4-20categorization-20project-categorization-review-suggestion",
-						"title": "Review ML and Rule Category Suggestion",
-						"categories": "4. Categorization Project",
-						"url": " /4.%20categorization%20project/Categorization-Review-Suggestion/",
-						"content": "Overview\n\nThe left panel of the screen displays the categorization status for each record.  From left to right it contains\n\n  Check box to select a record\n  Comment section: \n  Task status: \n  Machine Learning (ML) categorization status\n  Selected Label by the user\n  Rules categorization status\n  Record id in the catalog\n\n\n\n\nLabel Status\n\nAt the center, the Label Status (or Selected Label) indicates\n\n   when a category has been set for the record\n  In light green without icon when there is only\n  Click on the   icon to see\n    \n      The user who categorized the row\n      The category selected by the user\n      Select the   trash icon to delete the category\n    \n  \n\n\n\n\nComment\n\nComment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon  indicates there is one or more comment for the record. Click on the icon to open the right panel and view the comment.\n\n\n\nML Task Status\n\nUnifyd Insights Machine Learning will automatically begins to suggest categories for similar records as you start labeling. The suggestion improves as you manually label more records. Depending on your dataset size and the number of categories, we suggest a threshold of a few hundred to a thousand categorized rows per category for the ML to produce a good recommendation.\n\nOn the left panel, the ML Suggestion returns the following information:\n\n   Robot with a one green: there is only one ML suggestion for the record\n   Robot with number yellow: Two ML Suggestion are conflicting. Open the Suggested Category panel to review the conflict\n   Robot with number in red: Multiple ML Suggestion are conflicting. Open the Suggested Category panel to review the conflict\n  Green thumb up: ML Suggestion aggrees with user label\n  Red thumb down: ML Suggestion disagrees with user label\n\n\n\n\nApproving ML Suggestion\n\nML recommendations are only suggestions. You will need to review and upvote (i.e. approve) them manually.\n\n  If the selected category is wrong, you can down vote it to select the next suggested category.\n  At any time you can bulk upvote or downvote item from the Action menu.\n  Once categorize the Labels will show the classified icon: \n\n\n\n\nRules Status\n\nOn the left panel, the Rules Suggestion returns the following information:\n\n   Crossed Arrow with a one green: there is only one rules suggestion for the recor\n   Crossed Arrow with number in red: Multiples Rules Suggestion are conflicting. Open the Suggested Rule panel to review the conflict\n   Red Exclamation mark: Too many rules conflict with a similar score. Open the Suggested Rule panel to review the conflict\n  Green thumb up: Rule Suggestion aggrees with user label\n  Red thumb down: Rule Suggestion disagrees with user label"
-					}
-					
-				
-			
-		
-			
-				
-					,
-					
 					"2-20wrangling-wrangling": {
 						"id": "2-20wrangling-wrangling",
 						"title": "Wrangling",
@@ -195,12 +165,42 @@
 				
 					,
 					
+					"1-20project-20-20dataset-project-update-data": {
+						"id": "1-20project-20-20dataset-project-update-data",
+						"title": "Uplodate Data in a Project",
+						"categories": "1. Project &amp; Dataset",
+						"url": " /1.%20project%20&amp;%20dataset/Project-Update-Data/",
+						"content": "In this tutorial, we present how to upload data into a dataset in Unifyd."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"1-20project-20-20dataset-project-deduplication": {
+						"id": "1-20project-20-20dataset-project-deduplication",
+						"title": "ID Policy and Deduplication Settings",
+						"categories": "1. Project &amp; Dataset",
+						"url": " /1.%20project%20&amp;%20dataset/Project-Deduplication/",
+						"content": "When you create a dataset for the first time, you have the option to setup a ID Policy/Deduplication Settings.\n\nKey field: Select the fields that will determine uniqueness of records for insertion. The field (or combination of fields) must be\n\n  unique per records\n  always present in the dataset (not null).\n\n\nThe update parameters are:\n\n  None: Unifyd will import the entier file for each dataset update. This setting is great if you want to keep a historical version of a records overtime across different updates.\n  Insert Only New Records: If the record has already been uploaded in previous dataset update, it will be discarded from the newest file update. You will see a lower amount of records inserted in Unifyd compare to the total count in your file. New records are inserted.\n  Insert and Update Records: If the record has already been uploaded in previous dataset update, the data in the previous dataset will be updated. In other word we will not keep historical version of a record, the entire dataset only contains the most recent version of each record. The updated record will also be present in the latest dataset update. New records are inserted."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
 					"1-20project-20-20dataset-project-creation": {
 						"id": "1-20project-20-20dataset-project-creation",
-						"title": "Project and Catalogue Creation",
+						"title": "Create a Project",
 						"categories": "1. Project &amp; Dataset",
 						"url": " /1.%20project%20&amp;%20dataset/Project-Creation/",
-						"content": "In this tutorial, we present how to upload new data into unifyd and creating a new catalog. This is the most simple version of the workflow without duplication, set up, or aggregating multiple datasets together."
+						"content": "Project in Unifyd are the top level entity managing\n\n  User access and permission\n  Data around a particular topic\n  Machine Learning Task artifacts including dictionnary, catalogue and ML models\n\n\nFrom the Project tab in the homepage you can\n\n  Access existing project\n  View meta information regarding the project including last updated date, number of task and user who have access\n  Create a new project by clicking the icon\n\n\n\n\nOnce the project created to invite new user\n\n  Click the  in the top right menu\n  Select the user to invite\n  Key the project name in the Projects section at the bottom of the menu"
 					}
 					
 				
@@ -225,12 +225,12 @@
 				
 					,
 					
-					"3-20catalog-20set-20up-contains-filter": {
-						"id": "3-20catalog-20set-20up-contains-filter",
-						"title": "Contains Filter",
-						"categories": "3. Catalog Set up",
-						"url": " /3.%20catalog%20set%20up/Contains-Filter/",
-						"content": "In this tutorial, we walk through the contains filter on a catalog, including usage of\n\n  All Of  to search all word separated by comma (AND search)\n  Any Of to search any word separated by comma (OR search)\n  Build complex search by combining multiple string with AND / OR / BUT NOT operators\n  Use Case Sensitive either for a specific word\n\n\nKnown limitations\n\n  When using a list of comma-separated words, make sure you have no space between your term.\n  You need to use Case Sensitive search for multiple words1\n  Note that at this stage, you cannot search string that contains a comma , 2\n\n\n\n\n\nFootnotes\n\n\n  \n    \n      See (UNPR-1103) &#8617;\n    \n    \n      See (UNPR-1092) &#8617;"
+					"4-20categorization-20project-categorization-review-suggestion": {
+						"id": "4-20categorization-20project-categorization-review-suggestion",
+						"title": "Review ML and Rule Category Suggestion",
+						"categories": "4. Categorization Project",
+						"url": " /4.%20categorization%20project/Categorization-Review-Suggestion/",
+						"content": "Overview\n\nThe left panel of the screen displays the categorization status for each record.  From left to right it contains\n\n  Check box to select a record\n  Comment section: \n  Task status: \n  Machine Learning (ML) categorization status\n  Selected Label by the user\n  Rules categorization status\n  Record id in the catalog\n\n\n\n\nLabel Status\n\nAt the center, the Label Status (or Selected Label) indicates\n\n   when a category has been set for the record\n  In light green without icon when there is only\n  Click on the   icon to see\n    \n      The user who categorized the row\n      The category selected by the user\n      Select the   trash icon to delete the category\n    \n  \n\n\n\n\nComment\n\nComment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon  indicates there is one or more comment for the record. Click on the icon to open the right panel and view the comment.\n\n\n\nML Task Status\n\nUnifyd Insights Machine Learning will automatically begins to suggest categories for similar records as you start labeling. The suggestion improves as you manually label more records. Depending on your dataset size and the number of categories, we suggest a threshold of a few hundred to a thousand categorized rows per category for the ML to produce a good recommendation.\n\nOn the left panel, the ML Suggestion returns the following information:\n\n   Robot with a one green: there is only one ML suggestion for the record\n   Robot with number yellow: Two ML Suggestion are conflicting. Open the Suggested Category panel to review the conflict\n   Robot with number in red: Multiple ML Suggestion are conflicting. Open the Suggested Category panel to review the conflict\n  Green thumb up: ML Suggestion aggrees with user label\n  Red thumb down: ML Suggestion disagrees with user label\n\n\n\n\nApproving ML Suggestion\n\nML recommendations are only suggestions. You will need to review and upvote (i.e. approve) them manually.\n\n  If the selected category is wrong, you can down vote it to select the next suggested category.\n  At any time you can bulk upvote or downvote item from the Action menu.\n  Once categorize the Labels will show the classified icon: \n\n\n\n\nRules Status\n\nOn the left panel, the Rules Suggestion returns the following information:\n\n   Crossed Arrow with a one green: there is only one rules suggestion for the recor\n   Crossed Arrow with number in red: Multiples Rules Suggestion are conflicting. Open the Suggested Rule panel to review the conflict\n   Red Exclamation mark: Too many rules conflict with a similar score. Open the Suggested Rule panel to review the conflict\n  Green thumb up: Rule Suggestion aggrees with user label\n  Red thumb down: Rule Suggestion disagrees with user label"
 					}
 					
 				
@@ -275,7 +275,37 @@
 						"title": "Categorization Rules Management",
 						"categories": "4. Categorization Project",
 						"url": " /4.%20categorization%20project/Categorization-Creating-Rules/",
-						"content": "Create a Rule\n\nIn this video\n\n  Create a filter to validate the set of records we want to apply a rule to\n  Create a rule\n  Filter records with the rules applied. Learn more regarding filtering in catalog\n  Identified records with conflicting rules\n  View at the project level all rules and the number of records impacted.\n  Export / Import rules\n\n\n\n\n\n\nAuto Label Record\n\nIf you want your rules to apply the label directly, you need to select the Auto Label Record option during the rule creation.\n\n\n\nIf your rules has\n\n  Less than 1,000 records the new label will be applied within few seconds (you can refresh the page to see them)\n  More than 1,000 records, the application will trigger a background job. The new category will appears only once the job completed You can follow its progress in the job panel (see screenshot below)\n\n\n\n\nEdit Rules\n\nWe currently do not support Rules Edition. You will need to delete the rule and recreate it with your modification.1\n\nDelete Rules\n\nThis tutorial explains how you can delete a categorization rule.\n\n  Find a Record with the rules and click the cross arrow icon\n  Click the eye icon to open the rule panel\n  Select delete\n\n\n\n\nWe also recorded a quick walkthrough.\n\n\nDownloading and Uploading Rules\n\nThis tutorial explains how you can bulk generate categorization rules in Excel before importing in into Unifyd. In our tutorial, we only use the filter contains on a single column.\n\n\nNOTE\n\nThe section below needs to be updated following the new Contains filter released in June 2021\n\n\n\nUsing the rules-task-template.xlsx template (line 2 and 3 are available as an example, you can delete them):\n\n  name:  Name of the rule as it will appear in Unifyd Interface\n  output: Name of the category it should be mapped to. You need to provide the full path of the category. We recommend that you copy the value from the Unifyd interface.\n  filters: do not edit this column The Excel formula concatenates the value from column D to G to generate the filter expression for Unifyd. The formula is\n    =\"{\"\"\"&amp;D2&amp;\"\"\"\"&amp;\":{\"&amp;\"\"\"\"&amp;\"operand\"\"\"&amp;\":[\"\"\"&amp;F2&amp;\"\"\"\"&amp;\",\"&amp;\"\"\"\"&amp;G2&amp;\"\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\",\"\"\"&amp;\"0\"\"\"&amp;\"],\"\"\"&amp;\"operator\"\"\"&amp;\":\"\"\"&amp;E2&amp;\"\"\"\"&amp;\"}}\"\n    \n    Update the following columns to generate the filters expression\n  \n  Data Column Used: Which column is used for filtering. It should match the column name in Unifyd.\n  Filter Type: in this tutorial, we only use CONTAINS (in UpperCase only)\n  Filter Variable: the keyword to search. It can contain only one and only one keyword. Unifyd do not support array or list of search at this point; you will need to create one filter for each value\n  But Not Variable: the keyword to exclude from the search. It can contain only one and only one keyword. Unifyd does not support an array or list of searches at this point.\n\n\nOnce your rules are generated, you can copy and paste special without the formula (using Ctrl+Alt+V see Office documentation) the columns name output filters to the rules-task-template.csv document and save it as csv.\n\n\nFootnote\n\n\n  \n    \n      See Feature UNPR-1170 &#8617;"
+						"content": "Create a Rule\n\nIn this video\n\n  Create a filter to validate the set of records we want to apply a rule to\n  Create a rule\n  Filter records with the rules applied. Learn more regarding filtering in catalog\n  Identified records with conflicting rules\n  View at the project level all rules and the number of records impacted.\n  Export / Import rules\n\n\n\n\n\n\nAuto Label Record\n\nIf you want your rules to apply the label directly, you need to select the Auto Label Record option during the rule creation.\n\n\n\nIf your rules has\n\n  Less than 1,000 records the new label will be applied within few seconds (you can refresh the page to see them)\n  More than 1,000 records, the application will trigger a background job. The new category will appears only once the job completed You can follow its progress in the job panel (see screenshot below)\n\n\n\n\nEdit Rules\n\nWe currently do not support Rules Edition. You will need to delete the rule and recreate it with your modification.1\n\nDelete Rules\n\nThis tutorial explains how you can delete a categorization rule.\n\n  Find a Record with the rules and click the cross arrow icon\n  Click the eye icon to open the rule panel\n  Select delete\n\n\n\n\nWe also recorded a quick walkthrough.\n\n\n\nFootnote\n\n\n  \n    \n      See Feature UNPR-1170 &#8617;"
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"3-20catalog-20set-20up-catalog-manage-grid": {
+						"id": "3-20catalog-20set-20up-catalog-manage-grid",
+						"title": "Catalog Grid Presentation",
+						"categories": "3. Catalog Set up",
+						"url": " /3.%20catalog%20set%20up/Catalog-Manage-Grid/",
+						"content": "Creating View\n\nNavigating the grid\n\nIn this video, we see how to manage the grid appearance, including\n\n  Resize column\n  Reorder column\n  Sort column\n  Change the row height\n  Display image\n  Hide column\n  Filter - learn more about the contains filter\n  Grid and Table view\n  Export data (download)\n\n\nWe also see how you can\n\n\n  Add a comment on a record.\n\n\n\n\nThe screenshot below presents how you can remove sorting on a column and a filter."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
+					"3-20catalog-20set-20up-catalog-contains-filter": {
+						"id": "3-20catalog-20set-20up-catalog-contains-filter",
+						"title": "Contains Filter",
+						"categories": "3. Catalog Set up",
+						"url": " /3.%20catalog%20set%20up/Catalog-Contains-Filter/",
+						"content": "In this tutorial, we walk through the contains filter on a catalog, including usage of\n\n  All Of  to search all word separated by comma (AND search)\n  Any Of to search any word separated by comma (OR search)\n  Build complex search by combining multiple string with AND / OR / BUT NOT operators\n  Use Case Sensitive either for a specific word\n\n\nKnown limitations\n\n  When using a list of comma-separated words, make sure you have no space between your term.\n  You need to use Case Sensitive search for multiple words1\n  Note that at this stage, you cannot search string that contains a comma , 2\n\n\n\n\n\nFootnotes\n\n\n  \n    \n      See (UNPR-1103) &#8617;\n    \n    \n      See (UNPR-1092) &#8617;"
 					}
 					
 				
