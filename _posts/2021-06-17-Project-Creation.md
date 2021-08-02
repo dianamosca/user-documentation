@@ -9,17 +9,25 @@ type: Document
 
 ---
 
+
 Project in Unifyd are the top level entity managing
 * User access and permission
 * Data around a particular topic
 * Machine Learning Task artifacts including dictionnary, catalogue and ML models
 
+## 1. Project Homepage
+
 From the `Project` tab in the homepage you can
 * Access existing project
 * View meta information regarding the project including last updated date, number of task and user who have access
-* Create a new project by clicking the icon
+
+### 1.1 Create a new project 
+
+Create a new project by clicking the icon
 
 [![Rcreate-project-icon.png](/user-documentation/images/create-project-icon.png)](/user-documentation/images/create-project-icon.png)
+
+## 2. Add user to a project 
 
 Once the project created to invite new user
 * Click the [![user-icone.png](/user-documentation/images/user-icone.png)](/user-documentation/images/user-icone.png) in the top right menu

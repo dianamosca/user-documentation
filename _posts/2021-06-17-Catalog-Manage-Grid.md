@@ -16,7 +16,7 @@ In this video, we see how to manage the grid appearance, including
 * Change the row height
 * Display image
 * Hide column
-* Filter - learn more about the [contains filter](/3.%20catalog%20set%20up/Contains-Filter/)
+* Filter - learn more about the [contains filter](/3.%20catalog%20set%20up/Catalog-Contains-Filter/)
 * Grid and Table view
 * Export data (download)
 
