@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-16T20:04:07+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-16T20:10:43+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
 
 &lt;p&gt;This use case explains how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; record. Then, once a match is made, we update the VIP platform automatically using webhook.&lt;/p&gt;
 
@@ -181,11 +181,11 @@
   &lt;li&gt;Key the project name in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Projects&lt;/code&gt; section at the bottom of the menu&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/add-user-to-project.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/add-user-to-project.png&quot; alt=&quot;add-user-to-project.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Project in Unifyd are the top level entity managing User access and permission Data around a particular topic Machine Learning Task artifacts including dictionnary, catalogue and ML models</summary></entry><entry><title type="html">Matching Introduction</title><link href="http://localhost:4000/5.%20matching%20project/Matching-Project/" rel="alternate" type="text/html" title="Matching Introduction" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/5.%20matching%20project/Matching-Project</id><content type="html" xml:base="http://localhost:4000/5.%20matching%20project/Matching-Project/">&lt;h2 id=&quot;project-creation&quot;&gt;Project Creation&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/add-user-to-project.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/add-user-to-project.png&quot; alt=&quot;add-user-to-project.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Project in Unifyd are the top level entity managing User access and permission Data around a particular topic Machine Learning Task artifacts including dictionnary, catalogue and ML models</summary></entry><entry><title type="html">Matching Introduction</title><link href="http://localhost:4000/5.%20matching%20project/Matching-Project/" rel="alternate" type="text/html" title="Matching Introduction" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/5.%20matching%20project/Matching-Project</id><content type="html" xml:base="http://localhost:4000/5.%20matching%20project/Matching-Project/">&lt;h2 id=&quot;1-project-creation&quot;&gt;1. Project Creation&lt;/h2&gt;
 
 &lt;p&gt;Once you selected your &lt;code class=&quot;highlighter-rouge&quot;&gt;Catalog&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Catalog Table&lt;/code&gt;, select &lt;code class=&quot;highlighter-rouge&quot;&gt;Type = Record Matching (Entity Mastering)&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;field-configuration&quot;&gt;Field Configuration&lt;/h2&gt;
+&lt;h2 id=&quot;2-field-configuration&quot;&gt;2. Field Configuration&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;/user-documentation/images/Matching-Field-Configuration.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Matching-Field-Configuration.png&quot; alt=&quot;Matching-Field-Configuration.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -208,7 +208,7 @@
       &lt;li&gt;Numeric Decay %&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Project Creation</summary></entry><entry><title type="html">Review ML and Rule Category Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" rel="alternate" type="text/html" title="Review ML and Rule Category Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Project Creation</summary></entry><entry><title type="html">Review ML and Rule Category Suggestion</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/" rel="alternate" type="text/html" title="Review ML and Rule Category Suggestion" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Review-Suggestion/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
 
 &lt;p&gt;The left panel of the screen displays the categorization status for each record.  From left to right it contains&lt;/p&gt;
 &lt;ul&gt;
@@ -223,7 +223,7 @@
 
 &lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Left-Overview.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Left-Overview.png&quot; alt=&quot;Categorization-Left-Overview.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;label-status&quot;&gt;Label Status&lt;/h2&gt;
+&lt;h2 id=&quot;2-label-status&quot;&gt;2. Label Status&lt;/h2&gt;
 
 &lt;p&gt;At the center, the Label Status (or Selected Label) indicates&lt;/p&gt;
 &lt;ul&gt;
@@ -240,13 +240,13 @@
 
 &lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Label-Satus.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Label-Satus.png&quot; alt=&quot;Categorization-Label-Satus.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;comment&quot;&gt;Comment&lt;/h2&gt;
+&lt;h2 id=&quot;3-comment&quot;&gt;3. Comment&lt;/h2&gt;
 
 &lt;p&gt;Comment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon &lt;img src=&quot;/user-documentation/images/comments-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt; indicates there is one or more comment for the record. Click on the icon to open the right panel and view the comment.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/user-documentation/images/Record-Comment.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Record-Comment.png&quot; alt=&quot;Record-Comment.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;ml-task-status&quot;&gt;ML Task Status&lt;/h2&gt;
+&lt;h2 id=&quot;4-ml-task-status&quot;&gt;4. ML Task Status&lt;/h2&gt;
 
 &lt;p&gt;Unifyd Insights Machine Learning will automatically begins to suggest categories for similar records as you start labeling. The suggestion improves as you manually label more records. Depending on your dataset size and the number of categories, we suggest a threshold of a few hundred to a thousand categorized rows per category for the ML to produce a good recommendation.&lt;/p&gt;
 
@@ -261,7 +261,7 @@
 
 &lt;p&gt;&lt;a href=&quot;/user-documentation/images/ML-Task-Status.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/ML-Task-Status.png&quot; alt=&quot;ML-Task-Status.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;approving-ml-suggestion&quot;&gt;Approving ML Suggestion&lt;/h3&gt;
+&lt;h3 id=&quot;41-approving-ml-suggestion&quot;&gt;4.1 Approving ML Suggestion&lt;/h3&gt;
 
 &lt;p&gt;ML recommendations are only suggestions. You will need to review and upvote (i.e. approve) them manually.&lt;/p&gt;
 &lt;ul&gt;
@@ -272,7 +272,7 @@
 
 &lt;p&gt;&lt;a href=&quot;/user-documentation/images/upvote-ml-suggestion.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/upvote-ml-suggestion.png&quot; alt=&quot;upvote-ml-suggestion.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;rules-status&quot;&gt;Rules Status&lt;/h2&gt;
+&lt;h2 id=&quot;5-rules-status&quot;&gt;5. Rules Status&lt;/h2&gt;
 
 &lt;p&gt;On the left panel, the Rules Suggestion returns the following information:&lt;/p&gt;
 &lt;ul&gt;
@@ -283,7 +283,7 @@
   &lt;li&gt;&lt;img src=&quot;/user-documentation/images/thumbs-down-solid.svg&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;Red thumb down: Rule Suggestion disagrees with user label&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot; alt=&quot;Categorization-Rule-Status.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">Overview</summary></entry><entry><title type="html">Categorization Create Project</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" rel="alternate" type="text/html" title="Categorization Create Project" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Project</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Project/">&lt;h2 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/Categorization-Rule-Status.png&quot; alt=&quot;Categorization-Rule-Status.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Overview</summary></entry><entry><title type="html">Categorization Create Project</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Project/" rel="alternate" type="text/html" title="Categorization Create Project" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Project</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Project/">&lt;h2 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h2&gt;
 
 &lt;p&gt;We use a categorization project to assign records in a catalog to a specific category (for example, product category). Unifyd Insight human in the loop interface mix three approaches to ensure high accuracy of the categorization:&lt;/p&gt;
 &lt;ul&gt;

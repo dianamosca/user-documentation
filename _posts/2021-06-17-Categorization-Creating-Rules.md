@@ -8,7 +8,7 @@ description:
 type: Document
 ---
 
-## Create a Rule
+## 1. Create a Rule
 
 In this video
 * Create a filter to validate the set of records we want to apply a rule to
@@ -23,7 +23,7 @@ In this video
 
 <br> 
 
-### Auto Label Record 
+### 1.1 Auto Label Record 
 
 If you want your rules to apply the label directly, you need to select the `Auto Label Record` option during the rule creation. 
 
@@ -35,11 +35,11 @@ If your rules has
 
 [![rules-background-job.png](/user-documentation/images/rules-background-job.png)](/user-documentation/images/rules-background-job.png)
 
-## Edit Rules
+## 2. Edit Rules
 
 We currently do not support Rules Edition. You will need to delete the rule and recreate it with your modification.[^1]
 
-## Delete Rules
+## 3. Delete Rules
 
 This tutorial explains how you can delete a categorization rule. 
 1. Find a Record with the rules and click the cross arrow icon

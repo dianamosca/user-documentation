@@ -8,11 +8,11 @@ description:
 type: Document
 ---
 
-## Project Creation 
+## 1. Project Creation 
 
 Once you selected your `Catalog` and `Catalog Table`, select `Type = Record Matching (Entity Mastering)`.
 
-## Field Configuration
+## 2. Field Configuration
 
 [![Matching-Field-Configuration.png](/user-documentation/images/Matching-Field-Configuration.png)](/user-documentation/images/Matching-Field-Configuration.png)
 

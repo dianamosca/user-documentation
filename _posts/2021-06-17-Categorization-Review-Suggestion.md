@@ -8,7 +8,7 @@ description:
 type: Document
 ---
 
-## Overview 
+## 1. Overview 
 
 The left panel of the screen displays the categorization status for each record.  From left to right it contains
 * Check box to select a record
@@ -21,7 +21,7 @@ The left panel of the screen displays the categorization status for each record.
 
 [![Categorization-Left-Overview.png](/user-documentation/images/Categorization-Left-Overview.png)](/user-documentation/images/Categorization-Left-Overview.png)
 
-## Label Status 
+## 2. Label Status 
 
 At the center, the Label Status (or Selected Label) indicates
 *  <img src="/user-documentation/images/sitemap-solid.svg" width="25" height="25"> when a category has been set for the record
@@ -35,13 +35,13 @@ At the center, the Label Status (or Selected Label) indicates
 [![Categorization-Label-Satus.png](/user-documentation/images/Categorization-Label-Satus.png)](/user-documentation/images/Categorization-Label-Satus.png)
 
 
-## Comment
+## 3. Comment
 
 Comment are free form text to add contextual information regarding a record or leave a note for other users. A blue comment icon <img src="/user-documentation/images/comments-solid.svg" width="25" height="25"> indicates there is one or more comment for the record. Click on the icon to open the right panel and view the comment. 
 
 [![Record-Comment.png](/user-documentation/images/Record-Comment.png)](/user-documentation/images/Record-Comment.png)
 
-## ML Task Status
+## 4. ML Task Status
 
 Unifyd Insights Machine Learning will automatically begins to suggest categories for similar records as you start labeling. The suggestion improves as you manually label more records. Depending on your dataset size and the number of categories, we suggest a threshold of a few hundred to a thousand categorized rows per category for the ML to produce a good recommendation. 
 
@@ -54,7 +54,7 @@ On the left panel, the ML Suggestion returns the following information:
 
 [![ML-Task-Status.png](/user-documentation/images/ML-Task-Status.png)](/user-documentation/images/ML-Task-Status.png)
 
-### Approving ML Suggestion 
+### 4.1 Approving ML Suggestion 
 
 ML recommendations are only suggestions. You will need to review and upvote (i.e. approve) them manually.
 * If the selected category is wrong, you can down vote it to select the next suggested category. 
@@ -63,7 +63,7 @@ ML recommendations are only suggestions. You will need to review and upvote (i.e
 
 [![upvote-ml-suggestion.png](/user-documentation/images/upvote-ml-suggestion.png)](/user-documentation/images/upvote-ml-suggestion.png)
 
-## Rules Status 
+## 5. Rules Status 
 
 On the left panel, the Rules Suggestion returns the following information:
 * <img src="/user-documentation/images/random.svg" width="25" height="25"> Crossed Arrow with a one green: there is only one rules suggestion for the recor
