@@ -15,11 +15,11 @@ type: Document
 
 ## 2. Export file format 
 
-The export file will contains all the columns from your view plus the following extra columns.
+The export file will contain all the columns from your view plus the following extra columns.
 
 ### 2.1 Catalog
 
-The following fields contains the records metadata: 
+The following fields contain the records metadata: 
 * `Record ID`: the unique id of the record in the dataset.
 * `Task Id`: the unique id of the task in Unifyd Insight
 * `Catalog Id`: the unique id of the catalog in Unifyd Insight
@@ -29,21 +29,21 @@ The following fields contains the records metadata:
 
 The export file contains only the selected label for the record[^1]. The following fields are available: 
 * `Approved`: boolean - if the label has been approved in Unifyd Application
-* `Expert Label`: Name of the **Label** set by the expert. The field will be empty if no Expert categorized the record. 
+* `Expert Label`: Name of the **Label** set by the expert. The field is empty if no Expert has categorized the record. 
 * `Expert`: Expert user name
 
 ### 2.3 ML Labelling
 
-The export file contains only the value of the highest score ML recommendation for the record[^1].
+The export file contains only the highest score ML recommendation for the record[^1].a
 * `ML Label`: Name of the **Label** set by the ML task. This will be present 
 * `ML Label Score`: Score of the label 
 
 ### 2.4 Rule Labelling
 
 The export file contains only the value of the highest score rule for the record[^1]. 
-* `Rule Label`: Name of the **Label** set by the rule. The field will be empty is no rules apply to the record. 
+* `Rule Label`: Name of the **Label** set by the rule. The field will be empty if no rules apply to the record. 
 * `Rule Name`: Name of the rule
-* `Rules`: Multi value field, comma separated
+* `Rules`: Multi-value field, comma-separated
 
 
 ## 3. Selecting labels
@@ -57,6 +57,4 @@ As you review the results, you will need to select the best label for each recor
 ---
 **Footnotes**
 
-[^1]: We can prepare custom export with all the expert labelling, rules and ML suggestion for a record. Contact us for more details. 
-
-
+[^1]: We can prepare a custom export with all the expert labeling, rules, and ML suggestion for a record. Contact us for more details. 

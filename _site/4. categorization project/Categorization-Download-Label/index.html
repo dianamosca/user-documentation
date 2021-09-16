@@ -136,11 +136,11 @@
 
 <h2 id="2-export-file-format">2. Export file format</h2>
 
-<p>The export file will contains all the columns from your view plus the following extra columns.</p>
+<p>The export file will contain all the columns from your view plus the following extra columns.</p>
 
 <h3 id="21-catalog">2.1 Catalog</h3>
 
-<p>The following fields contains the records metadata:</p>
+<p>The following fields contain the records metadata:</p>
 <ul>
   <li><code class="highlighter-rouge">Record ID</code>: the unique id of the record in the dataset.</li>
   <li><code class="highlighter-rouge">Task Id</code>: the unique id of the task in Unifyd Insight</li>
@@ -153,13 +153,13 @@
 <p>The export file contains only the selected label for the record<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. The following fields are available:</p>
 <ul>
   <li><code class="highlighter-rouge">Approved</code>: boolean - if the label has been approved in Unifyd Application</li>
-  <li><code class="highlighter-rouge">Expert Label</code>: Name of the <strong>Label</strong> set by the expert. The field will be empty if no Expert categorized the record.</li>
+  <li><code class="highlighter-rouge">Expert Label</code>: Name of the <strong>Label</strong> set by the expert. The field is empty if no Expert has categorized the record.</li>
   <li><code class="highlighter-rouge">Expert</code>: Expert user name</li>
 </ul>
 
 <h3 id="23-ml-labelling">2.3 ML Labelling</h3>
 
-<p>The export file contains only the value of the highest score ML recommendation for the record<sup id="fnref:1:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>The export file contains only the highest score ML recommendation for the record<sup id="fnref:1:1"><a href="#fn:1" class="footnote">1</a></sup>.a</p>
 <ul>
   <li><code class="highlighter-rouge">ML Label</code>: Name of the <strong>Label</strong> set by the ML task. This will be present</li>
   <li><code class="highlighter-rouge">ML Label Score</code>: Score of the label</li>
@@ -169,9 +169,9 @@
 
 <p>The export file contains only the value of the highest score rule for the record<sup id="fnref:1:2"><a href="#fn:1" class="footnote">1</a></sup>.</p>
 <ul>
-  <li><code class="highlighter-rouge">Rule Label</code>: Name of the <strong>Label</strong> set by the rule. The field will be empty is no rules apply to the record.</li>
+  <li><code class="highlighter-rouge">Rule Label</code>: Name of the <strong>Label</strong> set by the rule. The field will be empty if no rules apply to the record.</li>
   <li><code class="highlighter-rouge">Rule Name</code>: Name of the rule</li>
-  <li><code class="highlighter-rouge">Rules</code>: Multi value field, comma separated</li>
+  <li><code class="highlighter-rouge">Rules</code>: Multi-value field, comma-separated</li>
 </ul>
 
 <h2 id="3-selecting-labels">3. Selecting labels</h2>
@@ -189,7 +189,7 @@
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>We can prepare custom export with all the expert labelling, rules and ML suggestion for a record. Contact us for more details. <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a> <a href="#fnref:1:2" class="reversefootnote">&#8617;<sup>3</sup></a></p>
+      <p>We can prepare a custom export with all the expert labeling, rules, and ML suggestion for a record. Contact us for more details. <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a> <a href="#fnref:1:2" class="reversefootnote">&#8617;<sup>3</sup></a></p>
     </li>
   </ol>
 </div>

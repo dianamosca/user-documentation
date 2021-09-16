@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-08-30T13:00:58+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-16T17:45:51+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
 
 &lt;p&gt;This use case explains how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; record. Then, once a match is made, we update the VIP platform automatically using webhook.&lt;/p&gt;
 
@@ -347,11 +347,11 @@ We review the meaning of each icon in the left menu on the page &lt;a href=&quot
 
 &lt;h2 id=&quot;2-export-file-format&quot;&gt;2. Export file format&lt;/h2&gt;
 
-&lt;p&gt;The export file will contains all the columns from your view plus the following extra columns.&lt;/p&gt;
+&lt;p&gt;The export file will contain all the columns from your view plus the following extra columns.&lt;/p&gt;
 
 &lt;h3 id=&quot;21-catalog&quot;&gt;2.1 Catalog&lt;/h3&gt;
 
-&lt;p&gt;The following fields contains the records metadata:&lt;/p&gt;
+&lt;p&gt;The following fields contain the records metadata:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Record ID&lt;/code&gt;: the unique id of the record in the dataset.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Task Id&lt;/code&gt;: the unique id of the task in Unifyd Insight&lt;/li&gt;
@@ -364,13 +364,13 @@ We review the meaning of each icon in the left menu on the page &lt;a href=&quot
 &lt;p&gt;The export file contains only the selected label for the record&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. The following fields are available:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Approved&lt;/code&gt;: boolean - if the label has been approved in Unifyd Application&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Expert Label&lt;/code&gt;: Name of the &lt;strong&gt;Label&lt;/strong&gt; set by the expert. The field will be empty if no Expert categorized the record.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Expert Label&lt;/code&gt;: Name of the &lt;strong&gt;Label&lt;/strong&gt; set by the expert. The field is empty if no Expert has categorized the record.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Expert&lt;/code&gt;: Expert user name&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;23-ml-labelling&quot;&gt;2.3 ML Labelling&lt;/h3&gt;
 
-&lt;p&gt;The export file contains only the value of the highest score ML recommendation for the record&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;The export file contains only the highest score ML recommendation for the record&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.a&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ML Label&lt;/code&gt;: Name of the &lt;strong&gt;Label&lt;/strong&gt; set by the ML task. This will be present&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ML Label Score&lt;/code&gt;: Score of the label&lt;/li&gt;
@@ -380,9 +380,9 @@ We review the meaning of each icon in the left menu on the page &lt;a href=&quot
 
 &lt;p&gt;The export file contains only the value of the highest score rule for the record&lt;sup id=&quot;fnref:1:2&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Rule Label&lt;/code&gt;: Name of the &lt;strong&gt;Label&lt;/strong&gt; set by the rule. The field will be empty is no rules apply to the record.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Rule Label&lt;/code&gt;: Name of the &lt;strong&gt;Label&lt;/strong&gt; set by the rule. The field will be empty if no rules apply to the record.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Rule Name&lt;/code&gt;: Name of the rule&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Rules&lt;/code&gt;: Multi value field, comma separated&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Rules&lt;/code&gt;: Multi-value field, comma-separated&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;3-selecting-labels&quot;&gt;3. Selecting labels&lt;/h2&gt;
@@ -400,7 +400,7 @@ We review the meaning of each icon in the left menu on the page &lt;a href=&quot
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;We can prepare custom export with all the expert labelling, rules and ML suggestion for a record. Contact us for more details. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;We can prepare a custom export with all the expert labeling, rules, and ML suggestion for a record. Contact us for more details. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Download the categorization Label</summary></entry></feed>
