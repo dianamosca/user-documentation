@@ -18,15 +18,15 @@
 <meta name="generator" content="Jekyll v3.7.2" />
 <meta property="og:title" content="Categorization Download Label" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="User Documentation for Unifyd Insights" />
-<meta property="og:description" content="User Documentation for Unifyd Insights" />
+<meta name="description" content="1. Download the categorization Label" />
+<meta property="og:description" content="1. Download the categorization Label" />
 <link rel="canonical" href="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/" />
 <meta property="og:url" content="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/" />
 <meta property="og:site_name" content="Unifyd Insights Documentation" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-06-17T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"User Documentation for Unifyd Insights","@type":"BlogPosting","url":"http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/","headline":"Categorization Download Label","dateModified":"2021-06-17T00:00:00+00:00","datePublished":"2021-06-17T00:00:00+00:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/"},"@context":"http://schema.org"}</script>
+{"description":"1. Download the categorization Label","@type":"BlogPosting","url":"http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/","headline":"Categorization Download Label","dateModified":"2021-06-17T00:00:00+00:00","datePublished":"2021-06-17T00:00:00+00:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Unifyd Insights Documentation" />
@@ -115,7 +115,7 @@
 				<section class="tutorial">
 	<section class="sidebar sticky">
 		<ul>
-			
+			<ul><li><a href="#1-download-the-categorization-label">1. Download the categorization Label</a></li><li><a href="#2-export-file-format">2. Export file format</a><ul><li><a href="#21-catalog">2.1 Catalog</a></li><li><a href="#22-expert-labelling">2.2 Expert Labelling</a></li><li><a href="#23-ml-labelling">2.3 ML Labelling</a></li><li><a href="#24-rule-labelling">2.4 Rule Labelling</a></li></ul></li><li><a href="#3-selecting-labels">3. Selecting labels</a></li></ul>
 
 		</ul>
 		<br>
@@ -130,7 +130,69 @@
 		
 		
 		<div class="tutorial-main">
-			<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/fb038906378b44898d5ad2db8c9a5a8f" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+			<h2 id="1-download-the-categorization-label">1. Download the categorization Label</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/fb038906378b44898d5ad2db8c9a5a8f" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h2 id="2-export-file-format">2. Export file format</h2>
+
+<p>The export file will contain all the columns from your view plus the following extra columns.</p>
+
+<h3 id="21-catalog">2.1 Catalog</h3>
+
+<p>The following fields contain the records metadata:</p>
+<ul>
+  <li><code class="highlighter-rouge">Record ID</code>: the unique id of the record in the dataset.</li>
+  <li><code class="highlighter-rouge">Task Id</code>: the unique id of the task in Unifyd Insight</li>
+  <li><code class="highlighter-rouge">Catalog Id</code>: the unique id of the catalog in Unifyd Insight</li>
+  <li><code class="highlighter-rouge">Catalog Name</code>: the name of the catalog in Unifyd Insight</li>
+</ul>
+
+<h3 id="22-expert-labelling">2.2 Expert Labelling</h3>
+
+<p>The export file contains only the selected label for the record<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. The following fields are available:</p>
+<ul>
+  <li><code class="highlighter-rouge">Approved</code>: boolean - if the label has been approved in Unifyd Application</li>
+  <li><code class="highlighter-rouge">Expert Label</code>: Name of the <strong>Label</strong> set by the expert. The field is empty if no Expert has categorized the record.</li>
+  <li><code class="highlighter-rouge">Expert</code>: Expert user name</li>
+</ul>
+
+<h3 id="23-ml-labelling">2.3 ML Labelling</h3>
+
+<p>The export file contains only the highest score ML recommendation for the record<sup id="fnref:1:1"><a href="#fn:1" class="footnote">1</a></sup>.a</p>
+<ul>
+  <li><code class="highlighter-rouge">ML Label</code>: Name of the <strong>Label</strong> set by the ML task. This will be present</li>
+  <li><code class="highlighter-rouge">ML Label Score</code>: Score of the label</li>
+</ul>
+
+<h3 id="24-rule-labelling">2.4 Rule Labelling</h3>
+
+<p>The export file contains only the value of the highest score rule for the record<sup id="fnref:1:2"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<ul>
+  <li><code class="highlighter-rouge">Rule Label</code>: Name of the <strong>Label</strong> set by the rule. The field will be empty if no rules apply to the record.</li>
+  <li><code class="highlighter-rouge">Rule Name</code>: Name of the rule</li>
+  <li><code class="highlighter-rouge">Rules</code>: Multi-value field, comma-separated</li>
+</ul>
+
+<h2 id="3-selecting-labels">3. Selecting labels</h2>
+
+<p>As you review the results, you will need to select the best label for each record. We recommend the following naive model:</p>
+<ul>
+  <li>Select the <code class="highlighter-rouge">Expert Label</code> by default</li>
+  <li>If <code class="highlighter-rouge">Expert Label</code> is blank, select the <code class="highlighter-rouge">Rule Label</code></li>
+  <li>If the <code class="highlighter-rouge">Rule Label</code> is blank, select the <code class="highlighter-rouge">ML Label</code></li>
+</ul>
+
+<hr />
+<p><strong>Footnotes</strong></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>We can prepare a custom export with all the expert labeling, rules, and ML suggestion for a record. Contact us for more details. <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a> <a href="#fnref:1:2" class="reversefootnote">&#8617;<sup>3</sup></a></p>
+    </li>
+  </ol>
+</div>
 
 		</div>
 	</section>

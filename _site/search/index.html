@@ -170,7 +170,7 @@
 						"title": "Uplodate Data in a Project",
 						"categories": "1. Project &amp; Dataset",
 						"url": " /1.%20project%20&amp;%20dataset/Project-Update-Data/",
-						"content": "In this tutorial, we present how to upload data into a dataset in Unifyd."
+						"content": "In this tutorial, we present how to upload data into a dataset in Unifyd.\n\nNote: Unifyd Insight currently can import file with up to 200,000 rows. You should break down larger files in smaller dataset update."
 					}
 					
 				
@@ -260,7 +260,7 @@
 						"title": "Categorization Download Label",
 						"categories": "4. Categorization Project",
 						"url": " /4.%20categorization%20project/Categorization-Download-Label/",
-						"content": ""
+						"content": "1. Download the categorization Label\n\n\n\n2. Export file format\n\nThe export file will contain all the columns from your view plus the following extra columns.\n\n2.1 Catalog\n\nThe following fields contain the records metadata:\n\n  Record ID: the unique id of the record in the dataset.\n  Task Id: the unique id of the task in Unifyd Insight\n  Catalog Id: the unique id of the catalog in Unifyd Insight\n  Catalog Name: the name of the catalog in Unifyd Insight\n\n\n2.2 Expert Labelling\n\nThe export file contains only the selected label for the record1. The following fields are available:\n\n  Approved: boolean - if the label has been approved in Unifyd Application\n  Expert Label: Name of the Label set by the expert. The field is empty if no Expert has categorized the record.\n  Expert: Expert user name\n\n\n2.3 ML Labelling\n\nThe export file contains only the highest score ML recommendation for the record1.a\n\n  ML Label: Name of the Label set by the ML task. This will be present\n  ML Label Score: Score of the label\n\n\n2.4 Rule Labelling\n\nThe export file contains only the value of the highest score rule for the record1.\n\n  Rule Label: Name of the Label set by the rule. The field will be empty if no rules apply to the record.\n  Rule Name: Name of the rule\n  Rules: Multi-value field, comma-separated\n\n\n3. Selecting labels\n\nAs you review the results, you will need to select the best label for each record. We recommend the following naive model:\n\n  Select the Expert Label by default\n  If Expert Label is blank, select the Rule Label\n  If the Rule Label is blank, select the ML Label\n\n\n\nFootnotes\n\n\n  \n    \n      We can prepare a custom export with all the expert labeling, rules, and ML suggestion for a record. Contact us for more details. &#8617; &#8617;2 &#8617;3"
 					}
 					
 				
