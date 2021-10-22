@@ -9,7 +9,7 @@ type: Document
 
 ---
 
-<div style="position: relative; padding-bottom: 57.05229793977813%; height: 0;"><iframe src="https://www.loom.com/embed/d6c7a248fd7b46e0a90929d0452a7f9d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/637967277?h=77ca1bf714&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Unifyd Insights - Dataset Deduplication Setting.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 When you create a dataset for the first time, you have the option to setup a ID Policy/Deduplication Settings.
 

@@ -15,7 +15,7 @@ Catalog View save the [grid configuration](/3.%20catalog%20set%20up/Catalog-Mana
 1. You cannot restore a view to a previous state. You will need to reconfigure it manually
 2. Since the default view is shared with all users, filter from one user will impact others. To avoid conflicts, we recommend each user create a private default view (see section `3. Recommended Settings` below). 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/ee5e357ea2074135b5be2bcd48eb2507" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/637970483?h=455ca12668&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Unifyd Insights - Managing Conflicting View"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ##  2. Creating View 
 

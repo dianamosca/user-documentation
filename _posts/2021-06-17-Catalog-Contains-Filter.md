@@ -19,7 +19,7 @@ In this tutorial, we walk through the contains filter on a catalog, including us
 * You need to use Case Sensitive search for multiple words[^1]
 * Note that at this stage, you cannot search string that contains a comma `,` [^2]
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/71d17681c7d94543ae0cb8ccb472109b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/637971818?h=358517af7e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Unifyd Insights - Contains Filter"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ---
 **Footnotes**

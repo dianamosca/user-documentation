@@ -10,7 +10,8 @@ type: use-case
 
 This use case explains how to use Unifyd Insights Platform to match `Shipment` data with `VIP Issues`. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a `VIP Issue` with a `Shipment` record. Then, once a match is made, we update the VIP platform automatically using webhook. 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/a4aef116c4734e608a5006ba049ca585" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<iframe src="https://player.vimeo.com/video/637963006?h=22b2a71873" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/637963006">TFE - Tutorial</a> from <a href="https://vimeo.com/user155281799">Martin Magdinier</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 ## 2. Reviewing Matches 
 
