@@ -13,7 +13,7 @@ type: Document
 In this video
 * Create a filter to validate the set of records we want to apply a rule to
 * Create a rule
-* Filter records with the rules applied. Learn more regarding [filtering in catalog](/3.%20catalog%20set%20up/Contains-Filter/)
+* Filter records with the rules applied. Learn more regarding [filtering in catalog](/3.%20catalog%20set%20up/Catalog-Contains-Filter/)
 * Identified records with conflicting rules
 * View at the project level all rules and the number of records impacted. 
 * Export / Import rules
