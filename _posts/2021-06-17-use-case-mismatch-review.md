@@ -77,9 +77,10 @@ All Medium Priority records are `Active`
 ### 3.3 Low Priority
 
 All Low Priority records are `Active` without any filter on the `Last Updated` field with either
+* A score under 20 and a `Last Updated` over  50 weeks from today
 * 1 or more `Count False` that are not already High or Medium priority<br>
 [![Low-Count.png](/user-documentation/images/mismatch/Low-Count.png)](/user-documentation/images/mismatch/Low-Count.png)
-* A score under 20 and a `Last Updated` over  50 weeks from today
+
 
 
 
