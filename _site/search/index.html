@@ -120,6 +120,21 @@
 				
 					
 					
+					"use-case-mismatch-review": {
+						"id": "use-case-mismatch-review",
+						"title": "MisMatch Review",
+						"categories": "",
+						"url": " /use-case-mismatch-review/",
+						"content": "1. Overview\n\nThis use case explains how to use Unifyd Insights Platform to detect mismatches in VIP Cross Reference file.\n\nLog in to Unifyd and navigate to the catalog MisMatch with Priority to review the data.\n\n1.1 Review Item by Priority.\n\nYou can review items by priority, at the beginning of the project or when you want to clear older potential mismatches detected by Unifyd.\n\nTo do so, use the filter to select:\n\n  List of Review Priority to select the level of priority you like to review.\n  Review Status is (blank) to focus on items you have not reviewed yet.\n\n\nWhen you review an item, update the Review Priority field to track your progress. In your comment, you can add the Count False and C_Desc_Score. It will help to see if there are changes when the records are updated.\n\n1.2 Review Recent Items\n\nAfter each update, review recent items to focus on active sales and ensure the Review Status set previously is still current.\n\nTo do so, use the filter to select:\n\n  Records recently updated using the Last Updated\n  List of Review Priority\n  Compare the Count False and C_Desc_Score in the Review Status notes and compare it with the field value.\n  Edit the Review Status with your notes and the current  Count False and C_Desc_Score.\n  The History tab list all the edits made to the Review Status field.\n\n\n2. Fields Comparison\n\nUnifyd compares the following fields to detect a mismatch.\n\n  Dist. Selling Unit vs. Supp. Selling Units returns a boolean\n  Dist. U/C vs. Supp. U/C returns a boolean\n  Supp GTIN vs. Dist GTIN returns a boolean\n  Dist Item Size vs. Package returns a boolean\n  Normalized Vintage field vs. vintage extracted from Supp Item Description returns a boolean\n  Dist Item Desc vs. Supp Item Desc return a match probability. The lower the score, the more risk of mismatch. The results is stored in the field C_Desc_Score.\n\n\nThe system does not compare if one of the fields is null.  The first boolean are summarized in the Count False.\n\n3. Priority Computation\n\nUsing the four following fields we compute the review priority for each field\n\n  Active\n  Last Updated\n  Count False\n  C_Desc_Score\n\n\n3.1 High Priority\n\nAll High Priority records are Active and have a Last_Updated value in the last 20 weeks from today and either\n\n  \n    4 or more Count False  \n\n  \n  \n    a C_Desc_Score lower than 20.  \n\n  \n\n\n3.2 Medium Priority\n\nAll Medium Priority records are Active\n\n  3 Count False and a Last Updated less than 50 weeks.\n  \n    4 or more Count False and a Last Updated between 20 and 50 weeks from today \n\n  \n  a C_Desc_Score lower than 20 and a Last Updated between 20 and 50 weeks from today   \n\n\n\n3.3 Low Priority\n\nAll Low Priority records are Active without any filter on the Last Updated field with either\n\n  1 or more Count False that are not already High or Medium priority\n\n  A score under 20 and a Last Updated over  50 weeks from today"
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
 					"use-case-matching-two-datasets": {
 						"id": "use-case-matching-two-datasets",
 						"title": "Matching Two Datasets Together",

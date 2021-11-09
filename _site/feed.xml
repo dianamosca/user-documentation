@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-01T20:57:57+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-09T19:55:51+00:00</updated><id>http://localhost:4000/</id><title type="html">Unifyd Insights Documentation</title><subtitle>User Documentation for Unifyd Insights</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">MisMatch Review</title><link href="http://localhost:4000/use-case-mismatch-review/" rel="alternate" type="text/html" title="MisMatch Review" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-mismatch-review</id><content type="html" xml:base="http://localhost:4000/use-case-mismatch-review/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
+
+&lt;p&gt;This use case explains how to use Unifyd Insights Platform to detect mismatches in VIP Cross Reference file.&lt;/p&gt;
+
+&lt;p&gt;Log in to Unifyd and navigate to the catalog &lt;code class=&quot;highlighter-rouge&quot;&gt;MisMatch with Priority&lt;/code&gt; to review the data.&lt;/p&gt;
+
+&lt;h3 id=&quot;11-review-item-by-priority&quot;&gt;1.1 Review Item by Priority.&lt;/h3&gt;
+
+&lt;p&gt;You can &lt;strong&gt;review items by priority&lt;/strong&gt;, at the beginning of the project or when you want to clear older potential mismatches detected by Unifyd.&lt;/p&gt;
+
+&lt;p&gt;To do so, use the filter to select:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;List of &lt;code class=&quot;highlighter-rouge&quot;&gt;Review Priority&lt;/code&gt; to select the level of priority you like to review.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Review Status&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;(blank)&lt;/code&gt; to focus on items you have not reviewed yet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When you review an item, update the &lt;code class=&quot;highlighter-rouge&quot;&gt;Review Priority&lt;/code&gt; field to track your progress. In your comment, you can add the &lt;code class=&quot;highlighter-rouge&quot;&gt;Count False&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;C_Desc_Score&lt;/code&gt;. It will help to see if there are changes when the records are updated.&lt;/p&gt;
+
+&lt;h3 id=&quot;12-review-recent-items&quot;&gt;1.2 Review Recent Items&lt;/h3&gt;
+
+&lt;p&gt;After each update, &lt;strong&gt;review recent items&lt;/strong&gt; to focus on active sales and ensure the &lt;code class=&quot;highlighter-rouge&quot;&gt;Review Status&lt;/code&gt; set previously is still current.&lt;/p&gt;
+
+&lt;p&gt;To do so, use the filter to select:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Records recently updated using the &lt;code class=&quot;highlighter-rouge&quot;&gt;Last Updated&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;List of &lt;code class=&quot;highlighter-rouge&quot;&gt;Review Priority&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Compare the &lt;code class=&quot;highlighter-rouge&quot;&gt;Count False&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;C_Desc_Score&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Review Status&lt;/code&gt; notes and compare it with the field value.&lt;/li&gt;
+  &lt;li&gt;Edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;Review Status&lt;/code&gt; with your notes and the current  &lt;code class=&quot;highlighter-rouge&quot;&gt;Count False&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;C_Desc_Score&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;History&lt;/code&gt; tab list all the edits made to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Review Status&lt;/code&gt; field.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-fields-comparison&quot;&gt;2. Fields Comparison&lt;/h2&gt;
+
+&lt;p&gt;Unifyd compares the following fields to detect a mismatch.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Dist. Selling Unit&lt;/code&gt; vs. &lt;code class=&quot;highlighter-rouge&quot;&gt;Supp. Selling Units&lt;/code&gt; returns a boolean&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Dist. U/C&lt;/code&gt; vs. &lt;code class=&quot;highlighter-rouge&quot;&gt;Supp. U/C&lt;/code&gt; returns a boolean&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Supp GTIN&lt;/code&gt; vs. &lt;code class=&quot;highlighter-rouge&quot;&gt;Dist GTIN&lt;/code&gt; returns a boolean&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Dist Item Size&lt;/code&gt; vs. &lt;code class=&quot;highlighter-rouge&quot;&gt;Package&lt;/code&gt; returns a boolean&lt;/li&gt;
+  &lt;li&gt;Normalized &lt;code class=&quot;highlighter-rouge&quot;&gt;Vintage&lt;/code&gt; field vs. vintage extracted from &lt;code class=&quot;highlighter-rouge&quot;&gt;Supp Item Description&lt;/code&gt; returns a boolean&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Dist Item Desc&lt;/code&gt; vs. &lt;code class=&quot;highlighter-rouge&quot;&gt;Supp Item Desc&lt;/code&gt; return a match probability. The lower the score, the more risk of mismatch. The results is stored in the field &lt;code class=&quot;highlighter-rouge&quot;&gt;C_Desc_Score&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The system does not compare if one of the fields is null.  The first boolean are summarized in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Count False&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-priority-computation&quot;&gt;3. Priority Computation&lt;/h2&gt;
+
+&lt;p&gt;Using the four following fields we compute the review priority for each field&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Active&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Last Updated&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Count False&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C_Desc_Score&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;31-high-priority&quot;&gt;3.1 High Priority&lt;/h3&gt;
+
+&lt;p&gt;All High Priority records are &lt;code class=&quot;highlighter-rouge&quot;&gt;Active&lt;/code&gt; and have a &lt;code class=&quot;highlighter-rouge&quot;&gt;Last_Updated&lt;/code&gt; value in the last 20 weeks from today and either&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;4 or more &lt;code class=&quot;highlighter-rouge&quot;&gt;Count False&lt;/code&gt;  &lt;br /&gt;
+&lt;a href=&quot;/user-documentation/images/mismatch/High-Count.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/mismatch/High-Count.png&quot; alt=&quot;High-Count.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;a &lt;code class=&quot;highlighter-rouge&quot;&gt;C_Desc_Score&lt;/code&gt; lower than 20. &lt;br /&gt; 
+&lt;a href=&quot;/user-documentation/images/mismatch/High-Score.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/mismatch/High-Score.png&quot; alt=&quot;High-Score.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;32-medium-priority&quot;&gt;3.2 Medium Priority&lt;/h3&gt;
+
+&lt;p&gt;All Medium Priority records are &lt;code class=&quot;highlighter-rouge&quot;&gt;Active&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;3 &lt;code class=&quot;highlighter-rouge&quot;&gt;Count False&lt;/code&gt; and a &lt;code class=&quot;highlighter-rouge&quot;&gt;Last Updated&lt;/code&gt; less than 50 weeks.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;4 or more &lt;code class=&quot;highlighter-rouge&quot;&gt;Count False&lt;/code&gt; and a &lt;code class=&quot;highlighter-rouge&quot;&gt;Last Updated&lt;/code&gt; between 20 and 50 weeks from today &lt;br /&gt;
+&lt;a href=&quot;/user-documentation/images/mismatch/High-Count.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/mismatch/High-Count.png&quot; alt=&quot;High-Count.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;a &lt;code class=&quot;highlighter-rouge&quot;&gt;C_Desc_Score&lt;/code&gt; lower than 20 and a &lt;code class=&quot;highlighter-rouge&quot;&gt;Last Updated&lt;/code&gt; between 20 and 50 weeks from today  &lt;br /&gt; 
+&lt;a href=&quot;/user-documentation/images/mismatch/Medium-Score.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/mismatch/Medium-Score.png&quot; alt=&quot;Medium-Score.png&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;33-low-priority&quot;&gt;3.3 Low Priority&lt;/h3&gt;
+
+&lt;p&gt;All Low Priority records are &lt;code class=&quot;highlighter-rouge&quot;&gt;Active&lt;/code&gt; without any filter on the &lt;code class=&quot;highlighter-rouge&quot;&gt;Last Updated&lt;/code&gt; field with either&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1 or more &lt;code class=&quot;highlighter-rouge&quot;&gt;Count False&lt;/code&gt; that are not already High or Medium priority&lt;br /&gt;
+&lt;a href=&quot;/user-documentation/images/mismatch/Low-Count.png&quot;&gt;&lt;img src=&quot;/user-documentation/images/mismatch/Low-Count.png&quot; alt=&quot;Low-Count.png&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;A score under 20 and a &lt;code class=&quot;highlighter-rouge&quot;&gt;Last Updated&lt;/code&gt; over  50 weeks from today&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Overview</summary></entry><entry><title type="html">Matching Two Datasets Together</title><link href="http://localhost:4000/use-case-matching-two-datasets/" rel="alternate" type="text/html" title="Matching Two Datasets Together" /><published>2021-06-22T00:00:00+00:00</published><updated>2021-06-22T00:00:00+00:00</updated><id>http://localhost:4000/use-case-matching-two-datasets</id><content type="html" xml:base="http://localhost:4000/use-case-matching-two-datasets/">&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
 
 &lt;p&gt;This use case explains how to use Unifyd Insights Platform to match &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; data with &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issues&lt;/code&gt;. In this scenario, the Unifyd Insight application mirrors data from two systems. First, we use Unifyd Insights to match a &lt;code class=&quot;highlighter-rouge&quot;&gt;VIP Issue&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;Shipment&lt;/code&gt; record. Then, once a match is made, we update the VIP platform automatically using webhook.&lt;/p&gt;
 
@@ -347,67 +436,4 @@ We review the meaning of each icon in the left menu on the page &lt;a href=&quot
   &lt;li&gt;Train the model on your dataset and batch categorize records. This task can take from few minutes to several hours, depending on the size of your dataset&lt;/li&gt;
   &lt;li&gt;Review the conflict between ML suggestion and your rules and expert categorization. The ambiguity chart helps to target hard-to-categorize items and improve the model accuracy.&lt;/li&gt;
   &lt;li&gt;Build, train and rerun a new model. We usually need a couple of iteration to achieve up to 99% accuracy of the model.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Introduction</summary></entry><entry><title type="html">Categorization Download Label</title><link href="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/" rel="alternate" type="text/html" title="Categorization Download Label" /><published>2021-06-17T00:00:00+00:00</published><updated>2021-06-17T00:00:00+00:00</updated><id>http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label</id><content type="html" xml:base="http://localhost:4000/4.%20categorization%20project/Categorization-Download-Label/">&lt;h2 id=&quot;1-download-the-categorization-label&quot;&gt;1. Download the categorization Label&lt;/h2&gt;
-
-&lt;div style=&quot;padding:56.25% 0 0 0;position:relative;&quot;&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/637968680?h=473645900b&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen=&quot;&quot; style=&quot;position:absolute;top:0;left:0;width:100%;height:100%;&quot; title=&quot;Download Categorization Label&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-&lt;script src=&quot;https://player.vimeo.com/api/player.js&quot;&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;2-export-file-format&quot;&gt;2. Export file format&lt;/h2&gt;
-
-&lt;p&gt;The export file will contain all the columns from your view plus the following extra columns.&lt;/p&gt;
-
-&lt;h3 id=&quot;21-catalog&quot;&gt;2.1 Catalog&lt;/h3&gt;
-
-&lt;p&gt;The following fields contain the records metadata:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Record ID&lt;/code&gt;: the unique id of the record in the dataset.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Task Id&lt;/code&gt;: the unique id of the task in Unifyd Insight&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Catalog Id&lt;/code&gt;: the unique id of the catalog in Unifyd Insight&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Catalog Name&lt;/code&gt;: the name of the catalog in Unifyd Insight&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;22-expert-labelling&quot;&gt;2.2 Expert Labelling&lt;/h3&gt;
-
-&lt;p&gt;The export file contains only the selected label for the record&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. The following fields are available:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Approved&lt;/code&gt;: boolean - if the label has been approved in Unifyd Application&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Expert Label&lt;/code&gt;: Name of the &lt;strong&gt;Label&lt;/strong&gt; set by the expert. The field is empty if no Expert has categorized the record.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Expert&lt;/code&gt;: Expert user name&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;23-ml-labelling&quot;&gt;2.3 ML Labelling&lt;/h3&gt;
-
-&lt;p&gt;The export file contains only the highest score ML recommendation for the record&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.a&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ML Label&lt;/code&gt;: Name of the &lt;strong&gt;Label&lt;/strong&gt; set by the ML task. This will be present&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ML Label Score&lt;/code&gt;: Score of the label&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;24-rule-labelling&quot;&gt;2.4 Rule Labelling&lt;/h3&gt;
-
-&lt;p&gt;The export file contains only the value of the highest score rule for the record&lt;sup id=&quot;fnref:1:2&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Rule Label&lt;/code&gt;: Name of the &lt;strong&gt;Label&lt;/strong&gt; set by the rule. The field will be empty if no rules apply to the record.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Rule Name&lt;/code&gt;: Name of the rule&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Rules&lt;/code&gt;: Multi-value field, comma-separated&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3-selecting-labels&quot;&gt;3. Selecting labels&lt;/h2&gt;
-
-&lt;p&gt;As you review the results, you will need to select the best label for each record. We recommend the following naive model:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Select the &lt;code class=&quot;highlighter-rouge&quot;&gt;Expert Label&lt;/code&gt; by default&lt;/li&gt;
-  &lt;li&gt;If &lt;code class=&quot;highlighter-rouge&quot;&gt;Expert Label&lt;/code&gt; is blank, select the &lt;code class=&quot;highlighter-rouge&quot;&gt;Rule Label&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;If the &lt;code class=&quot;highlighter-rouge&quot;&gt;Rule Label&lt;/code&gt; is blank, select the &lt;code class=&quot;highlighter-rouge&quot;&gt;ML Label&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Footnotes&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;We can prepare a custom export with all the expert labeling, rules, and ML suggestion for a record. Contact us for more details. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Download the categorization Label</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">1. Introduction</summary></entry></feed>
