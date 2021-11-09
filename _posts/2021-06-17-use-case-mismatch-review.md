@@ -69,7 +69,7 @@ All High Priority records are `Active` and have a `Last_Updated` value in the la
 All Medium Priority records are `Active`
 * 3 `Count False` and a `Last Updated` less than 50 weeks. 
 * 4 or more `Count False` and a `Last Updated` between 20 and 50 weeks from today <br>
-[![High-Count.png](/user-documentation/images/mismatch/High-Count.png)](/user-documentation/images/mismatch/High-Count.png)
+[![Medium-Count.png](/user-documentation/images/mismatch/Medium-Count.png)](/user-documentation/images/mismatch/Medium-Count.png)
 
 * a `C_Desc_Score` lower than 20 and a `Last Updated` between 20 and 50 weeks from today  <br> 
 [![Medium-Score.png](/user-documentation/images/mismatch/Medium-Score.png)](/user-documentation/images/mismatch/Medium-Score.png)
