@@ -81,6 +81,9 @@ All Low Priority records are `Active` without any filter on the `Last Updated` f
 * 1 or more `Count False` that are not already High or Medium priority<br>
 [![Low-Count.png](/user-documentation/images/mismatch/Low-Count.png)](/user-documentation/images/mismatch/Low-Count.png)
 
+### 3.4 Inactive Priority
+
+All Inactive Priority are `Inactive` records. (`Active` column with value='I')
 
 
 
